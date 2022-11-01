@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+button,
+textarea,
+th,
+td,
+figure {
+  margin: 0;
+  padding: 0;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+.darkmode {
+  --darkModeBlack: #ffffff;
+  --darkModeGray: #767676;
+  --darkModeWhite: #26292c;
+  --darkModeDarkGreen: #8f4343;
+  --darkModeLightGreen: #ffffff;
+  --darkModeDarkBrown: #ffffff;
+  --darkModeBrown: #ffffff;
+  --darkModeLinghtBrown: #ffffff;
+}
+
+.color-example {
+  background-color: var(--darkModeDarkGreen, #334c3f);
+}
+
+:root {
+  --p1440: calc(100vw / 1440);
+  --ps: calc(100vw / 1100);
+  --pp: calc(100vw / 768);
+  --ph: calc(100vw / 468);
+}
+
+body {
+  font-family: "Noto Serif", Noto Serif TC;
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes changeColor {
+  to {
+    background-color: white;
+  }
+}
+@keyframes changeColor {
+  to {
+    background-color: white;
+  }
+}
+@-webkit-keyframes showWords {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes showWords {
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes showPulse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes showPulse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes pulse {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.25;
+    transform: scale(0.75);
+  }
+}
+@keyframes pulse {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.25;
+    transform: scale(0.75);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+/* ALTERNATING ORBITS */
+#intro {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #26292c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  z-index: 999;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  #intro {
+    display: none;
+  }
+}
+#intro .spinner-box {
+  width: 170px;
+  height: 210px;
+  background-color: transparent;
+}
+#intro .logo-box {
+  width: 170px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#intro .logo-box .circle-border {
+  width: 85px;
+  height: 85px;
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(0deg, rgba(63, 249, 220, 0) 33%, rgb(255, 255, 255) 100%);
+  -webkit-animation: spin 1s linear 0s;
+          animation: spin 1s linear 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#intro .logo-box .circle-core {
+  width: 100%;
+  height: 100%;
+  background-color: #26292c;
+  border-radius: 50%;
+  -webkit-animation: changeColor 0.5s linear 1s;
+          animation: changeColor 0.5s linear 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#intro .logo-box .circle-core svg {
+  width: 52px;
+  height: 57px;
+}
+#intro .logo-box .circle-core svg path {
+  fill: #26292c;
+}
+#intro .words-box {
+  width: 170px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+#intro .words-box img {
+  width: 152px;
+  height: 72px;
+  opacity: 0;
+  -webkit-animation: showWords 1s linear 1.5s;
+          animation: showWords 1s linear 1.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#intro .spinner-box2 {
+  position: absolute;
+  top: 100%;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  opacity: 0;
+  -webkit-animation: showPulse 1s linear 3s;
+          animation: showPulse 1s linear 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  /* PULSE BUBBLES */
+}
+#intro .spinner-box2 .pulse-container {
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#intro .spinner-box2 .pulse-bubble {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+}
+#intro .spinner-box2 .pulse-bubble-1 {
+  -webkit-animation: pulse 0.6s ease 0s infinite alternate;
+          animation: pulse 0.6s ease 0s infinite alternate;
+}
+#intro .spinner-box2 .pulse-bubble-2 {
+  -webkit-animation: pulse 0.6s ease 0.3s infinite alternate;
+          animation: pulse 0.6s ease 0.3s infinite alternate;
+}
+#intro .spinner-box2 .pulse-bubble-3 {
+  -webkit-animation: pulse 0.6s ease 0.6s infinite alternate;
+          animation: pulse 0.6s ease 0.6s infinite alternate;
+}
+
+.noact {
+  opacity: 0 !important;
+}/*# sourceMappingURL=intro.css.map */
