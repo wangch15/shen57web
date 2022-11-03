@@ -217,7 +217,7 @@ body {
 @media (max-width: 468px) {
   #news .container .news-info-container .main-news-area .main-news-img {
     width: 100%;
-    height: calc(230 * var(--pv-img));
+    height: calc(400 * var(--pv-img));
     background-repeat: no-repeat;
     margin-right: 0;
     margin-bottom: 0;
@@ -265,7 +265,7 @@ body {
 @media (max-width: 468px) {
   #news .container .news-info-container .sub-news-area .sub-news-img {
     width: 100%;
-    height: calc(230 * var(--pv-img));
+    height: calc(330 * var(--pv-img));
     background-repeat: no-repeat;
     margin-right: 0;
     margin-bottom: 0;

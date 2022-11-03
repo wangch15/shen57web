@@ -117,7 +117,7 @@ body {
 
           @include phone{
             width: 100%;
-            height: calc(230 * var(--pv-img));
+            height: calc(400 * var(--pv-img));
             background-repeat: no-repeat;
             margin-right: 0;
             margin-bottom: 0;
@@ -156,7 +156,7 @@ body {
 
           @include phone{
             width: 100%;
-            height: calc(230 * var(--pv-img));
+            height: calc(330 * var(--pv-img));
             background-repeat: no-repeat;
             margin-right: 0;
             margin-bottom: 0;
