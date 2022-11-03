@@ -606,6 +606,19 @@ body {
 .r-rooms .r-rooms-shen7 {
   background-image: url("../img/rooms/room7-cover.jpg");
 }
+.r-rooms .r-rooms-shen7 .bookingArea {
+  background-color: var(--darkModeWhite, #ffffff);
+  opacity: 0.6;
+}
+.r-rooms .r-rooms-shen7 .bookingArea .r-shen5-text {
+  color: var(--darkModeBlack, #26292c);
+}
+.r-rooms .r-rooms-shen7 .bookingArea .r-rooms-shen-text-top {
+  color: var(--darkModeBlack, #26292c);
+}
+.r-rooms .r-rooms-shen7 .bookingArea .r-rooms-shen-text-bottom {
+  color: var(--darkModeBlack, #26292c);
+}
 .r-rooms .r-rooms-shen7 .r-rooms-shen-text {
   display: flex;
   justify-content: center;

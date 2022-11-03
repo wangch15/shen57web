@@ -169,6 +169,7 @@ footer{
         @include flex;
         background-color: rgba(0, 0, 0, 0.6);
         display: none;
+        z-index: 999;
 
         // js點擊
         .linebox-bg{

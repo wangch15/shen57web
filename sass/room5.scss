@@ -400,6 +400,19 @@ body{
   }
   .r-rooms-shen5{
     background-image: url("../img/rooms/room5-cover.jpg");
+    .bookingArea{
+      background-color: var(--darkModeWhite,$shen57white);
+      opacity: 0.6;
+      .r-shen5-text{
+        color: var(--darkModeBlack,$shen57black);
+      }
+      .r-rooms-shen-text-top{
+        color: var(--darkModeBlack,$shen57black);
+      }
+      .r-rooms-shen-text-bottom{
+        color: var(--darkModeBlack,$shen57black);
+      }
+    }
     .r-rooms-shen-text{
       @include flex;
       .r-rooms-shen-text-top{
