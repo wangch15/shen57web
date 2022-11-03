@@ -541,7 +541,7 @@ body {
 @media (max-width: 570px) {
   .b-reserve .b-precautions ol {
     line-height: 22px;
-    font-size: 12px;
+    font-size: 14px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -624,6 +624,11 @@ body {
 .b-tabs .b-tabs-content span {
   color: var(--darkModeDarkBrown, #767067);
   font-weight: 900;
+}
+@media (max-width: 570px) {
+  .b-tabs .b-tabs-content span {
+    font-size: 14px;
+  }
 }
 .b-tabs .b-tabs-content ol {
   color: var(--darkModeGray, #767676);

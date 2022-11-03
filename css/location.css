@@ -293,7 +293,7 @@ body {
 }
 @media (max-width: 468px) {
   #location .location-info-container .info-map-box .info-area-top .info-inside-box .info-content {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 #location .location-info-container .info-map-box .map-area {
@@ -405,7 +405,7 @@ body {
 }
 @media (max-width: 468px) {
   #location .location-info-container .info-map-box .info-inside-lastbox .info-content p {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -453,7 +453,7 @@ body {
 }
 @media (max-width: 468px) {
   .travel-map-area .info-inside-box .info-content {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 .travel-map-area .travel-map {

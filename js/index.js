@@ -41,7 +41,7 @@ let idxHeader = document.querySelector('header');
 let idxSection = document.querySelector('#index');
 
 if (window.innerWidth <= 468) {
-    idxSection.prepend(idxHeader);
+    idxHeader.style.top = '0px'
 } else {
     window.onscroll = function () {
         let roll = document.documentElement.scrollTop || document.body.scrollTop

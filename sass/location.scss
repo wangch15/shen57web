@@ -183,7 +183,7 @@ body {
             font-weight: 500;
             
             @include phone{
-              font-size: $phoneH6;
+              font-size: $phoneH5;
             }
           }
         }
@@ -286,7 +286,7 @@ body {
             font-size: $webH6;
             font-weight: 500;
             @include phone{
-              font-size: $phoneH6;
+              font-size: $phoneH5;
             }
           }
         }
@@ -331,7 +331,7 @@ body {
         font-size: $webH5;
         font-weight: 500;
         @include phone{
-          font-size: $phoneH6;
+          font-size: $phoneH5;
         }
       }
     }

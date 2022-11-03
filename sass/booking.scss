@@ -373,7 +373,7 @@ body{
       padding-left: 16px;
       @include phone570{
         line-height: 22px;
-        font-size: $phoneH6;
+        font-size: $phoneH5;
         @include flex(start,center);
         flex-wrap: wrap;
       }
@@ -445,6 +445,9 @@ body{
     span{
       color: var(--darkModeDarkBrown,$shen57DarkBrown);
       font-weight: 900;
+      @include phone570{
+        font-size: $phoneH5;
+      }
     }
     ol{
       color: var(--darkModeGray,$shen57gray);
