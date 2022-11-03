@@ -6,14 +6,15 @@ const intro = document.getElementById('intro')
 console.log(indexLoaded);
 window.addEventListener("load", function (event) {
     indexLoaded = true
-    console.log(indexLoaded);
+    
 });
 
+//&& indexLoaded 如果把行加到判斷內即會等網頁真的load完才隱藏intro
 logoWords.addEventListener('animationend', (event) => {
 
     logoWordsLoaded = true
-
-    if (logoWordsLoaded && indexLoaded) {
+    
+    if (logoWordsLoaded) {
         intro.classList.add('noact')
     }
 
