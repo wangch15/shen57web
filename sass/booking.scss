@@ -1,0 +1,573 @@
+@import 'reset';
+@import 'variable';
+@import 'mixin';
+
+//fontfamily
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+@mixin bookingpad{
+  @media (max-width:900px) {
+      @content
+  }
+};
+
+@mixin phone570{
+  @media (max-width:570px) {
+      @content
+  }
+};
+
+@mixin phone360{
+  @media (max-width:360px) {
+      @content
+  }
+};
+
+body{
+  font-family: $engFont,$notoTC;
+}
+#booking{
+  width: 100%;
+  max-width: 1100px;
+  height: 100%;
+  margin: auto;
+  @include phone{
+    margin-top: 50px;
+  }
+}
+// 訂-預約
+.b-reserve{
+  width: 100%;
+  max-width: 910px;
+  margin: auto;
+  margin-top: 50px;
+  @include bookingpad{
+    padding: 0 40px;
+  }
+  @include phone570{
+    padding: 0;
+    margin-top: 30px;
+  }
+  // 訂-流程區塊
+  .b-step{
+    width: 100%;
+    height: 480px;
+    @include flex(space-between,center);
+    @include bookingpad{
+      height: 550px;
+      flex-wrap: wrap;
+    }
+    // 訂-流程
+    .b-step-card{
+      width: calc((100% - 10px) / 3);
+      height: 100%;
+      @include bookingpad{
+        width: 100%;
+        height: calc((100% - 10px) / 3);
+      }
+      @include phone570{
+        width: 100%;
+        height: calc((100% - 10px) / 3);
+      }
+      // 訂-流程-背景/圖片
+      .b-step-bg-left,
+      .b-step-bg-middle,
+      .b-step-bg-right{
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        img{
+          width: 65px;
+          padding-bottom: 45px;
+          @include bookingpad{
+            padding-bottom: unset;
+            float: left;
+          }
+          @include phone570{
+            width: 50px;
+          }
+        }
+      }
+      .b-step-bg-left{
+        background-image: url("../img/booking/booking-01.jpg");
+        padding: 65px 40px 0 40px;
+        @include bookingpad{
+          background-image: url("../img/booking/phone/booking-01-phone.jpg");
+          padding: 20px;
+          @include flex;
+          @include phone570{
+            @include flex;
+          }
+        }
+      }
+      .b-step-bg-middle{
+        background-image: url("../img/booking/booking-02.jpg");
+        padding: 65px 40px 0 53px;
+        @include bookingpad{
+          background-image: url("../img/booking/phone/booking-02-phone.jpg");
+          padding: 20px;
+          @include flex;
+          @include phone570{
+            @include flex;
+          }
+        }
+      }
+      .b-step-bg-right{
+        background-image: url("../img/booking/booking-03.jpg");
+        padding: 65px 40px 0 53px;
+        @include bookingpad{
+          background-image: url("../img/booking/phone/booking-03-phone.jpg");
+          padding: 20px;
+          @include flex;
+          @include phone570{
+            @include flex;
+          }
+        }
+      }
+      .b-step-left-box,
+      .b-step-middle-box,
+      .b-step-right-box{
+        @include bookingpad{
+          width: 450px;
+        }
+        @include phone570{
+          width: unset;
+          transform: translateX(-10px);
+        }
+      }
+      // 訂-流程-內容
+      .b-step-content{
+        color: var(--darkModeWhite,$shen57white);
+        font-size: $webH6;
+        @include bookingpad{
+          font-size: $phoneH5;
+          float: left;
+          padding-left: 30px;
+          @include flex;
+          flex-direction: row;
+        }
+        @include phone570{
+          padding-left: 30px;
+          display: unset;
+        }
+        h4{
+          font-size: $webH4;
+          font-weight: bold;
+          @include bookingpad{
+            font-size: $phoneH4;
+            line-height: 15px;
+          }
+        }
+        // LINE-QRcode按鈕
+        .community-line{
+          margin: 0;
+          padding: 0;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          cursor: pointer;
+        }
+        // LINE-QRcode彈跳視窗
+        .linebox{
+          background: var(--darkModeWhite,$shen57white);
+          box-shadow: 0 2px 15px 0 rgba(0,0,0,0.6);
+          min-width: 320px;
+          padding: 0;
+          border: 0;
+          text-align: center;
+          // 彈跳視窗-背景
+          &::backdrop{
+            background: var(--darkModeBlack,$shen57black);
+            opacity: 0.6;
+            animation: dialog-bg 0.3s;
+            @keyframes dialog-bg{
+              from {
+                background: rgba(0, 0, 0, 0);
+              }
+            }
+          }
+          // js點擊
+          .linebox-bg{
+            background: #ffffff;
+            padding: 40px 25px;
+          }
+          img{
+            min-width: 250px;
+            padding: 10px;
+            border: 1px solid var(--darkModeGray,$shen57gray);
+            @include phone{
+              min-width: 200px;
+            }
+          }
+          h4,
+          h5{
+            color: var(--darkModeDarkGreen,$shen57DarkGreen);
+            font-size: $webH4;
+            font-weight: bold;
+            margin-top: 40px;
+            @include phone{
+              font-size: $phoneH4;
+            }
+          }
+          h5{
+            margin-top: unset;
+          }
+          .linebox-text{
+            color: var(--darkModeGray,$shen57gray);
+            font-size: $webH6;
+            margin: 15px 0;
+            @include phone{
+              font-size: $phoneH5;
+            }
+            p{
+              margin: 0;
+            }
+          }
+          .qrcode-close{
+            background: var(--darkModeWhite,$shen57white);
+            width: 100px;
+            height: 30px;
+            color: #334c3f;
+            border: 1px solid #334c3f;
+            font-size: $webH5;
+            font-weight: bold;
+            font-family: $notoTC;
+            margin-top: 40px;
+            cursor: pointer;
+            &:hover{
+              background: var(--darkModeDarkGreen,$shen57DarkGreen);
+              color: var(--darkModeWhite,$shen57white);
+            }
+            @include phone{
+              background: var(--darkModeDarkGreen,$shen57DarkGreen);
+              color: var(--darkModeWhite,$shen57white);
+              font-size: $phoneH5;
+            }
+          }
+        }
+        // 訂-流程-來電預約
+        #b-step-contact{
+          width: 100%;
+          padding-top: 15px;
+          line-height: 28px;
+          @include flex;
+          @include bookingpad{
+            width: 120%;
+          }
+          @include phone570{
+            padding-top: 20px;
+            flex-wrap: wrap;
+          }
+          .b-step-contact-name{
+            width: 40%;
+          }
+          .b-step-contact-message{
+            width: 60%;
+            a{
+              color: var(--darkModeWhite,$shen57white);
+              text-decoration: underline;
+            }
+            img{
+              width: 26px;
+              padding: 0;
+            }
+            .message-line{
+              @include flex(space-between,center);
+            }
+            .message-facebook{
+              @include flex(space-between,center);
+              .message-facebook-triangle{
+                width: 22px;
+                @include flex(space-between,center);
+                img{
+                  width: 50%;
+                }
+              }
+            }
+          }
+        }
+        .b-step-contact-time{
+          padding-top: 60px;
+          @include flex(space-between,center);
+          @include bookingpad{
+            display: none;
+          }
+        }
+        // 訂-流程-確認資訊
+        .b-step-check{
+          padding-top: 45px;
+          padding-right: 12px;
+          @include flex;
+          flex-wrap: wrap;
+          @include bookingpad{
+            padding: 0 25px;
+            padding-right: 0;
+            display: unset;
+          }
+          p{
+            margin: 0;
+            line-height: 23px;
+          }
+          @include phone570{
+            display: none;
+          }
+        }
+        // 訂-流程-訂金付款
+        .b-step-deposit{
+          padding-top: 60px;
+          padding-right: 12px;
+          @include flex;
+          flex-wrap: wrap;
+          @include bookingpad{
+            padding: 0 25px;
+            padding-top: 15px;
+            padding-right: 0;
+            display: unset;
+          }
+          @include phone570{
+            padding: unset;
+            display: none;
+          }
+          p{
+            margin: 0;
+            line-height: 23px;
+          }
+        }
+        // 訂-流程(手機板)-確認資訊、訂金付款
+        .step-content-text{
+          @include phone570{
+            line-height: 25px;
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+  }
+  // 訂-注意事項
+  .b-precautions{
+    background-color: var(--darkModeDarkBrown,$shen57DarkBrown);
+    color: var(--darkModeWhite,$shen57white);
+    width: 100%;
+    height: 200px;
+    margin-top: 5px;
+    padding: 20px 50px 0 50px;
+    @include bookingpad{
+      height: unset;
+      padding: 10px 20px;
+      margin-top: unset;
+      @include flex(center,center);
+      flex-wrap: wrap;
+    }
+    h4{
+      font-size: $webH4;
+      font-weight: bold;
+      @include phone570{
+        font-size: $phoneH4;
+        @include flex;
+      }
+    }
+    ol{
+      font-size: $webH6;
+      padding-left: 16px;
+      @include phone570{
+        line-height: 22px;
+        font-size: $phoneH6;
+        @include flex(start,center);
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+// 訂-訂房須知(頁籤)
+.b-tabs{
+  width: 100%;
+  max-width: 910px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  @include bookingpad{
+    padding: 0 40px;
+    margin-top: 70px;
+  }
+  @include phone570{
+    max-width: 100%;
+    margin-top: 35px;
+    padding: 0 40px;
+  }
+  @include phone360{
+    padding: 0 10px;
+  }
+  .b-tabs-label{
+    color: var(--darkModeDarkBrown,$shen57DarkBrown);
+    font-size: $webH5;
+    font-weight: bold;
+    margin-right: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    @include phone570{
+      width: 50%;
+      font-size: $phoneH4;
+      margin-right: unset;
+      border: 1px solid var(--darkModeDarkBrown,$shen57DarkBrown);
+      @include flex;
+    }
+  }
+  .b-tabs-radio{
+    display: none;
+    // 訂-訂房須知-頁籤點擊
+    &:checked + .b-tabs-label{
+      background-color: var(--darkModeDarkBrown,$shen57DarkBrown);
+      color: var(--darkModeWhite,$shen57white);
+      font-weight: bold;
+      + .b-tabs-content{
+        display: block;
+      }
+    }
+  }
+  // 訂-訂房須知-文字內容
+  .b-tabs-content{
+    order: 1;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 70px;
+    border-top: 1px solid var(--darkModeDarkBrown,$shen57DarkBrown);
+    font-size: $webH6;
+    display: none;
+    @include phone570{
+      font-size: $phoneH6;
+      padding-bottom: 35px;
+      border-top: unset;
+    }
+    span{
+      color: var(--darkModeDarkBrown,$shen57DarkBrown);
+      font-weight: 900;
+    }
+    ol{
+      color: var(--darkModeGray,$shen57gray);
+      margin: 0 0 30px 0;
+      padding-left: 23px;
+      @include phone570{
+        padding-left: 16px;
+      }
+      li{
+        line-height: 27px;
+        font-weight: 600;
+        @include phone570{
+          line-height: 24px;
+        }
+        .b-tabs-subol{
+          list-style: cjk-ideographic;
+          padding-left: 30px;
+          @include phone570{
+            padding-left: 24px;
+          }
+        }
+        p{
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+// 訂-其他房型
+.b-rooms{
+  width: 100%;
+  height: 215px;
+  margin-bottom: 100px;
+  @include flex(space-between,center);
+  @include bookingpad{
+    height: 435px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    padding: 0 40px;
+  }
+  @include phone570{
+    height: 295px;
+    margin-bottom: 60px;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  .b-rooms-shen5,
+  .b-rooms-shen7{
+    width: calc((100% - 30px) / 2);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 20px;
+    @include bookingpad{
+      width: 100%;
+      height: calc((100% - 5px) / 2);
+    }
+    @include phone570{
+      height: 145px;
+      padding: 18px 18px;
+    }
+    .b-rooms-shen-text{
+      width: 100%;
+      height: 100%;
+      padding: 20px 20px;
+      @include phone570{
+        padding: unset;
+      }
+      .b-rooms-shen-text-top{
+        color: var(--darkModeWhite,$shen57white);
+        width: 100%;
+        height: 50%;
+        font-weight: bold;
+        font-size: $webH4;
+        @include flex(space-between,start);
+        @include phone570{
+          font-size: $phoneH4;
+        }
+        &:hover{
+          color: var(--darkModeBlack,$shen57black);
+        }
+      }
+      .b-rooms-shen-text-bottom{
+        color: var(--darkModeWhite,$shen57white);
+        width: 100%;
+        height: 50%;
+        font-size: $webH6;
+        @include flex(space-between,end);
+        @include phone570{
+          font-size: $phoneH6;
+        }
+        img{
+          width: 112px;
+          padding-bottom: 5px;
+        }
+      }
+      &:hover{
+        background-color: var(--darkModeWhite,$shen57white);
+        opacity: 0.6;
+        color: var(--darkModeBlack,$shen57black);
+        .b-rooms-shen-text-top{
+          color: var(--darkModeBlack,$shen57black);
+        }
+        .b-rooms-shen-text-bottom{
+          color: var(--darkModeBlack,$shen57black);
+          .bottom-img{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .b-rooms-shen5{
+    background-image: url("../img/booking/room5-cover.jpg");
+    // 平板、手機 -> 訂-森5
+    .b-rooms-shen-text-top,
+    .b-rooms-shen-text-bottom{
+      text-align: right;
+      @include flex;
+      flex-direction: row-reverse;
+    }
+  }
+  .b-rooms-shen7{
+    background-image: url("../img/booking/room7-cover.jpg");
+  }
+}

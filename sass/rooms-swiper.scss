@@ -1,0 +1,228 @@
+@import 'mixin';
+@import 'reset';
+@import 'variable';
+
+// font-family
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+*{margin: 0;
+padding: 0;}
+
+body {
+    font-family: $engFont, $notoTC;
+    padding-top: 50px;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--darkModeWhite,$shen57white);
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    object-fit: cover;
+}
+
+// 以下為自己寫的
+.swiper-Area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;    
+}
+
+.swiper-button-next {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+    cursor: url(../img/story/mouse-right-s.svg), pointer !important;
+}
+
+.swiper-button-prev {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    cursor: url(../img/story/mouse-left-s.svg), pointer;
+}
+
+.mySwiper {
+    width: 100%;
+    height: 100%;
+    box-sizing: unset;
+}
+
+.swiper-slide {
+    @include flex(start,start);
+    span{
+        writing-mode: vertical-lr;
+        text-orientation: sideways-right;
+        color: var(--darkModeGray,$shen57gray);
+        font-size: 14px;
+        font-weight: 600;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        @include pad{
+            border-radius: unset;
+            -webkit-border-radius: unset;
+            -moz-border-radius: unset;
+            -ms-border-radius: unset;
+            -o-border-radius: unset;
+}
+    }
+}
+
+
+
+//點點按鈕動畫效果
+
+.pagination-box {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: unset;
+}
+
+
+/* button style */
+.swiper-pagination-bullet {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 1;
+}
+.swiper-pagination-bullet span {
+    background-color: var(--darkModeLightGreen,$shen57LightGreen);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: inline-block;
+    border:1px solid var(--darkModeLightGreen,$shen57LightGreen);
+
+}
+
+.swiper-pagination-bullet-active span {
+    width: 11px;
+    height: 11px;
+    background-color: var(--darkModeDarkGreen,$shen57DarkGreen); 
+    border:1px solid var(--darkModeDarkGreen,$shen57DarkGreen);
+}
+
+/* button circle */
+.progress {
+    width: 33px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include phone{
+        width: 20px;
+        height: 11px;
+    }
+}
+
+//transform: translate(第一個值可以調整讀取條位置, -50%);
+.line-origin {
+    width: 100%;
+    height: 1px;
+    background: transparent;
+    top: 50%;
+    left: 100%;
+    transform: translate(67%, -50%);
+    -webkit-transform: translate(67%, -50%);
+    -moz-transform: translate(67%, -50%);
+    -ms-transform: translate(67%, -50%);
+    -o-transform: translate(67%, -50%);
+    opacity: 0;
+    display: flex;
+    @include phone{
+        transform: translate(78%, -50%);
+        -webkit-transform: translate(78%, -50%);
+        -moz-transform: translate(78%, -50%);
+        -ms-transform: translate(78%, -50%);
+        -o-transform: translate(78%, -50%);
+    }
+}
+
+.fill-bar {
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkModeDarkGreen,$shen57DarkGreen) ;
+     flex: 0;
+     flex-basis: 0%;
+}
+
+.swiper-pagination-bullet-active .line-origin {
+    opacity: 1;
+}
+.swiper-pagination-bullet-active .line-origin .fill-bar {
+    animation: progress 3.9s linear;
+    -webkit-animation: progress 3.9s linear;
+}
+
+@keyframes progress {
+    from{
+        flex-basis: 0%;
+    }
+    to{
+        flex-basis: 100%;
+    }
+}
+
+//由js加入 隱藏最後點點的進度條
+.noShow{
+    display: none;
+}

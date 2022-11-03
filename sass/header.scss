@@ -1,0 +1,643 @@
+@import 'reset';
+@import 'variable';
+@import 'mixin';
+
+//fontfamily
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+// header-nav 變版
+@mixin headerpad{
+  @media (max-width: 1024px) {
+      @content
+  }
+};
+
+@mixin pad900{
+  @media (max-width:900px) {
+      @content
+  }
+};
+
+@mixin phone570{
+  @media (max-width:570px) {
+      @content
+  }
+};
+
+
+body{
+  font-family: $engFont,$notoTC;
+}
+header{
+  background-color: var(--darkModeDarkGreen,$shen57DarkGreen);
+  width: 100%;
+  height: 75px;
+  @include headerpad{
+    height: 50px;
+  }
+  @include phone{
+    position: fixed;
+    top: 0;
+    z-index: 99;
+  }
+}
+#header-nav{
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  padding: 0 20px;
+  margin: auto;
+  @include flex(space-between,center);
+}
+
+// 頁首-logo
+.header-logo{
+  width: 148px;
+  height: 24px;
+  @include headerpad{
+    width: 123px;
+    height: 20px;
+  }
+}
+
+// 頁首-菜單
+.header-menu{
+  @include headerpad{
+    display: none;
+  }
+  ul{
+    list-style: none;
+    @include flex;
+    li{
+      color: var(--darkModeWhite,$shen57white);
+      margin: 0 20px;
+      padding: 10px 3px;
+      line-height: 14px;
+      font-weight: bold;
+      font-size: $webH5;
+      @include flex;
+      @include headerpad{
+        margin: 0 10px;
+      }
+      &:hover{
+        border-top: 2px solid var(--darkModeWhite,$shen57white);
+        border-bottom: 2px solid var(--darkModeWhite,$shen57white);
+      }
+    }
+  }
+}
+// 頁首-隱藏盒子
+.header-ham{
+  width: 148px;
+  // header-btn日夜切換預留空間
+  .header-dark-btn{
+    width: 108px;
+    height: 24px;
+    float: left;
+  }
+  // hambox
+  .header-ham-btn{
+    background-image: url("../img/header/hambtn-w.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px;
+    height: 35px;
+    float: right;
+    @include headerpad{
+      width: 33px;
+      height: 27px;
+    }
+  }
+  .ham-checked{
+    background-image: url("../img/header/hambtn-check-g.svg") !important;
+  }
+  .showhambox{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  // hambox-點擊後的區塊顯示
+  #header-hambox{
+    display: block;
+    background-color: var(--darkModeWhite,$shen57white);
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 99;
+    transform: translateY(-100%);
+    transition: transform .6s;
+    .hambox-menu{
+      width: 100%;
+      max-width: 1400px;
+      height: auto;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      // hambox-logo
+      .hambox-logobox{
+        width: 100%;
+        height: 75px;
+        margin: 0;
+        padding: 0 20px;
+        border-bottom: 1px solid var(--darkModeGray,$shen57gray);
+        @include flex(space-between,center);
+        @include headerpad{
+          height: 50px;
+        }
+        @include phone{
+          padding: 0 10px;
+        }
+        .hambox-logo{
+          width: 150px;
+          height: 25px;
+          @include headerpad{
+            width: 125px;
+          }
+        }
+        .hambox-btn{
+          width: 40px;
+          height: 35px;
+          float: right;
+          cursor: pointer;
+          @include headerpad{
+            width: 33px;
+            height: 27px;
+          }
+        }
+      }
+      .hambox-infobox{
+        width: 100%;
+        max-width: 1100px;
+        height: calc(100% - 76px);
+        margin: auto;
+        padding: 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+        @include headerpad{
+          height: calc(100% - 51px);
+        }
+        // hambox-shen57資訊
+        .hambox-info{
+          width: 100%;
+          height: 500px;
+          @include flex;
+          flex-wrap: wrap;
+          @include headerpad{
+            height: 400px;
+          }
+          @include pad{
+            height: 100%;
+          }
+          // hambox-nav
+          .hambox-info-left{
+            width: 45.5%;
+            height: 100%;
+            padding-right: 30px;
+            @include flex(start,end);
+            flex-wrap: wrap;
+            @include pad900{
+              width: 40%;
+            }
+            @include pad{
+              width: 100%;
+              height: 350px;
+              padding-right: unset;
+              @include flex(start,start);
+            }
+            ul{
+              width: 100%;
+              margin: 0;
+              padding: 0;
+              font-weight: bold;
+              list-style: none;
+              @include pad{
+                padding: 10px;
+              }
+              a{
+                @include pad{
+                  &:last-child{
+                    li{
+                      border-bottom: unset;
+                    }
+                  }
+                }
+              }
+              li{
+                color: var(--darkModeDarkGreen,$shen57DarkGreen);
+                font-size: $webH1;
+                line-height: 78px;
+                border-bottom: 2px solid transparent;
+                display: flex;
+                justify-content: space-between;
+                @include headerpad{
+                  font-size: $webH2;
+                  line-height: 70px;
+                  padding: 0 20px;
+                }
+                @include pad{
+                  font-size: $webH3;
+                  padding: 0 20px;
+                  line-height: 65px;
+                  border-bottom: 2px solid var(--darkModeDarkGreen,$shen57DarkGreen);
+                }
+                @include phone{
+                  font-size: $phoneH3;
+                  padding: 0;
+                  line-height: 60px;
+                }
+                span{
+                  font-size: 48px;
+                  display: none;
+                  @include pad{
+                    display: block;
+                  }
+                }
+                &:hover{
+                  border-bottom: 2px solid var(--darkModeDarkGreen,$shen57DarkGreen);
+                  span{
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+          // hambox-關於
+          .hambox-info-right{
+            width: 54.5%;
+            height: 100%;
+            @include flex(start,end);
+            flex-wrap: wrap;
+            @include pad900{
+              width: 60%;
+            }
+            @include pad{
+              width: 100%;
+              height: 350px;
+              padding: 0 30px;
+              @include flex(start,start);
+            }
+            @include phone{
+              padding: 0 10px;
+            }
+            .info-right-about{
+              width: 100%;
+              .info-right-community{
+                color: var(--darkModeDarkGreen,$shen57DarkGreen);
+                font-size: $webH2;
+                display: flex;
+                align-items: center;
+                @include headerpad{
+                  font-size: $webH3;
+                }
+                @include pad{
+                  justify-content: space-between;
+                }
+                @include phone{
+                  font-size: $phoneH4;
+                }
+                p{
+                  margin: 0;
+                  padding: 15px 0;
+                  padding-right: 10px;
+                }
+                .community-img{
+                  max-width: 150px;
+                  display: flex;
+                  a{
+                    max-width: 30px;
+                    max-height: 30px;
+                    margin: 0 8px;
+                    @include phone{
+                      max-width: 25px;
+                      max-height: 25px;
+                    }
+                    img{
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                  // LINE-QRcode按鈕
+                  .community-line{
+                    max-width: 30px;
+                    margin: 0 8px;
+                    padding: 0;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                    img{
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                  // LINE-QRcode彈跳視窗
+                  .linebox{
+                    background: var(--darkModeWhite,$shen57white);
+                    box-shadow: 0 2px 15px 0 rgba(0,0,0,0.6);
+                    min-width: 320px;
+                    padding: 0;
+                    border: 0;
+                    margin: auto;
+                    text-align: center;
+                    // 彈跳視窗-背景
+                    &::backdrop{
+                      background: var(--darkModeBlack,$shen57black);
+                      opacity: 0.6;
+                      animation: dialog-bg 0.3s;
+                      @keyframes dialog-bg{
+                        from {
+                          background: rgba(0, 0, 0, 0);
+                        }
+                      }
+                    }
+                    // js點擊
+                    .linebox-bg{
+                      background: #ffffff;
+                      padding: 40px 25px;
+                    }
+                    img{
+                      max-width: 250px !important;
+                      padding: 10px;
+                      border: 1px solid var(--darkModeGray,$shen57gray);
+                      @include phone{
+                        max-width: 200px !important;
+                      }
+                    }
+                    h4,
+                    h5{
+                      color: var(--darkModeDarkGreen,$shen57DarkGreen);
+                      font-size: $webH4;
+                      font-weight: bold;
+                      margin-top: 40px;
+                      @include phone{
+                        font-size: $phoneH4;
+                      }
+                    }
+                    h5{
+                      margin-top: unset;
+                    }
+                    .linebox-text{
+                      color: var(--darkModeGray,$shen57gray);
+                      font-size: $webH6;
+                      margin: 15px 0;
+                      @include phone{
+                        font-size: $phoneH5;
+                      }
+                      p{
+                        margin: 0;
+                        padding: 0;
+                      }
+                    }
+                    .qrcode-close{
+                      background: var(--darkModeWhite,$shen57white);
+                      width: 100px;
+                      height: 30px;
+                      color: #334c3f;
+                      border: 1px solid #334c3f;
+                      font-size: $webH5;
+                      font-weight: bold;
+                      font-family: $notoTC;
+                      margin-top: 40px;
+                      cursor: pointer;
+                      &:hover{
+                        background: var(--darkModeDarkGreen,$shen57DarkGreen);
+                        color: var(--darkModeWhite,$shen57white);
+                      }
+                      @include phone{
+                        background: var(--darkModeDarkGreen,$shen57DarkGreen);
+                        color: var(--darkModeWhite,$shen57white);
+                        font-size: $phoneH5;
+                      }
+                    }
+                  }
+                }
+              }
+              .info-right-box{
+                width: 100%;
+                padding: 15px 0;
+                border-bottom: 1px solid var(--darkModeBrown,$shen57Brown);
+                @include flex(start,center);
+                @include headerpad{
+                  padding: 12px 0;
+                }
+                @include pad900{
+                  padding-right: 20px;
+                }
+                &:last-child{
+                  border-bottom: unset;
+                  align-items: flex-start;
+                }
+                .info-right-title{
+                  color: var(--darkModeDarkGreen,$shen57DarkGreen);
+                  min-width: 100px;
+                  font-size: $webH4;
+                  font-weight: bold;
+                  padding-right: 20px;
+                  @include flex;
+                  @include phone{
+                    min-width: 65px;
+                    font-size: $phoneH5;
+                    padding-right: unset;
+                    @include flex(start,center);
+                  }
+                }
+                .info-right-content{
+                  color: var(--darkModeGray,$shen57gray);
+                  font-size: $webH6;
+                  @include phone{
+                    font-size: $phoneH6;
+                  }
+                  span{
+                    display: flex;
+                    flex-wrap: wrap;
+                  }
+                }
+              }
+            }
+          }
+        }
+        // hambox-shen57房型
+        .hambox-rooms{
+          width: 100%;
+          height: 215px;
+          margin: 75px 0;
+          @include flex;
+          @include headerpad{
+            height: 240px;
+            margin: 50px 0;
+          }
+          @include pad{
+            display: none;
+          }
+          .hambox-bottom-rooms{     
+            width: 100%;
+            height: 215px;
+            @include flex(space-between,center);
+            @include headerpad{
+              height: 240px;
+            }
+            @include phone570{
+              height: 295px;
+              padding: 0;
+              flex-wrap: wrap;
+            }
+            .hambox-rooms-shen5,
+            .hambox-rooms-shen7{
+              width: calc((100% - 30px) / 2);
+              height: 100%;
+              background-repeat: no-repeat;
+              background-size: cover;
+              padding: 20px 20px;
+              @include phone570{
+                height: 145px;
+                padding: 18px 18px;
+              }
+              .hambox-shen-text{
+                width: 100%;
+                height: 100%;
+                padding: 20px 20px;
+                @include phone570{
+                  padding: unset;
+                }
+                .hambox-shen-text-top{
+                  color: var(--darkModeWhite,$shen57white);
+                  width: 100%;
+                  height: 50%;
+                  font-weight: bold;
+                  font-size: $webH4;
+                  @include flex(center,start);
+                  @media (min-width:1024px){
+                    &:hover{
+                      color: var(--darkModeBlack,$shen57black);
+                    }
+                  }
+                  @include headerpad{
+                    height: 40%;
+                  }
+                  @include phone570{
+                    font-size: $phoneH4;
+                  }
+                  .text-hidden{
+                    @include headerpad{
+                      display: none;
+                    }
+                  }
+                }
+                .hambox-shen-text-bottom{
+                  display: none;
+                  color: var(--darkModeWhite,$shen57white);
+                  width: 100%;
+                  height: 50%;
+                  font-size: $webH6;
+                  @include flex(center,end);
+                  @include headerpad{
+                    text-align: center;
+                    @include flex(start,center);
+                    flex-direction: column;
+                    span{
+                      padding-bottom: 45px;
+                    }
+                  }
+                  @include phone570{
+                    font-size: $phoneH6;
+                  }
+                  img{
+                    width: 112px;
+                    padding-bottom: 5px;
+                  }
+                  .text-hidden{
+                    @include headerpad{
+                      display: block;
+                    }
+                  }
+                }
+                .text-hidden{
+                  display: none;
+                }
+                // 1024p以內變版前-動畫
+                @media (min-width:1024px){
+                  &:hover{
+                    background-color: var(--darkModeWhite,$shen57white);
+                    color: var(--darkModeBlack,$shen57black);
+                    animation: roombg 0.5s;
+                    animation-fill-mode: forwards;
+                    animation-timing-function: ease-out;
+                    .hambox-shen-text-top{
+                      color: var(--darkModeBlack,$shen57black);
+                      @include flex(space-between,start);
+                    }
+                    .hambox-shen-text-bottom{
+                      color: var(--darkModeBlack,$shen57black);
+                      @include flex(space-between,end);
+                      .bottom-img-left{
+                        display: block;
+                        animation: moveleft 0.5s;
+                        animation-fill-mode: forwards;
+                        animation-timing-function: ease-out;
+                      }
+                      .bottom-img-right{
+                        display: block;
+                        animation: moveright 0.5s;
+                        animation-fill-mode: forwards;
+                        animation-timing-function: ease-out;
+                      }
+                    }
+                    .text-move-left{
+                      animation: moveleft 0.5s;
+                      animation-fill-mode: forwards;
+                      animation-timing-function: ease-out;
+                    }
+                    .text-move-right{
+                      animation: moveright 0.5s;
+                      animation-fill-mode: forwards;
+                      animation-timing-function: ease-out;
+                    }
+                    .text-hidden{
+                      display: block;
+                      animation: text 0.3s;
+                      animation-fill-mode: forwards;
+                      @keyframes text{
+                        0%{opacity: 0;}
+                        100%{opacity: 1;}
+                      }
+                    }
+                    @keyframes roombg{
+                      0%{opacity: 0;}
+                      100%{opacity: 0.6;}
+                    }
+                    @keyframes moveleft{
+                      0%{transform: translate(140%, 0);}
+                      100%{transform: translate(0, 0);}
+                    }
+                    @keyframes moveright{
+                      0%{transform: translate(-140%, 0);}
+                      100%{transform: translate(0, 0);}
+                    }
+                  }
+                }
+              }
+            }
+            .hambox-rooms-shen5{
+              background-image: url("../img/booking/room5-cover.jpg");
+              .hambox-shen-text-top,
+              .hambox-shen-text-bottom{
+                text-align: right;
+                @include flex;
+                flex-direction: row-reverse;
+              }
+            }
+            .hambox-rooms-shen7{
+              background-image: url("../img/booking/room7-cover.jpg");
+            }
+          }
+        }
+      }
+    }
+  }
+}

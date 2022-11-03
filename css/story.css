@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+button,
+textarea,
+th,
+td,
+figure {
+  margin: 0;
+  padding: 0;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+.darkmode {
+  --darkModeBlack: #ffffff;
+  --darkModeGray: #767676;
+  --darkModeWhite: #26292c;
+  --darkModeDarkGreen: #8f4343;
+  --darkModeLightGreen: #ffffff;
+  --darkModeDarkBrown: #ffffff;
+  --darkModeBrown: #ffffff;
+  --darkModeLinghtBrown: #ffffff;
+}
+
+.color-example {
+  background-color: var(--darkModeDarkGreen, #334c3f);
+}
+
+:root {
+  --p1440: calc(100vw / 1440);
+  --ps: calc(100vw / 1100);
+  --pp: calc(100vw / 768);
+  --ph: calc(100vw / 468);
+}
+
+body {
+  font-family: "Noto Serif", Noto Serif TC;
+}
+
+#story {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 468px) {
+  #story {
+    margin-top: 50px;
+    padding-top: unset;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 40px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 468px) {
+  .container {
+    padding: 0 10px;
+    max-width: 360px;
+  }
+}
+
+.s-swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 38px;
+}
+@media (max-width: 468px) {
+  .s-swiper {
+    padding-top: 76px;
+    padding-bottom: 45px;
+  }
+}
+.s-swiper div {
+  width: 600px;
+  height: 600px;
+  background-color: lightgray;
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .s-swiper div {
+    width: calc(600 * var(--pp));
+    height: calc(600 * var(--pp));
+  }
+}
+@media (max-width: 468px) {
+  .s-swiper div {
+    width: calc(468 * var(--ph));
+    height: calc(468 * var(--ph));
+  }
+}
+
+.s-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+@media (max-width: 468px) {
+  .s-intro {
+    display: none;
+  }
+}
+.s-intro p {
+  font-size: 15px;
+  color: var(--darkModeDarkBrown, #767067);
+  line-height: 23px;
+  text-align: center;
+}
+.s-intro span {
+  font-weight: 900;
+}
+
+.s-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+  width: 100%;
+  max-width: 768px;
+  margin-bottom: 100px;
+}
+@media (max-width: 468px) {
+  .s-text {
+    flex-direction: column-reverse;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 60px;
+  }
+}
+
+.s-text-left {
+  padding-right: 50px;
+}
+@media (max-width: 468px) {
+  .s-text-left {
+    padding-right: 0;
+  }
+}
+.s-text-left .t-1 p,
+.s-text-left .t-2 p,
+.s-text-left .t-3 p {
+  margin-bottom: 50px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 26px;
+  color: var(--darkModeDarkBrown, #767067);
+}
+@media (max-width: 468px) {
+  .s-text-left .t-1 p,
+.s-text-left .t-2 p,
+.s-text-left .t-3 p {
+    line-height: 18px;
+    font-size: 12px;
+  }
+}
+.s-text-left .t-3 p {
+  margin-bottom: 0;
+}
+
+.s-text-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 68px;
+  height: 620px;
+}
+@media (max-width: 468px) {
+  .s-text-right {
+    width: 100%;
+    flex-direction: row;
+    height: 80px;
+    padding-top: 0;
+    padding-bottom: 28px;
+  }
+}
+.s-text-right .s-word {
+  width: 68px;
+  height: 80px;
+}
+@media (max-width: 468px) {
+  .s-text-right .s-word {
+    width: 40px;
+    height: 44px;
+  }
+}
+.s-text-right .s-word-en {
+  font-size: 27px;
+  color: var(--darkModeBrown, #e1dcd7);
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  font-weight: bold;
+}
+@media (max-width: 468px) {
+  .s-text-right .s-word-en {
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=story.css.map */

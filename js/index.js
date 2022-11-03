@@ -19,14 +19,36 @@ logoWords.addEventListener('animationend', (event) => {
 
 });
 
-const scrollBtn = document.querySelector('.scroll-btn')
-const scrollIntro = document.querySelector('.intro')
+
+
+let scrollBtn = document.querySelector('.scroll-btn')
+let scrollIntro = document.querySelector('.intro')
 
 scrollBtn.addEventListener('click', function (e) {
     e.preventDefault();
+
     window.scroll({
         top: scrollIntro.offsetTop,
         left: 0,
         behavior: 'smooth'
     })
 })
+
+
+
+let idxHeader = document.querySelector('header');
+let idxSection = document.querySelector('#index');
+
+if (window.innerWidth <= 468) {
+    idxSection.prepend(idxHeader);
+} else {
+    window.onscroll = function () {
+        let roll = document.documentElement.scrollTop || document.body.scrollTop
+        if (roll >= (scrollIntro.offsetTop)) {
+            idxHeader.style.top = '0px'
+        }
+        else {
+            idxHeader.style.top = '-75px'
+        }
+    }
+}

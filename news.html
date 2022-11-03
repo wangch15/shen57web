@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>森五七行館 - 訊 News</title>
+   <link rel="stylesheet" href="./css/header.css">
+   <link rel="stylesheet" href="./css/news.css">
+   <link rel="stylesheet" href="./css/footer.css">
+   <link rel="icon" type="image/svg" href="./img/shen57-favicon.svg" media="(prefers-color-scheme: light)">
+   <link rel="icon" type="image/svg" href="./img/shen57-favicon-w.svg" media="(prefers-color-scheme: dark)">
+</head>
+
+<body>
+
+   <!-- 頁首 -->
+   <header>
+      <div id="header-nav">
+         <!-- 頁首-logo -->
+         <div class="header-logo">
+            <a href="/"><img src="./img/header/header-logo.svg" alt="屏東-恆春民宿-森五七行館"></a>
+         </div>
+         <!-- 頁首-菜單 -->
+         <div class="header-menu">
+            <ul>
+               <a href="/news.html">
+                  <li>訊 News</li>
+               </a>
+               <a href="/room5.html">
+                  <li>宿 Rooms</li>
+               </a>
+               <a href="/booking.html">
+                  <li>訂 Booking</li>
+               </a>
+               <a href="/story.html">
+                  <li>源 Story</li>
+               </a>
+               <a href="/location.html">
+                  <li>行 Location</li>
+               </a>
+            </ul>
+         </div>
+         <!-- 頁首-隱藏盒子 -->
+         <div class="header-ham">
+            <div class="header-dark-btn"></div>
+            <div class="header-ham-btn">
+               <!-- hambox -->
+               <div id="header-hambox">
+                  <div class="hambox-menu">
+                     <!-- hambox-logo -->
+                     <div class="hambox-logobox">
+                        <a href="/"><img src="./img/header/header-hamlogo.svg" class="hambox-logo"
+                              alt="屏東-恆春民宿-森五七行館"></a>
+                        <div class="hambox-btn"></div>
+                     </div>
+                     <div class="hambox-infobox">
+                        <!-- hambox-shen57資訊 -->
+                        <div class="hambox-info">
+                           <!-- hambox-nav -->
+                           <div class="hambox-info-left">
+                              <ul>
+                                 <a href="/news.html">
+                                    <li>訊 News<span>˙</span></li>
+                                 </a>
+                                 <a href="/room5.html">
+                                    <li>宿 Rooms<span>˙</span></li>
+                                 </a>
+                                 <a href="/booking.html">
+                                    <li>訂 Booking<span>˙</span></li>
+                                 </a>
+                                 <a href="/story.html">
+                                    <li>源 Story<span>˙</span></li>
+                                 </a>
+                                 <a href="/location.html">
+                                    <li>行 Location<span>˙</span></li>
+                                 </a>
+                              </ul>
+                           </div>
+                           <!-- hambox-關於 -->
+                           <div class="hambox-info-right">
+                              <div class="info-right-about">
+                                 <div class="info-right-community">
+                                    <p>關於&emsp;森˙五七行館</p>
+                                    <div class="community-img">
+                                       <!-- LINE-QRcode按鈕 -->
+                                       <button type="button" class="community-line qrcode-open"
+                                          onclick="openwindow()"><img src="./img/header/line.svg"
+                                             alt="屏東-恆春民宿-森五七行館-line"></button>
+                                       <!-- LINE-QRcode彈跳視窗 -->
+                                       <dialog class="linebox show-dialog">
+                                          <!-- linebox-bg 視窗內背景 -->
+                                          <div class="linebox-bg">
+                                             <img src="./img/footer/shen57-line-link.jpg" alt="">
+                                             <h4>透過行動條碼加入LINE好友</h4>
+                                             <div class="linebox-text">
+                                                <p>請在LINE應用程式上開啟「好友」分頁，點選畫面右上方用來加入好友的圖示，</p>
+                                                <p>接著點選「行動條碼」，然後掃描此行動條碼。</p>
+                                             </div>
+                                             <h5>透過LINE ID新增LINE好友：shen57hostel</h5>
+                                             <button type="button" class="qrcode-close"
+                                                onclick="closewindow()">關閉視窗</button>
+                                          </div>
+                                       </dialog>
+                                       <a href="https://www.instagram.com/shen57hostel/" target="_blank"><img
+                                             src="./img/header/instagram.svg" alt="屏東-恆春民宿-森五七行館-instagram"></a>
+                                       <a href="https://www.facebook.com/shen57hostel2016" target="_blank"><img
+                                             src="./img/header/facebook.svg" alt="屏東-恆春民宿-森五七行館-facebook"></a>
+                                    </div>
+                                 </div>
+                                 <div class="info-right-box">
+                                    <div class="info-right-title">行館地址</div>
+                                    <div class="info-right-content">946 屏東縣恆春鎮大光里砂尾路68-2號</div>
+                                 </div>
+                                 <div class="info-right-box">
+                                    <div class="info-right-title">聯絡電話</div>
+                                    <div class="info-right-content">(08) 886-7658 / 0961-333-857</div>
+                                 </div>
+                                 <div class="info-right-box">
+                                    <div class="info-right-title">電子信箱</div>
+                                    <div class="info-right-content">shen57hostel@gmail.com</div>
+                                 </div>
+                                 <div class="info-right-box">
+                                    <div class="info-right-title">訂房時段</div>
+                                    <div class="info-right-content">每日 09 : 00 am ~ 09 : 00 pm</div>
+                                 </div>
+                                 <div class="info-right-box">
+                                    <div class="info-right-title">服&emsp;&emsp;務</div>
+                                    <div class="info-right-content">
+                                       <span>提供優惠汽機車租賃、包車旅遊導覽服務資訊。</span>
+                                       <span>提供旅遊資訊及諮詢服務。</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- hambox-shen57房型 -->
+                        <div class="hambox-rooms">
+                           <div class="hambox-bottom-rooms">
+                              <a href="/room5.html" class="hambox-rooms-shen5">
+                                 <div class="hambox-shen-text">
+                                    <div class="hambox-shen-text-top">
+                                       <span class="text-hidden">參考房型</span>
+                                       <span class="text-move-left">森5 / 時尚館</span>
+                                    </div>
+                                    <div class="hambox-shen-text-bottom">
+                                       <span class="text-hidden">本房型為 <b>獨棟別墅</b> <br>室內坪數 <b>50</b> 坪，室外約 <b>150</b>
+                                          坪</span>
+                                       <div>
+                                          <img src="./img/booking/room5-arrow-white.svg" alt="屏東-恆春民宿-前往森五時尚館">
+                                          <img src="./img/booking/room5-arrow-black.svg" alt="屏東-恆春民宿-前往森五時尚館"
+                                             class="bottom-img-left" hidden>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </a>
+                              <a href="/room7.html" class="hambox-rooms-shen7">
+                                 <div class="hambox-shen-text">
+                                    <div class="hambox-shen-text-top">
+                                       <span class="text-hidden">參考房型</span>
+                                       <span class="text-move-right">森7 / 和風館</span>
+                                    </div>
+                                    <div class="hambox-shen-text-bottom">
+                                       <span class="text-hidden">本房型為 <b>獨棟別墅</b> <br>室內坪數 <b>50</b> 坪，室外約 <b>150</b>
+                                          坪</span>
+                                       <img src="./img/booking/room7-arrow-white.svg" alt="屏東-恆春民宿-前往森七和風館">
+                                       <img src="./img/booking/room7-arrow-black.svg" alt="屏東-恆春民宿-前往森七和風館"
+                                          class="bottom-img-right" hidden>
+                                    </div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <!-- 訊 -->
+   <main id="news">
+      <section class="container">
+         <!-- 訊-頁面標題 -->
+         <div class="title-area">
+            <img src="./img/news/calligraphy-news.svg" alt="">
+            <div class="title-area-infobox">
+               <h5>​最新消息 · 活動訊息 · 優惠專案</h5>
+            </div>
+         </div>
+
+         <div class="news-info-container">
+            <!-- 主打最新消息 -->
+            <div class="main-news-area">
+               <!-- <img src="./img/index-news-cover.jpg" alt=""> -->
+               <div class="main-news-img" style="background-image: url(./img/news/news3.jpg);"></div>
+               <div class="main-news-infobox">
+                  <div class="titlebox">
+                     <p class="title-date">2022.04.19</p>
+                     <h2 class="title-words">森五七週年 同樂專案</h2>
+                  </div>
+                  <div class="info-content">
+                     <p>
+                        森五七行館的創辦週年將於5月7日到來，即日起至6/30日推出週年慶同樂住房專案，入住可享三好禮。<br>
+                        好禮一：專案每棟贈送一紀念禮品<br>
+                        好禮二：平日（星期日～星期四）4人入住，連續入住第二晚享5700元週年慶感恩價<br>
+                        好禮三：住宿期間出示Google或TripAdvisor評論，即送環保購物袋一個<br>
+                        期待各方親友蒞臨同樂。
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <!-- 一般最新消息 -->
+            <div class="sub-news-area">
+               <div class="sub-news-img" style="background-image: url(./img/news/news1.jpg);"></div>
+               <div class="sub-news-infobox">
+                  <div class="titlebox">
+                     <p class="title-date">2022.10.11</p>
+                     <h2 class="title-words">半島歌謠祭 - 如山似水的能量</h2>
+                  </div>
+                  <div class="info-content">
+                     <p>
+                        半島民謠如水，用其柔軟的力量牽起每一座孤島，清澈的映出每個人隨著天光變化而有的不同日常，輕柔的擁抱、陪伴，療癒⋯⋯半島民謠也似山，不斷地承受新舊的碰撞，激盪出更多的可能。<br>
+                        ​<br>
+                        正因民謠如水又似山，半島歌謠祭 得以每一年都懷著不同的能量。<br>
+                        <br>
+                        ‒⌜⌝⌞⌟⌜⌝⌞⌟⌜⌝⌞⌟⌜⌝⌞⌟⌜⌝⌞⌟⌜⌝⌞⌟⌜⌝⌞⌟‒<br>
+                        ​ 2022/10/12-2022/10/16 演出時間表<br>
+                        #2022半島歌謠祭 ◌ 恆春北門廣場<br>
+                        ◝◟◞ ◠◡ ▷▸ 我的半島生活pattern ◆◇◈<br>
+                        ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯<br>
+                        ​<br>
+                        10.12（三）-10.13（四）▷▸ 藝術裝置體驗<br>
+                        10.13（四）▷▸民謠大賽<br>
+                        ​<br>
+                        10.14（五） ◝◟◞ ◠◡<br>
+                        ▷▸民謠大賽Ｘ老調新聲Ｘ世界音樂Ｘ詩劇場詩生活<br>
+                        ▷▸浮可泰、漂流出口、Caiti Baker、泰武古謠傳唱、恆春半島民謠傳藝師<br>
+                        ​<br>
+                        10.15（六） ◝◟◞ ◠◡<br>
+                        ▷▸民謠大賽Ｘ老調新聲Ｘ世界音樂Ｘ詩劇場詩生活Ｘ島嶼狂想曲民謠時尚秀<br>
+                        ▷▸Dj Jez Fang、百合花、同根生、恆春半島民謠傳藝師、范逸臣、Daniel Wong民謠時尚秀、夏川里美<br>
+                        ​<br>
+                        10.16（日） ◝◟◞ ◠◡<br>
+                        ▷▸民謠大賽決賽Ｘ抽獎活動Ｘ頒獎典禮<br>
+                        ​<br>
+                        指導單位：文化部、交通部觀光局<br>
+                        主辦單位：屏東縣政府<br>
+                        合辦單位：財團法人屏東縣文化基金會<br>
+                        承辦單位：屏東縣政府文化處<br>
+                        執行單位：城東大院子文化有限公司<br>
+                        民謠大賽執行單位：社團法人屏東縣瓊麻園城鄉文教發展協會
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="sub-news-area">
+               <div class="sub-news-img" style="background-image: url(./img/news/news2.jpg);"></div>
+               <div class="sub-news-infobox">
+                  <div class="titlebox">
+                     <p class="title-date">2022.09.16</p>
+                     <h2 class="title-words">2022 屏東滿州佳樂水國際衝浪嘉年華 (9/30-10/2)</h2>
+                  </div>
+                  <div class="info-content">
+                     <p>
+                        第18屆「屏東滿州佳樂水國際衝浪嘉年華」將於30日登場，地點就在佳樂水漁村公園。本次特別於24、25日在車城海口港推出免費SUP體驗，比賽期間，除賽事之外，還有市集、草地音樂會、親子DIY與Mini Ramp(公園迷你滑板)，多元的活動，輕鬆熱鬧的氛圍，邀請全民共襄盛舉，融入南台灣最具代表性的衝浪勝地。
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!-- 頁腳 -->
+   <footer>
+      <div id="footer">
+         <div class="footer-nav">
+            <!-- 頁腳-logo -->
+            <div class="footer-logo">
+               <a href="/"><img src="./img/footer/footer-logo.svg" alt="屏東-恆春民宿-森五七行館"></a>
+            </div>
+            <!-- 頁腳-選單盒子 -->
+            <div class="footer-menu">
+               <!-- 頁腳-分頁欄 -->
+               <ul>
+                  <a href="/news.html">
+                     <li>訊 News</li>
+                  </a>
+                  <a href="/room5.html">
+                     <li>宿 Rooms</li>
+                  </a>
+                  <a href="/booking.html">
+                     <li>訂 Booking</li>
+                  </a>
+                  <a href="/story.html">
+                     <li>源 Story</li>
+                  </a>
+                  <a href="/location.html">
+                     <li id="footer-menu-lastli">行 Location</li>
+                  </a>
+               </ul>
+               <!-- 頁腳-聯絡資訊 -->
+               <div class="footer-contact">
+                  <div class="footer-text">
+                     <p>屏東縣恆春鎮大光里砂尾路68-2號</p><span>|</span>
+                     <p>(08) 886-7658 / 0961-333-857</p><span>|</span>
+                     <p>shen57hostel@gmail.com</p>
+                  </div>
+                  <div class="footer-community">
+                     <!-- LINE-QRcode按鈕 -->
+                     <button type="button" class="community-line" onclick="openwindow()"><img
+                           src="./img/footer/line.svg" alt="屏東-恆春民宿-森五七行館-line"></button>
+                     <!-- LINE-QRcode彈跳視窗 -->
+                     <dialog class="linebox show-dialog">
+                        <!-- linebox-bg 視窗內背景 -->
+                        <div class="linebox-bg">
+                           <img src="./img/footer/shen57-line-link.jpg" alt="">
+                           <h4>透過行動條碼加入LINE好友</h4>
+                           <div class="linebox-text">
+                              <p>請在LINE應用程式上開啟「好友」分頁，點選畫面右上方用來加入好友的圖示，</p>
+                              <p>接著點選「行動條碼」，然後掃描此行動條碼。</p>
+                           </div>
+                           <h5>透過LINE ID新增LINE好友：shen57hostel</h5>
+                           <button type="button" class="qrcode-close" onclick="closewindow()">關閉視窗</button>
+                        </div>
+                     </dialog>
+                     <a href="https://www.instagram.com/shen57hostel/" target="_blank"><img
+                           src="./img/footer/instagram.svg" alt="屏東-恆春民宿-森五七行館-instagram"></a>
+                     <a href="https://www.facebook.com/shen57hostel2016" target="_blank"><img
+                           src="./img/footer/facebook.svg" alt="屏東-恆春民宿-森五七行館-facebook"></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- 分隔線 -->
+         <div id="footer-line"></div>
+         <!-- 頁腳-copyright -->
+         <div class="footer-copyright">
+            <p>Copyright © 2022, Shen57 Hostel , All Rights Reserved.</p>
+            <p>Website designed by FiveMinusOne & DreamCenter</p>
+         </div>
+      </div>
+   </footer>
+
+   <script src="./js/hambtn.js"></script>
+   <script src="./js/line.js"></script>
+</body>
+
+</html>

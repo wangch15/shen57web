@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>footer</title>
+   <link rel="stylesheet" href="./css/footer.css">
+   <link rel="icon" type="image/svg" href="./img/index/shen57-favicon.svg" media="(prefers-color-scheme: light)">
+   <link rel="icon" type="image/svg" href="./img/index/shen57-favicon-w.svg" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+   
+   <!-- 頁腳 -->
+   <footer>
+      <div id="footer">
+         <div class="footer-nav">
+            <!-- 頁腳-logo -->
+            <div class="footer-logo">
+               <a href="/"><img src="./img/footer/footer-logo.svg" alt="屏東-恆春民宿-森五七行館"></a>
+            </div>
+            <!-- 頁腳-選單盒子 -->
+            <div class="footer-menu">
+               <!-- 頁腳-分頁欄 -->
+               <ul>
+                  <a href="/news.html"><li>訊 News</li></a>
+                  <a href="/room5.html"><li>宿 Rooms</li></a>
+                  <a href="/booking.html"><li>訂 Booking</li></a>
+                  <a href="/story.html"><li>源 Story</li></a>
+                  <a href="/location.html"><li id="footer-menu-lastli">行 Location</li></a>
+               </ul>
+               <!-- 頁腳-聯絡資訊 -->
+               <div class="footer-contact">
+                  <div class="footer-text">
+                     <p>屏東縣恆春鎮大光里砂尾路68-2號</p><span>|</span><p>(08) 886-7658 / 0961-333-857</p><span>|</span><p>shen57hostel@gmail.com</p>
+                  </div>
+                  <div class="footer-community">
+                     <!-- LINE-QRcode按鈕 -->
+                     <button type="button" class="community-line" onclick="openwindow()"><img src="./img/footer/line.svg" alt="屏東-恆春民宿-森五七行館-line"></button>
+                        <!-- LINE-QRcode彈跳視窗 -->
+                        <dialog class="linebox show-dialog">
+                           <!-- linebox-bg 視窗內背景 -->
+                           <div class="linebox-bg">
+                              <img src="./img/footer/shen57-line-link.jpg" alt="">
+                              <h4>透過行動條碼加入LINE好友</h4>
+                              <div class="linebox-text">
+                                 <p>請在LINE應用程式上開啟「好友」分頁，點選畫面右上方用來加入好友的圖示，</p>
+                                 <p>接著點選「行動條碼」，然後掃描此行動條碼。</p>
+                              </div>
+                              <h5>透過LINE ID新增LINE好友：shen57hostel</h5>
+                              <button type="button" class="qrcode-close" onclick="closewindow()">關閉視窗</button>
+                           </div>
+                        </dialog>
+                     <a href="https://www.instagram.com/shen57hostel/" target="_blank"><img src="./img/footer/instagram.svg" alt="屏東-恆春民宿-森五七行館-instagram"></a>
+                     <a href="https://www.facebook.com/shen57hostel2016" target="_blank"><img src="./img/footer/facebook.svg" alt="屏東-恆春民宿-森五七行館-facebook"></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- 分隔線 -->
+         <div id="footer-line"></div>
+         <!-- 頁腳-copyright -->
+         <div class="footer-copyright">
+            <p>Copyright © 2022, Shen57 Hostel , All Rights Reserved.</p>
+            <p>Website designed by FiveMinusOne & DreamCenter</p>
+         </div>
+      </div>
+   </footer>
+
+   <script src="./js/line.js"></script>
+</body>
+</html>

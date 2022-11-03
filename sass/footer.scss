@@ -1,0 +1,270 @@
+@import 'reset';
+@import 'variable';
+@import 'mixin';
+
+//fontfamily
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+// footer-nav 變版
+@mixin footerpad{
+  @media (max-width: 1100px) {
+      @content
+  }
+};
+
+
+body{
+  font-family: $engFont,$notoTC;
+}
+footer{
+  background-color: var(--darkModeDarkGreen,$shen57DarkGreen);
+  width: 100%;
+}
+#footer{
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  @include phone{
+    max-width: 340px;
+  }
+}
+.footer-nav{
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  padding: 40px 20px;
+  margin: auto;
+  @include flex(space-between,center);
+  @include footerpad{
+    padding: 20px 20px;
+    flex-direction: column;
+  }
+  @include phone{
+    padding: 0;
+    max-width: 360px;
+    padding: unset;
+  }
+}
+// 頁腳-logo
+.footer-logo{
+  height: 100%;
+  @include flex;
+  img{
+    width: 200px;
+    @include footerpad{
+      padding: 30px 0 15px;
+    }
+    @include phone{
+      width: 137px;
+      padding: 40px 0 20px;
+    }
+  }
+}
+// 頁腳-選單盒子
+.footer-menu{
+  @include phone{
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  // 頁腳-分頁欄
+  ul{
+    margin: 16px 0;
+    list-style: none;
+    @include flex(flex-end,center);
+    @include footerpad{
+      padding: 0;
+      @include flex(space-between,center);
+    }
+    @include phone{
+      padding: 0;
+    }
+    li{
+      color: var(--darkModeWhite,$shen57white);
+      padding: 0 25px;
+      font-weight: bold;
+      font-size: $webH5;
+      text-align: center;
+      @include flex;
+      &:hover{
+        text-decoration: underline;
+      }
+      @include footerpad{
+        padding: 0 15px;
+      }
+      @include pad{
+        font-size: $webH6;
+      }
+      @include phone{
+        padding: unset;
+        font-weight: 500;
+        font-size: $phoneH6;
+      }
+    }
+    // menu最後一個li去除右邊的padding
+    #footer-menu-lastli{
+      padding-right: 0;
+      @include footerpad{
+        padding-right: 25px;
+      }
+      @include phone{
+        padding-right: unset;
+      }
+    }
+  }
+  // 頁腳-聯絡資訊
+  .footer-contact{
+    color: var(--darkModeWhite,$shen57white);
+    @include flex(flex-end,center);
+    @include footerpad{
+      @include flex(space-between,center);
+    }
+    @include phone{
+      @include flex(space-between,end);
+    }
+    .footer-text{
+      font-size: $webH6;
+      padding-right: 45px;
+      flex-wrap: wrap;
+      @include flex(start,center);
+      @include footerpad{
+        padding-right: 20px;
+      }
+      @include pad{
+        padding-right: unset;
+      }
+      @include phone{
+        font-size: $phoneH6;
+        @include flex(unset,unset);
+      }
+      p{
+        margin: 0;
+      }
+      span{
+        padding: 0 13px;
+        @include phone{
+          display: none;
+        }
+      }
+    }
+    .footer-community{
+      min-width: 105px;
+      @include flex(space-between,center);
+      // LINE-QRcode按鈕
+      .community-line{
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      // LINE-QRcode彈跳視窗
+      .linebox{
+        background: var(--darkModeWhite,$shen57white);
+        box-shadow: 0 2px 15px 0 rgba(0,0,0,0.6);
+        min-width: 320px;
+        padding: 0;
+        border: 0;
+        margin: auto;
+        text-align: center;
+        // 彈跳視窗-背景
+        &::backdrop{
+          background: var(--darkModeBlack,$shen57black);
+          opacity: 0.6;
+          animation: dialog-bg 0.3s;
+          @keyframes dialog-bg{
+            from {
+              background: rgba(0, 0, 0, 0);
+            }
+          }
+        }
+        // js點擊
+        .linebox-bg{
+          background: #ffffff;
+          padding: 40px 25px;
+        }
+        img{
+          min-width: 250px;
+          padding: 10px;
+          border: 1px solid var(--darkModeGray,$shen57gray);
+          @include phone{
+            min-width: 200px;
+          }
+        }
+        h4,
+        h5{
+          color: var(--darkModeDarkGreen,$shen57DarkGreen);
+          font-size: $webH4;
+          font-weight: bold;
+          margin-top: 40px;
+          @include phone{
+            font-size: $phoneH4;
+          }
+        }
+        h5{
+          margin-top: unset;
+        }
+        .linebox-text{
+          color: var(--darkModeGray,$shen57gray);
+          font-size: $webH6;
+          margin: 15px 0;
+          @include phone{
+            font-size: $phoneH5;
+          }
+          p{
+            margin: 0;
+            padding: 0;
+          }
+        }
+        .qrcode-close{
+          background: var(--darkModeWhite,$shen57white);
+          width: 100px;
+          height: 30px;
+          color: #334c3f;
+          border: 1px solid #334c3f;
+          font-size: $webH5;
+          font-weight: bold;
+          font-family: $notoTC;
+          margin-top: 40px;
+          cursor: pointer;
+          &:hover{
+            background: var(--darkModeDarkGreen,$shen57DarkGreen);
+            color: var(--darkModeWhite,$shen57white);
+          }
+          @include phone{
+            background: var(--darkModeDarkGreen,$shen57DarkGreen);
+            color: var(--darkModeWhite,$shen57white);
+            font-size: $phoneH5;
+          }
+        }
+      }
+      img{
+        width: 26px;
+      }
+    }
+  }
+}
+// 分隔線
+#footer-line{
+  border: 1px solid var(--darkModeLightGreen,$shen57LightGreen);
+}
+// 頁腳-copyright
+.footer-copyright{
+  padding: 20px 0;
+  color: var(--darkModeLightGreen,$shen57LightGreen);
+  font-size: $footerCopyright;
+  flex-wrap: wrap;
+  @include flex;
+  @include phone{
+    flex-direction: column;
+  }
+  p{
+    padding: 0 6px;
+    font-size: $phoneH6;
+    @include footerpad{
+      margin: 0;
+      padding: unset;
+    }
+  }
+}

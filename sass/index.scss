@@ -1,0 +1,1367 @@
+@import "reset";
+@import "variable";
+@import "mixin";
+
+//fontfamily
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+body {
+  font-family: $engFont, $notoTC;
+}
+
+header {
+  position: fixed;
+  top: -75px;
+  left: 0;
+  z-index: 998;
+  transition: 1s;
+  @include phone{
+    top: 0px;
+  }
+}
+
+#index {
+  @include phone{
+    margin-top: 50px;
+  }
+  .wrap-1440 {
+    max-width: 1460px;
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .wrap {
+    max-width: 1120px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  .banner {
+    position: relative;
+    background: url(../img/index/banner.jpg) no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center top;
+
+    @include phone {
+      @media (max-width:468px) {
+        height: 50vh;
+        background-size: cover;
+
+      }
+    }
+  }
+
+  .index-menu {
+    list-style-type: none;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    margin: 40px 0;
+    padding-left: 0;
+
+    @include phone {
+      @media (max-width:468px) {
+        display: none;
+      }
+    }
+
+    li {
+      padding: 0 46px;
+
+      @include s-monitor {
+        @media (max-width:1100px) {
+          padding: 0 30px;
+        }
+      }
+
+      @include pad {
+        @media (max-width:768px) {
+          padding: 0 10px;
+        }
+      }
+
+      a {
+        font-size: $webH5;
+        color: var(--darkModeDarkGreen, $shen57DarkGreen);
+        font-weight: 700;
+
+        @include pad {
+          @media (max-width:768px) {
+            font-size: $phoneH5;
+          }
+        }
+
+        &:hover {
+          color: #FFF;
+          text-shadow: 0 0 5px #26292c;
+        }
+      }
+    }
+  }
+
+  .logo {
+    width: 310px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include pad {
+      @media (max-width:768px) {
+        width: 230px;
+      }
+    }
+
+    @include phone {
+      @media (max-width:468px) {
+        display: none;
+      }
+    }
+  }
+
+  .scroll-btn {
+    position: absolute;
+    bottom: 0;
+    right: 60px;
+    z-index: 99;
+    padding: 10px 10px 120px;
+    overflow: hidden;
+
+    @include phone {
+      @media (max-width:468px) {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      width: 2px;
+      height: 120px;
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 180px;
+      left: 20px;
+      width: 2px;
+      height: 40px;
+      background: var(--darkModeWhite, $shen57white);
+      animation: bnani 4s infinite;
+    }
+  }
+
+  @keyframes bnani {
+    0% {
+      transform: translateY(-100px);
+      opacity: .3;
+    }
+
+    50%,
+    100% {
+      transform: translateY(30px);
+      opacity: 1;
+    }
+  }
+
+  .intro {
+    height: calc(100vh + 75px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include phone {
+      @media (max-width:468px) {
+        height: 50vh;
+        padding-top: 35px;
+        padding-bottom: 60px;
+      }
+    }
+  }
+
+  .intro-content {
+    max-width: 785px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .intro-top {
+    display: flex;
+    justify-content: space-between;
+
+    @include pad {
+      @media (max-width:768px) {
+        max-width: 292px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .intro-en {
+    font-family: $notoTC;
+    font-size: $webH2;
+    font-weight: 700;
+    color: var(--darkModeBrown, $shen57Brown);
+
+    @include pad {
+      @media (max-width:768px) {
+        font-size: $phoneH4;
+      }
+    }
+  }
+
+  .intro-logo {
+    @include pad {
+      @media (max-width:768px) {
+        width: 35px;
+      }
+    }
+  }
+
+  .intro-text {
+    font-family: $notoTC;
+    font-size: $webH5;
+    font-weight: 600;
+    color: var(--darkModeBlack, $shen57black);
+    writing-mode: vertical-rl;
+    line-height: 61px;
+    margin-left: -22px;
+    margin-top: 105px;
+
+    @media (max-width:820px) {
+      margin: 105px auto 0 auto;
+    }
+
+    @include pad {
+      @media (max-width:768px) {
+        line-height: 22px;
+        margin: 30px auto 0 auto;
+      }
+    }
+
+    @include phone {
+      @media (max-width:468px) {
+        font-size: $phoneH5;
+      }
+    }
+
+    p {
+      margin: 0 0 0 60px;
+
+      @media (max-width:820px) {
+        margin: 0 0 0 25px;
+      }
+
+      span {
+        font-weight: 900;
+      }
+
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .rooms {
+    padding-top: 10px;
+  }
+
+  .rooms .wrap-1440 {
+    @include pc1440 {
+      @media (max-width:1440px) {
+        padding: 0;
+      }
+    }
+  }
+
+  .rooms-intro .left {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .rooms-top {
+    max-width: 673px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    margin-left: auto;
+    padding-right: 20px;
+
+    @include phone {
+      @media (max-width:468px) {
+        flex-direction: column;
+        padding-right: 5px;
+      }
+    }
+  }
+
+  .rooms-logo {
+    width: 73px;
+
+    @include phone {
+      @media (max-width:468px) {
+        width: 41px;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .rooms-text {
+    font-size: $webH6;
+    font-weight: 500;
+    color: var(--darkModeGray, $shen57gray);
+    line-height: 28px;
+    width: calc(100% - 73px);
+    margin-left: 24px;
+    margin-top: 20px;
+
+    @include phone {
+      @media (max-width:468px) {
+        font-size: $phoneH6;
+        line-height: 18px;
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+    }
+
+    span {
+      @include phone {
+        @media (max-width:468px) {
+          display: block;
+        }
+      }
+
+      &:nth-child(3) {
+        @include phone {
+          @media (max-width:468px) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    br {
+      @include phone {
+        @media (max-width:468px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .rooms-list {
+    margin-top: 105px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    @include s-monitor {
+      @media (max-width:1100px) {
+        flex-direction: column;
+        padding: 0;
+      }
+    }
+
+    @include phone {
+      @media (max-width:468px) {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .rooms-content {
+    position: relative;
+
+    .wrap {
+      @include s-monitor {
+        @media (max-width:1100px) {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  .rooms-color-bg {
+    background: var(--darkModeBrown, #e1dcd7);
+    width: 1003px;
+    height: 300px;
+    position: absolute;
+    top: -53px;
+    left: 0;
+    z-index: -1;
+
+    @include s-monitor {
+      @media (max-width:1100px) {
+        width: 79%;
+        height: 385px;
+      }
+    }
+
+    @include phone {
+      @media (max-width:468px) {
+        top: -13px;
+      }
+    }
+  }
+
+  .rooms-main {
+    max-width: 520px;
+    position: relative;
+    overflow: hidden;
+    transition: all .3s;
+
+    @include s-monitor {
+      @media (max-width:1100px) {
+        margin: 0 auto;
+        line-height: 0;
+      }
+    }
+
+    &:first-child {
+      margin-right: 20px;
+
+      @include s-monitor {
+        @media (max-width:1100px) {
+          margin: 0 auto;
+        }
+      }
+
+      &:hover {
+        .rooms-title {
+          color: var(--darkModeBlack, $shen57black);
+          transform: translate(-150%, 0);
+
+          @include s-monitor {
+            @media (max-width:1100px) {
+              color: var(--darkModeWhite, $shen57white);
+              transform: translateX(-50%);
+            }
+          }
+        }
+
+        .rooms-arrow {
+          background: url('../img/index/arrow-left-b.svg');
+          left: 60px;
+          transform: translateX(0);
+
+          @include s-monitor {
+            @media (max-width:1100px) {
+              background: url('../img/index/arrow-left-w.svg');
+              left: 50%;
+              transform: translate(-50%, 0);
+            }
+          }
+        }
+      }
+
+      .rooms-arrow {
+        background: url('../img/index/arrow-left-w.svg');
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+      .rooms-spec {
+        text-align: right;
+        margin: 45px 45px 40px 20px;
+      }
+
+      .rooms-poem {
+        text-align: right;
+        margin-right: 45px;
+      }
+    }
+
+    &:last-child {
+      &:hover {
+        .rooms-title {
+          color: var(--darkModeBlack, $shen57black);
+          transform: translate(50%, 0);
+
+          @include s-monitor {
+            @media (max-width:1100px) {
+              color: var(--darkModeWhite, $shen57white);
+              transform: translateX(-50%);
+            }
+          }
+        }
+
+        .rooms-arrow {
+          background: url('../img/index/arrow-right-b.svg');
+          right: 60px;
+          transform: translateX(0);
+
+          @include s-monitor {
+            @media (max-width:1100px) {
+              background: url('../img/index/arrow-right-w.svg');
+              right: 50%;
+              transform: translate(50%, 0);
+            }
+          }
+        }
+      }
+
+      .rooms-arrow {
+        background: url('../img/index/arrow-right-w.svg');
+        right: 50%;
+        transform: translate(50%, 0);
+      }
+
+      .rooms-spec {
+        text-align: left;
+        margin: 45px 20px 40px 45px;
+      }
+
+      .rooms-poem {
+        text-align: left;
+        margin-left: 45px;
+      }
+    }
+
+    &:hover {
+      .rooms-hover-bg {
+        opacity: 1;
+
+        @include s-monitor {
+          @media (max-width:1100px) {
+            display: none;
+          }
+        }
+      }
+
+      .rooms-title-white {
+        opacity: 0;
+
+        @include s-monitor {
+          @media (max-width:1100px) {
+            display: none;
+          }
+        }
+      }
+
+      .rooms-hover {
+        opacity: 1;
+
+        @include s-monitor {
+          @media (max-width:1100px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rooms-arrow {
+      position: absolute;
+      width: 116px;
+      height: 11px;
+      z-index: 9;
+      bottom: 62px;
+      transition: all .3s;
+
+      @include s-monitor {
+        @media (max-width:1100px) {
+          top: 72%;
+          bottom: auto;
+        }
+      }
+    }
+  }
+
+  .rooms-title {
+    font-family: $notoTC;
+    font-size: $webH3;
+    font-weight: 700;
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    color: var(--darkModeWhite, $shen57white);
+    transform: translateX(-50%);
+    z-index: 9;
+    transition: all .3s;
+
+    @include s-monitor {
+      @media (max-width:1100px) {
+        top: 16%;
+        line-height: 30px;
+      }
+    }
+
+    @include phone {
+      @media (max-width:468px) {
+        font-size: $phoneH3;
+      }
+    }
+  }
+
+  .rooms-spec-mobile {
+    display: none;
+
+    @include s-monitor {
+      @media (max-width:1100px) {
+        display: block;
+        font-family: $notoTC;
+        font-size: $phoneH4;
+        font-weight: 400;
+        line-height: 24px;
+        color: var(--darkModeWhite, $shen57white);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    @include phone {
+      @media (max-width:468px) {
+        font-size: $phoneH5;
+      }
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .rooms-hover-bg {
+    background: rgba(255, 255, 255, 0.7);
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    opacity: 0;
+    transition: all .5s;
+  }
+
+  .rooms-hover {
+    font-family: $notoTC;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--darkModeBlack, $shen57black);
+    opacity: 0;
+    transition: all .5s;
+
+    @include s-monitor {
+      @media (max-width:1100px) {
+        display: none;
+      }
+    }
+
+    span {
+      font-weight: 900;
+    }
+  }
+
+  .rooms-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 0;
+    z-index: 30;
+  }
+
+  .news,
+  .location {
+    margin-top: 120px;
+    font-family: $notoTC;
+
+    @include phone {
+      @media (max-width:468px) {
+        margin-top: 80px;
+      }
+    }
+  }
+
+  .news .wrap {
+    max-width: 1160px;
+
+    @include phone {
+      @media (max-width:468px) {
+        padding: 0;
+      }
+    }
+  }
+
+  .news-content-main {
+    display: flex;
+
+    @include pad {
+      @media (max-width:768px) {
+        flex-direction: column-reverse;
+        position: relative;
+      }
+    }
+
+    .left {
+      max-width: 680px;
+      width: 100%;
+    }
+  }
+
+  .news-title,
+  .location-title {
+    display: flex;
+    align-items: center;
+
+    @include pad {
+      @media (max-width:768px) {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+      }
+    }
+  }
+
+  .news-title-pic {
+    margin-right: 10px;
+
+    @include pad {
+      @media (max-width:768px) {
+        width: 60px;
+      }
+    }
+
+    @include phone {
+      @media (max-width:468px) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .news-title-text {
+    font-family: $notoTC;
+    font-size: $webH5;
+    font-weight: 500;
+    color: var(--darkModeDarkBrown, $shen57DarkBrown);
+    position: relative;
+    padding-bottom: 10px;
+
+    @include pad {
+      @media (max-width:768px) {
+        width: 100%;
+      }
+    }
+
+    @include phone {
+      @media (max-width:468px) {
+        font-size: $phoneH5;
+        padding-bottom: 5px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 564px;
+      height: 1px;
+      background: var(--darkModeBlack, $shen57black);
+      bottom: 0;
+      left: 0;
+
+      @include pad {
+        @media (max-width:768px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .news-date {
+    font-size: $webH6;
+    font-weight: 700;
+    color: var(--darkModeDarkGreen, $shen57DarkGreen);
+    margin-bottom: 10px;
+
+    @include phone {
+      @media (max-width:468px) {
+        font-size: $phoneH6;
+      }
+    }
+  }
+
+  .news-name {
+    font-size: $webH2;
+    font-weight: 700;
+    color: var(--darkModeDarkGreen, $shen57DarkGreen);
+    letter-spacing: 0.05em;
+
+    @include phone {
+      @media (max-width:468px) {
+        font-size: $phoneH4;
+      }
+    }
+  }
+
+  .news-intro {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--darkModeGray, #767676);
+    max-width: 556px;
+    line-height: 23px;
+    letter-spacing: 0.075em;
+    margin-top: 25px;
+    margin-bottom: 28px;
+    height: 180px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    overflow: hidden;
+
+    @include s-monitor {
+      @media (max-width:1100px) {
+        height: 108px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        padding-right: 30px;
+      }
+    }
+
+    @include phone {
+      @media (max-width:468px) {
+        font-size: $phoneH6;
+        padding-right: 10px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .news-content-pic {
+    margin-top: 59px;
+    max-width: 420px;
+    height: 420px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+
+    @include pad {
+      @media (max-width:768px) {
+        text-align: center;
+        margin: 59px auto 0 auto;
+      }
+    }
+
+    @include phone {
+      @media (max-width:468px) {
+        margin-top: 55px;
+      }
+    }
+  }
+
+  .news-content {
+    margin-left: 70px;
+    margin-top: 50px;
+
+    @include pad {
+      @media (max-width:768px) {
+        margin-top: 20px;
+      }
+    }
+
+    @include phone {
+      @media (max-width:468px) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .more-btn {
+    display: flex;
+    align-items: center;
+    font-size: $webH5;
+    font-weight: 900;
+    color: var(--darkModeDarkGreen, #334c3f);
+    border-bottom: 1px solid var(--darkModeDarkGreen, #334c3f);
+    letter-spacing: 0.2em;
+    padding: 7px 5px;
+    max-width: 106px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 10;
+
+    &:hover {
+      color: var(--darkModeWhite, $shen57white);
+
+      &::before {
+        opacity: 1;
+        width: 130%;
+      }
+
+      &::after {
+        content: url(../img/index/more-w.png);
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 0%;
+      height: 100%;
+      display: block;
+      background: var(--darkModeDarkGreen, $shen57DarkGreen);
+      position: absolute;
+      left: -10%;
+      opacity: 1;
+      top: 0;
+      z-index: -12;
+      -webkit-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+      -moz-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+      -o-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+      -ms-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+      transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    &::after {
+      content: url(../img/index/more-g.png);
+      position: absolute;
+      top: calc(50% - 10px);
+      right: 4px;
+    }
+  }
+
+  .news-more-btn {
+    margin-left: auto;
+    margin-right: 55px;
+
+    @include phone {
+      @media (max-width:468px) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .story {
+    margin-top: 115px;
+    position: relative;
+    padding-top: 207px;
+    overflow: hidden;
+
+    @include pad {
+      @media (max-width:768px) {
+        padding-top: 0;
+      }
+    }
+
+    .wrap-1440 {
+      @include pad {
+        @media (max-width:768px) {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .story-bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    @include pad {
+      @media (max-width:768px) {
+        position: relative;
+        z-index: 1;
+        line-height: 0;
+        height: 300px;
+        width: auto;
+        background: url(../img/index/index02.png) center center no-repeat;
+        background-size: cover;
+      }
+    }
+
+    img {
+      @include pad {
+        @media (max-width:768px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .story-content {
+    background-color: var(--darkModeBrown, #e1dcd7);
+    width: 952px;
+    height: 293px;
+    margin-left: auto;
+    padding: 55px 20px 20px 80px;
+
+
+    @include s-monitor {
+      @media (max-width:1100px) {
+        width: 100%;
+      }
+    }
+
+    @include pad {
+      @media (max-width:768px) {
+        padding: 25px 20px 75px 25px;
+        height: auto;
+      }
+    }
+  }
+
+  .story-title {
+    display: flex;
+    align-items: flex-end;
+    max-width: 685px;
+    width: 100%;
+
+    @include pad {
+      @media (max-width:768px) {
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .story-title-pic {
+    margin-bottom: 80px;
+    margin-right: 25px;
+    max-width: 71px;
+    width: 100%;
+
+    @include pad {
+      @media (max-width:768px) {
+        max-width: 40px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .story-text {
+    max-width: 450px;
+    width: 100%;
+    font-size: $webH6;
+    font-weight: 500;
+    line-height: 28px;
+    color: var(--darkModeGray, $shen57gray);
+    margin-right: 40px;
+
+    @include pad {
+      @media (max-width:768px) {
+        font-size: $phoneH6;
+        line-height: 18px;
+      }
+    }
+
+    p {
+      margin: 0;
+
+      b {
+        font-weight: 900;
+      }
+
+      span {
+        @include pad {
+          @media (max-width:768px) {
+            display: block;
+          }
+        }
+
+        &:nth-of-type(3) {
+          @include pad {
+            @media (max-width:768px) {
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+
+      br {
+        @include pad {
+          @media (max-width:768px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .story-more-btn {
+    margin-bottom: 8px;
+
+    @include pad {
+      @media (max-width:768px) {
+        position: absolute;
+        bottom: 4%;
+        right: 10px;
+      }
+    }
+  }
+
+  .location {
+    margin-bottom: 95px;
+
+    @include phone {
+      @media (max-width:468px) {
+        margin-bottom: 45px;
+      }
+    }
+
+    .wrap {
+      @include phone {
+        @media (max-width:468px) {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .location-content-main {
+    display: flex;
+
+    @include pad {
+      @media (max-width:768px) {
+        position: relative;
+        flex-direction: column-reverse;
+        width: 100%;
+      }
+    }
+
+    .left {
+      max-width: 660px;
+      width: 100%;
+
+      @include s-monitor {
+        @media (max-width:1100px) {
+          max-width: 570px;
+        }
+      }
+
+      @include pad {
+        max-width: unset;
+      }
+    }
+  }
+
+  .location-title-pic {
+    margin-right: 15px;
+
+    @include pad {
+      @media (max-width:768px) {
+        width: 35px;
+      }
+    }
+
+    @include pad {
+      @media (max-width:768px) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .location-title-text {
+    font-family: $notoTC;
+    font-size: $webH5;
+    font-weight: 500;
+    color: var(--darkModeDarkBrown, $shen57DarkBrown);
+    position: relative;
+    padding-bottom: 10px;
+
+    @include pad {
+      @media (max-width:768px) {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 578px;
+      height: 1px;
+      background: var(--darkModeBlack, $shen57black);
+      bottom: 0;
+      left: 0;
+
+      @include pad {
+        @media (max-width:768px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .location-content {
+    margin-left: 50px;
+    margin-top: 16px;
+    margin-right: 3px;
+
+    @include pad {
+      @media (max-width:768px) {
+        margin-left: 0;
+      }
+    }
+
+    .location-info {
+      &:last-of-type {
+        @include phone {
+          @media (max-width:468px) {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  .location-info {
+    display: flex;
+    align-items: center;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--darkModeBrown, $shen57Brown);
+
+    @include s-monitor {
+      @media (max-width:1100px) {
+        padding: 14px 0;
+      }
+    }
+
+    @include pad {
+      @media (max-width:768px) {
+        padding: 18px 10px;
+        max-width: 500px;
+        margin: auto;
+      }
+    }
+  }
+
+  .info-title {
+    font-size: $webH4;
+    font-weight: 700;
+    color: var(--darkModeDarkGreen, $shen57DarkGreen);
+    width: 80px;
+    margin-right: 45px;
+
+    @include s-monitor {
+      @media (max-width:1100px) {
+        font-size: $phoneH4;
+        margin-right: 10px;
+      }
+    }
+
+    @include pad {
+      @media (max-width:768px) {
+        font-size: $phoneH5;
+        width: 58px;
+      }
+    }
+  }
+
+  .info-text {
+    font-size: $webH6;
+    font-weight: 500;
+    color: var(--darkModeGray, $shen57gray);
+    width: calc(100% - 125px);
+
+    @include s-monitor {
+      @media (max-width:1100px) {
+        font-size: $phoneH6;
+      }
+    }
+
+    @include pad {
+      @media (max-width:768px) {
+        width: calc(100% - 58px);
+      }
+    }
+
+    a {
+      color: var(--darkModeGray, $shen57gray);
+    }
+  }
+
+  .info-text-map {
+    display: flex;
+    align-items: center;
+  }
+
+  .location-info-pic {
+    margin-top: 69px;
+    z-index: 1;
+
+    @include pad {
+      @media (max-width:768px) {
+        text-align: center;
+      }
+    }
+  }
+
+  .info-map-link {
+    font-size: $webH6;
+    font-weight: 700;
+    color: var(--darkModeDarkGreen, $shen57DarkGreen) !important;
+    border: 2px solid var(--darkModeDarkGreen, $shen57DarkGreen);
+    margin-left: 95px;
+    padding: 1px 8px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 10;
+
+    @include s-monitor {
+      @media (max-width:1100px) {
+        font-size: $phoneH5;
+        margin-left: auto;
+        margin-right: 20px;
+      }
+    }
+
+    @include pad {
+      @media (max-width:768px) {
+        margin-left: auto;
+        margin-right: 0;
+        padding: 1px 5px;
+      }
+    }
+
+    span {
+      @include s-monitor {
+        @media (max-width:1100px) {
+          display: none;
+        }
+      }
+    }
+
+    &:hover {
+      color: var(--darkModeWhite, $shen57white) !important;
+
+      &::before {
+        opacity: 1;
+        width: 130%;
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 0%;
+      height: 100%;
+      display: block;
+      background: var(--darkModeDarkGreen, $shen57DarkGreen);
+      position: absolute;
+      left: -10%;
+      opacity: 1;
+      top: 0;
+      z-index: -12;
+      -webkit-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+      -moz-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+      -o-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+      -ms-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+      transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+  }
+}

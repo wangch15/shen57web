@@ -1,0 +1,435 @@
+@import 'reset';
+@import 'variable';
+@import 'mixin';
+
+//fontfamily
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+@mixin roomspad{
+  @media (max-width:1000px) {
+      @content
+  }
+};
+
+@mixin pad700{
+  @media (max-width:700px) {
+      @content
+  }
+};
+
+@mixin phone570{
+  @media (max-width:570px) {
+      @content
+  }
+};
+
+:root{
+  --pv-img360: calc(100vw / 360);
+}
+
+body{
+  font-family: $engFont,$notoTC;
+}
+
+#room7{
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  @include phone{
+    margin-top: 50px;
+    padding-top: 30px;
+  }
+}
+// 宿-幻燈片
+.r-swiper{
+  background-color: rgb(247, 255, 174);
+  width: 100%;
+  height: 550px;
+  margin-top: 50px;
+}
+
+// 宿-房間資訊
+.r-container{
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+  @include roomspad{
+    padding: 0 50px;
+  }
+  @include pad700{
+    padding: 0 30px;
+  }
+  @include phone570{
+    padding: 0 20px;
+  }
+  @include phone{
+    padding: 0 10px;
+  }
+  h2{
+    color: var(--darkModeDarkGreen,$shen57DarkGreen);
+    font-size: $webH2;
+    font-weight: bold;
+    padding-top: 60px;
+    @include flex;
+    @include roomspad{
+      font-size: $webH4;
+      padding-top: 35px;
+    }
+  }
+  .r-content{
+    padding: 80px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    @include roomspad{
+      padding: 25px 0;
+      flex-direction: column-reverse;
+    }
+    // 宿-上方平面圖
+    .r-pattern{
+      width: 50%;
+      height: 450px;
+      @include flex(end,unset);
+      flex-wrap: wrap;
+      @include roomspad{
+        width: 100%;
+        height: 600px;
+        margin-top: 50px;
+        @include flex;
+        flex-direction: column;
+      }
+      @include pad700{
+        margin-top: 40px;
+        height: 450px;
+      }
+      @include phone570{
+        margin-top: 30px;
+        height: 400px;
+      }
+      // 宿-平面圖
+      .r-first-floor,
+      .r-second-floor{
+        height: calc((100% - 40px) / 2);
+        display: flex;
+        @include roomspad{
+          width: 500px;
+          @include flex;
+        }
+        @include pad700{
+          width: 400px;
+        }
+        @include phone570{
+          width: 350px;
+        }
+        @include phone{
+          width: 300px;
+          @include flex(unset,start);
+          flex-direction: column;
+        }
+        h4{
+          color: var(--darkModeDarkGreen,$shen57DarkGreen);
+          font-size: $webH4;
+          font-weight: bold;
+          padding-right: 30px;
+          @include roomspad{
+            padding-right: 20px;
+          }
+          @include phone570{
+            font-size: $webH5;
+          }
+          @include phone{
+            font-size: $phoneH5;
+            padding-bottom: 8px;
+            @include flex(space-between,start);
+          }
+        }
+      }
+      .r-first-floor{
+        margin-bottom: 40px;
+      }
+    }
+    // 宿-上方資訊
+    .r-info-top{
+      width: 50%;
+      height: 450px;
+      padding-right: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      @include roomspad{
+        width: 100%;
+        padding-left: unset;
+        display: flex(space-between,center);
+      }
+      .r-info-top-box{
+        width: 100%;
+        border-bottom: 1px solid #E1DCD7;
+        @include flex(start,center);
+        &:last-child{
+          border-bottom: unset;
+        }
+        .r-info-top-title{
+          color: var(--darkModeDarkGreen,$shen57DarkGreen);
+          min-width: 100px;
+          font-size: $webH4;
+          font-weight: bold;
+          padding-right: 20px;
+          @include phone570{
+            font-size: $webH5;
+            padding: 0 10px;
+          }
+          @include phone{
+            min-width: 80px;
+            font-size: $phoneH5;
+          }
+        }
+        .r-info-top-content{
+          color: var(--darkModeGray,$shen57gray);
+          font-size: $webH6;
+          @include roomspad{
+            display: flex;
+            flex-wrap: wrap;
+          }
+          @include phone{
+            font-size: $phoneH5;
+          }
+        }
+        .r-info-link-box{
+          width: 100%;
+          @include flex(space-between,start);
+        }
+        .r-info-map-link{
+          min-width: 80px;
+          max-height: 25px;
+          color: var(--darkModeDarkGreen, $shen57DarkGreen);
+          font-size: $webH6;
+          font-weight: bold;
+          border: 2px solid var(--darkModeDarkGreen, $shen57DarkGreen);
+          padding: 0 8px;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.3s;
+          z-index: 10;
+          @include pad700{
+            min-width: 44px;
+            font-size: $phoneH5;
+            margin-right: 10px;
+            padding: 0 6px;
+          }
+          &:hover{
+            color: var(--darkModeWhite, $shen57white);
+          }
+          &::before{
+            content: '';
+            width: 0%;
+            height: 100%;
+            display: block;
+            background: var(--darkModeDarkGreen, $shen57DarkGreen);
+            position: absolute;
+            opacity: 1;
+            top: 0;
+            left: -10%;
+            z-index: -12;
+            -webkit-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+            -moz-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+            -o-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+            -ms-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+            transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+            @include pad700{
+              left: -15%;
+            }
+          }
+          &:hover::before{
+            opacity: 1;
+            width: 120%;
+          }
+          span::after{
+            content: '訂房流程';
+            @include pad700(){
+              content: '訂房';
+            }
+          }
+        }
+      }
+    }
+  }
+  // 宿-下方資訊
+  .r-info-bottom{
+    width: 100%;
+    padding-bottom: 45px;
+    @include flex(space-between,start);
+    flex-wrap: wrap;
+    @include roomspad{
+      padding: 30px 0;
+    }
+    @include phone570{
+      padding: 0 10px 20px 10px;
+    }
+    .r-info-bottom-box{
+      width: 100%;
+      padding: 0 70px;
+      @include flex(start,start);
+      @include roomspad{
+        padding: unset;
+      }
+      @include phone570{
+        padding: 15px 0;
+        flex-direction: column;
+      }
+      .r-info-bottom-title{
+        min-width: 100px;
+        color: var(--darkModeDarkGreen,$shen57DarkGreen);
+        font-size: $webH4;
+        font-weight: bold;
+        @include phone570{
+          min-width: 90px;
+          font-size: $webH5;
+        }
+        @include phone{
+          min-width: 80px;
+          font-size: $phoneH5;
+        }
+      }
+      .r-info-bottom-content{
+        color: var(--darkModeGray,$shen57gray);
+        font-size: $webH6;
+        line-height: 25px;
+        padding-bottom: 55px;
+        @include roomspad{
+          padding-bottom: 35px;
+        }
+        @include phone570{
+          padding: 15px 7px;
+        }
+        @include phone{
+          font-size: $phoneH6;
+          padding: 10px 7px;
+        }
+        .r-bottom-content-box{
+          @include flex(unset,unset);
+          span:first-child{
+            min-width: 45px;
+            @include phone{
+              min-width: 36px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// 宿-其他房型
+.r-rooms{
+  width: 100%;
+  max-width: 1100px;
+  height: 215px;
+  margin: auto;
+  margin-bottom: 100px;
+  @include flex(space-between,center);
+  @include roomspad{
+    height: 435px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    padding: 0 30px;
+  }
+  @include phone570{
+    height: 295px;
+    margin-bottom: 60px;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  .r-rooms-shen5,
+  .r-rooms-shen7{
+    width: calc((100% - 30px) / 2);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 20px;
+    @include roomspad{
+      width: 100%;
+      height: calc((100% - 5px) / 2);
+    }
+    @include phone570{
+      height: 145px;
+      padding: 18px 18px;
+    }
+    .r-rooms-shen-text{
+      width: 100%;
+      height: 100%;
+      padding: 20px 20px;
+      @include phone570{
+        padding: unset;
+      }
+      .r-rooms-shen-text-top{
+        color: var(--darkModeWhite,$shen57white);
+        width: 100%;
+        height: 50%;
+        font-weight: bold;
+        font-size: $webH4;
+        @include flex(space-between,start);
+        flex-direction: row-reverse;
+        @include phone570{
+          font-size: $phoneH4;
+        }
+        &:hover{
+          color: var(--darkModeBlack,$shen57black);
+        }
+      }
+      .r-rooms-shen-text-bottom{
+        color: var(--darkModeWhite,$shen57white);
+        width: 100%;
+        height: 50%;
+        font-size: $webH6;
+        @include flex(space-between,end);
+        flex-direction: row-reverse;
+        @include phone570{
+          font-size: $phoneH6;
+        }
+        span{
+          text-align: right;
+        }
+        img{
+          width: 112px;
+          padding-bottom: 5px;
+        }
+      }
+      &:hover{
+        background-color: var(--darkModeWhite,$shen57white);
+        opacity: 0.6;
+        color: var(--darkModeBlack,$shen57black);
+        .r-shen5-text{
+          color: var(--darkModeBlack,$shen57black);
+        }
+        .r-rooms-shen-text-top{
+          color: var(--darkModeBlack,$shen57black);
+        }
+        .r-rooms-shen-text-bottom{
+          color: var(--darkModeBlack,$shen57black);
+          .bottom-img{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .r-rooms-shen5{
+    background-image: url("../img/rooms/room5-cover.jpg");
+  }
+  .r-rooms-shen7{
+    background-image: url("../img/rooms/room7-cover.jpg");
+    .r-rooms-shen-text{
+      @include flex;
+      .r-rooms-shen-text-top{
+        height: 100%;
+        @include flex;
+        flex-direction: column;
+        span{
+          height: 50%;
+          @include flex;
+        }
+      }
+    }
+  }
+}

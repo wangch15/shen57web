@@ -1,0 +1,253 @@
+@import "reset";
+@import "variable";
+@import "mixin";
+
+//fontfamily
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+:root{
+  --pv-img:calc(100vw / 468);
+}
+
+body {
+  font-family: $engFont, $notoTC;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+#news {
+  width: 100%;
+  @include flex;
+  @include s-monitor{
+    padding: 0 40px;
+  }
+  @include pad{
+    padding: 0;
+  }
+  @include phone{
+    margin-top: 50px;
+  }
+  .container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 75px 0 80px;
+
+    @include pad{
+      width: 100%;
+      padding: 30px 40px 40px;
+    }
+
+    @include phone{
+      width: 360px;
+      padding: 30px 10px 40px;
+    }
+
+    //訊-頁面標題
+    .title-area {
+      width: 100%;
+      @include flex(start, center);
+
+      //訊書法文字
+      img {
+        width: 95px;
+        margin-right: 15px;
+        pointer-events: none;
+        @include phone{
+          width: 60px;
+          margin-right: 6px;
+        }
+      }
+      .title-area-infobox {
+        flex: 1;
+        border-bottom: 1px solid var(--darkModeBlack, $shen57black);
+        h5 {
+          font-size: $webH5;
+          line-height: 28px;
+          font-weight: 500;
+          color: var(--darkModeDarkBrown, $shen57DarkBrown);
+          @include phone{
+            font-size: $phoneH5;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+    //最新消息內容
+    .news-info-container {
+      @include flex(start, start);
+      flex-direction: column;
+
+      //主要最新消息&一般最新消息共同設置
+      .main-news-area,
+      .sub-news-area {
+        width: 100%;
+        @include flex(start, start);
+        border-bottom: 1px solid var(--darkModeGray, $shen57gray);
+        @include pad{
+          flex-direction: column;
+        }
+      }
+
+      //主打消息特殊設置-圖片CSS
+      .main-news-area {
+        padding: 40px 20px 60px;
+
+        @include phone{
+          padding: 20px 0 30px;
+        }
+        .main-news-img{
+          width: 420px;
+          height: 420px;
+          margin-right: 35px;
+          background-size: cover;
+          background-position: center;
+          @include s-monitor{
+            width: calc(420 * var(--ps));
+            height: calc(420 * var(--ps));
+          }
+
+          @include pad{
+            width: 100%;
+            height: calc(340 * var(--pp));
+            margin-right:0;
+            margin-bottom: 35px;
+          }
+
+          @include phone{
+            width: 100%;
+            height: calc(230 * var(--pv-img));
+            background-repeat: no-repeat;
+            margin-right: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+      //一般消息特殊設置-圖片CSS
+      .sub-news-area {
+        padding: 30px 20px;
+        @include flex(start, start);
+        flex-direction: row-reverse;
+        @include pad{
+          flex-direction: column;
+        }
+        @include phone{
+          padding: 20px 0 20px;
+        }
+        .sub-news-img{
+          background-image: url(../img/index-news-cover.jpg);
+          width: 350px;
+          height: 350px;
+          margin-left: 35px;
+          background-position:center ;
+          background-size: cover;
+          @include s-monitor{
+            width: calc(350 * var(--ps));
+            height: calc(350 * var(--ps));
+          }
+
+          @include pad{
+            width: 100%;
+            height: calc(340 * var(--pp));
+            margin-left:0;
+            margin-bottom: 35px;
+          }
+
+          @include phone{
+            width: 100%;
+            height: calc(230 * var(--pv-img));
+            background-repeat: no-repeat;
+            margin-right: 0;
+            margin-bottom: 0;
+          }
+        }
+        &:last-child{
+          border-bottom: none;
+        }
+      }
+
+      .main-news-infobox,.sub-news-infobox{
+        flex: 1;
+        //內文日期字體大小設置
+        .titlebox {
+          .title-date {
+            font-size: $webH6;
+            color: var(--darkModeDarkGreen, $shen57DarkGreen);
+            font-weight: 600;
+            line-height: 20px;
+            margin: 8px 0;
+            @include phone{
+              font-size: $phoneH6;
+              margin: 12px 0 0;
+            }
+          }
+          .title-words {
+            color: var(--darkModeDarkGreen, $shen57DarkGreen);
+            font-weight: 600;
+            line-height: 35px;
+          }
+        }
+        
+        //內文字體大小設置
+        .info-content {
+          font-size: $webH6;
+          line-height: 23px;
+          color: var(--darkModeGray, $shen57gray);
+          letter-spacing: 2px;
+          // letter-spacing:7.5%;
+          @include phone{
+            font-size: $phoneH6;
+            line-height: 16px;
+            letter-spacing: 1px;
+          }
+          p {
+            margin: 0;
+          }
+          ol {
+            padding-left:25px;
+            margin: 0;
+            @include phone{
+              padding-left:20px;
+            }
+            li {
+              font-size: $webH6;
+              line-height: 23px;
+              @include phone{
+                font-size: $phoneH6;
+              }
+            }
+          }
+        }
+      }
+      //內文標題字體大小設置
+      .main-news-infobox{
+        .titlebox {
+          .title-words {
+            font-size: $webH2;
+            margin: 8px 0 35px;
+
+            @include phone{
+              font-size: $phoneH4;
+              margin: 0px 0 15px;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+      .sub-news-infobox{
+        .titlebox {
+          .title-words {
+            font-size: $webH3;
+            margin: 8px 0 30px;
+            @include phone{
+              font-size: $phoneH4;
+              margin: 0px 0 15px;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>森五七行館 - 訂 Booking</title>
+   <link rel="stylesheet" href="./css/header.css">
+   <link rel="stylesheet" href="./css/booking.css">
+   <link rel="stylesheet" href="./css/footer.css">
+   <link rel="icon" type="image/svg" href="./img/shen57-favicon.svg" media="(prefers-color-scheme: light)">
+   <link rel="icon" type="image/svg" href="./img/shen57-favicon-w.svg" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+   
+   <!-- 頁首 -->
+   <header>
+      <div id="header-nav">
+         <!-- 頁首-logo -->
+         <div class="header-logo">
+            <a href="/"><img src="./img/header/header-logo.svg" alt="屏東-恆春民宿-森五七行館"></a>
+         </div>
+         <!-- 頁首-菜單 -->
+         <div class="header-menu">
+            <ul>
+               <a href="/news.html"><li>訊 News</li></a>
+               <a href="/room5.html"><li>宿 Rooms</li></a>
+               <a href="/booking.html"><li>訂 Booking</li></a>
+               <a href="/story.html"><li>源 Story</li></a>
+               <a href="/location.html"><li>行 Location</li></a>
+            </ul>
+         </div>
+         <!-- 頁首-隱藏盒子 -->
+         <div class="header-ham">
+            <div class="header-dark-btn"></div>
+            <div class="header-ham-btn">
+               <!-- hambox -->
+               <div id="header-hambox">
+                  <div class="hambox-menu">
+                     <!-- hambox-logo -->
+                     <div class="hambox-logobox">
+                        <a href="/"><img src="./img/header/header-hamlogo.svg" class="hambox-logo" alt="屏東-恆春民宿-森五七行館"></a>
+                        <div class="hambox-btn"></div>
+                     </div>
+                     <div class="hambox-infobox">
+                        <!-- hambox-shen57資訊 -->
+                        <div class="hambox-info">
+                           <!-- hambox-nav -->
+                           <div class="hambox-info-left">
+                              <ul>
+                                 <a href="/news.html"><li>訊 News<span>˙</span></li></a>
+                                 <a href="/room5.html"><li>宿 Rooms<span>˙</span></li></a>
+                                 <a href="/booking.html"><li>訂 Booking<span>˙</span></li></a>
+                                 <a href="/story.html"><li>源 Story<span>˙</span></li></a>
+                                 <a href="/location.html"><li>行 Location<span>˙</span></li></a>
+                              </ul>
+                           </div>
+                           <!-- hambox-關於 -->
+                           <div class="hambox-info-right">
+                              <div class="info-right-about">
+                                 <div class="info-right-community">
+                                    <p>關於&emsp;森˙五七行館</p>
+                                    <div class="community-img">
+                                       <!-- LINE-QRcode按鈕 -->
+                                       <button type="button" class="community-line qrcode-open" onclick="openwindow()"><img src="./img/header/line.svg" alt="屏東-恆春民宿-森五七行館-line"></button>
+                                          <!-- LINE-QRcode彈跳視窗 -->
+                                          <dialog class="linebox show-dialog">
+                                             <!-- linebox-bg 視窗內背景 -->
+                                             <div class="linebox-bg">
+                                                <img src="./img/footer/shen57-line-link.jpg" alt="">
+                                                <h4>透過行動條碼加入LINE好友</h4>
+                                                <div class="linebox-text">
+                                                   <p>請在LINE應用程式上開啟「好友」分頁，點選畫面右上方用來加入好友的圖示，</p>
+                                                   <p>接著點選「行動條碼」，然後掃描此行動條碼。</p>
+                                                </div>
+                                                <h5>透過LINE ID新增LINE好友：shen57hostel</h5>
+                                                <button type="button" class="qrcode-close" onclick="closewindow()">關閉視窗</button>
+                                             </div>
+                                          </dialog>
+                                       <a href="https://www.instagram.com/shen57hostel/" target="_blank"><img src="./img/header/instagram.svg" alt="屏東-恆春民宿-森五七行館-instagram"></a>
+                                       <a href="https://www.facebook.com/shen57hostel2016" target="_blank"><img src="./img/header/facebook.svg" alt="屏東-恆春民宿-森五七行館-facebook"></a>
+                                    </div>
+                                 </div>
+                                 <div class="info-right-box">
+                                    <div class="info-right-title">行館地址</div>
+                                    <div class="info-right-content">946 屏東縣恆春鎮大光里砂尾路68-2號</div>
+                                 </div>
+                                 <div class="info-right-box">
+                                    <div class="info-right-title">聯絡電話</div>
+                                    <div class="info-right-content">(08) 886-7658 / 0961-333-857</div>
+                                 </div>
+                                 <div class="info-right-box">
+                                    <div class="info-right-title">電子信箱</div>
+                                    <div class="info-right-content">shen57hostel@gmail.com</div>
+                                 </div>
+                                 <div class="info-right-box">
+                                    <div class="info-right-title">訂房時段</div>
+                                    <div class="info-right-content">每日 09 : 00 am ~ 09 : 00 pm</div>
+                                 </div>
+                                 <div class="info-right-box">
+                                    <div class="info-right-title">服&emsp;&emsp;務</div>
+                                    <div class="info-right-content">
+                                       <span>提供優惠汽機車租賃、包車旅遊導覽服務資訊。</span>
+                                       <span>提供旅遊資訊及諮詢服務。</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- hambox-shen57房型 -->
+                        <div class="hambox-rooms">
+                           <div class="hambox-bottom-rooms">
+                              <a href="/room5.html" class="hambox-rooms-shen5">
+                                 <div class="hambox-shen-text">
+                                    <div class="hambox-shen-text-top">
+                                       <span class="text-hidden">參考房型</span>
+                                       <span class="text-move-left">森5 / 時尚館</span>
+                                    </div>
+                                    <div class="hambox-shen-text-bottom">
+                                       <span class="text-hidden">本房型為 <b>獨棟別墅</b> <br>室內坪數 <b>50</b> 坪，室外約 <b>150</b> 坪</span>
+                                       <div>
+                                          <img src="./img/booking/room5-arrow-white.svg" alt="屏東-恆春民宿-前往森五時尚館">
+                                          <img src="./img/booking/room5-arrow-black.svg" alt="屏東-恆春民宿-前往森五時尚館" class="bottom-img-left" hidden>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </a>
+                              <a href="/room7.html" class="hambox-rooms-shen7">
+                                 <div class="hambox-shen-text">
+                                    <div class="hambox-shen-text-top">
+                                       <span class="text-hidden">參考房型</span>
+                                       <span class="text-move-right">森7 / 和風館</span>
+                                    </div>
+                                    <div class="hambox-shen-text-bottom">
+                                       <span class="text-hidden">本房型為 <b>獨棟別墅</b> <br>室內坪數 <b>50</b> 坪，室外約 <b>150</b> 坪</span>
+                                       <img src="./img/booking/room7-arrow-white.svg" alt="屏東-恆春民宿-前往森七和風館">
+                                       <img src="./img/booking/room7-arrow-black.svg" alt="屏東-恆春民宿-前往森七和風館" class="bottom-img-right" hidden>
+                                    </div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <!-- 訂 -->
+   <main id="booking">
+      <!-- 訂-預約 -->
+      <div class="b-reserve">
+         <!-- 訂-流程區塊 -->
+         <div class="b-step">
+            <div class="b-step-card">
+               <div class="b-step-bg-left">
+                  <div class="b-step-left-box">
+                     <img src="./img/booking/booking--01-icon.svg" alt="屏東-恆春民宿-森五七行館-來電預約">
+                     <!-- 訂-流程-內容 -->
+                     <div class="b-step-content">
+                        <div>
+                           <!-- 訂-流程-來電預約 -->
+                           <h4>來電預約</h4>
+                           <div id="b-step-contact">
+                              <div class="b-step-contact-name">
+                                 <div>
+                                    <span>電話預約</span>
+                                 </div>
+                                 <div>
+                                    <span>Line ID</span>
+                                 </div>
+                                 <div>
+                                    <span>Facebook</span>
+                                 </div>
+                              </div>
+                              <div class="b-step-contact-message">
+                                 <div>
+                                    <span>0961-333-857</span>
+                                 </div>
+                                 <div class="message-line">
+                                    <span>
+                                       shen57hostel
+                                    </span>
+                                    <div>
+                                    <!-- LINE-QRcode按鈕 -->
+                                    <button type="button" class="community-line qr-open" onclick="openwindow()"><img src="./img/footer/line.svg" alt="屏東-恆春民宿-森五七行館-line"></button>
+                                       <!-- LINE-QRcode彈跳視窗 -->
+                                       <dialog class="linebox show-dialog">
+                                          <!-- linebox-bg 視窗內背景 -->
+                                          <div class="linebox-bg">
+                                             <img src="./img/footer/shen57-line-link.jpg" alt="">
+                                             <h4>透過行動條碼加入LINE好友</h4>
+                                             <div class="linebox-text">
+                                                <p>請在LINE應用程式上開啟「好友」分頁，點選畫面右上方用來加入好友的圖示，</p>
+                                                <p>接著點選「行動條碼」，然後掃描此行動條碼。</p>
+                                             </div>
+                                             <h5>透過LINE ID新增LINE好友：shen57hostel</h5>
+                                             <button type="button" class="qrcode-close qr-close" onclick="closewindow()">關閉視窗</button>
+                                          </div>
+                                       </dialog>
+                                    </div>
+                                 </div>
+                                 <div class="message-facebook">
+                                    <span><a href="https://www.facebook.com/shen57hostel2016" target="_blank">森˙五七行館</a></span>
+                                    <div class="message-facebook-triangle">
+                                       <img src="./img/booking/triangle-white-right.svg" alt="前往森五七行館-facebook">
+                                       <img src="./img/booking/triangle-white-right.svg" alt="前往森五七行館-facebook">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="b-step-contact-time">
+                           <span>訂房時間</span><span>每日9:00am-9:00pm</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="b-step-card">
+               <div class="b-step-bg-middle">
+                  <div class="b-step-middle-box">
+                     <img src="./img/booking/booking--02-icon.svg" alt="屏東-恆春民宿-森五七行館-確認資訊">
+                     <!-- 訂-流程-內容 -->
+                     <div class="b-step-content">
+                        <!-- 訂-流程-內容-確認資訊 -->
+                        <div>
+                           <h4>確認資訊</h4>
+                           <p class="step-content-text">確認入住日期、房型有無空缺<br>經確認資料後，請再進行匯訂</p>
+                        </div>
+                        <div class="b-step-check">
+                           <p>【匯款帳號】</p>
+                           <p>台北富邦台中分行 012</p>
+                           <p>戶名 / 洪秀慧</p>
+                           <p>帳號 / 707168 761577</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="b-step-card">
+               <div class="b-step-bg-right">
+                  <div class="b-step-right-box">
+                     <img src="./img/booking/booking--03-icon.svg" alt="屏東-恆春民宿-森五七行館-訂金付款">
+                     <!-- 訂-流程-內容 -->
+                     <div class="b-step-content">
+                        <!-- 訂-流程-內容-訂金付款 -->
+                        <div>
+                           <h4>訂金付款</h4>
+                           <p class="step-content-text">3日內匯30%訂金至指定帳戶<br>餘額於當天CHECK IN時付現</p>
+                        </div>
+                        <div class="b-step-deposit">
+                           <p>務必來電告知</p>
+                           <p>匯款金額及帳戶後五碼</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- 訂-注意事項 -->
+         <div class="b-precautions">
+            <h4>【注意事項】</h4>
+            <ol>
+               <li>3天內未預付訂金則恕不保留原預訂房間，亦不另行通知取消訂房。</li>
+               <li>訂金收取標準：訂金為總房價之30%。(遇農曆過年、特殊節日或連續假日例外，以現場公告為主)</li>
+               <li>更改訂房：入住日前3天內（不包含入住當天），恕不接受更改住宿日期、房間數。</li>
+               <li>單筆訂房欲延期僅限1次，保留訂金期限為6個月，選擇保留訂金之訂房恕不再接受改為退款。若未能於期限內擇期入住，視同放棄住宿權利，恕不再退還訂金。</li>
+            </ol>
+         </div>
+      </div>
+      <!-- 訂-訂房須知(頁籤) -->
+      <div class="b-tabs">
+         <input type="radio" class="b-tabs-radio" name="tabs-1" id="b-tabs-1" checked>
+         <label for="b-tabs-1" class="b-tabs-label">訂房須知</label>
+            <div class="b-tabs-content">
+               <span>【入住與退房】</span>
+               <ol>
+                  <li>
+                     <p>入住( check in )時間 15:00 ~ 20:30</p>
+                     <p>辦理登記時，請出示證件</p>
+                     <p>非規定時間入住，敬請來電告知</p>
+                  </li>
+                  <li>
+                     <p>退房( check out )時間 11:00 前</p>
+                     <p>延後退房費用為 1000元 / 小時</p>
+                  </li>
+               </ol>
+               <span>【禁止事項】</span>
+               <ol>
+                  <li>室內禁煙，如有需要請至戶外。</li>
+                  <li>禁止攜帶寵物入住，違者強制退房不退費。</li>
+                  <li>嚴禁煙火，國家公園內不可燃放沖天炮、煙火等。</li>
+                  <li>晚間10點後請降低音量，維護居住品質，共享美好寧靜的休憩環境。</li>
+                  <li>禁止破壞或偷盜，行館內部設施、裝飾及毛巾、浴巾等，若有短少或損壞，需照價賠償。</li>
+                  <li>嚴禁違反善良風俗之行為，請勿大聲喧嘩、飲酒、轟趴等，違者經勸導無效，則強制退房不退費。</li>
+               </ol>
+               <span>【補充事項】</span>
+               <ol>
+                  <li>貴重物品 請自行保管，行館不負保管責任，貴重財物 建議隨身攜帶。</li>
+                  <li>隨手關閉電源，響應節能減碳，離開房間時請關閉空調等電器電源。</li>
+                  <li>若需 旅遊 或 其他相關資訊 及 服務 請告訴我們。</li>
+                  <li>
+                     <p>民宿 各物品、裝飾配件及毛巾、浴巾請勿攜回，如有短少者，需原費收費；</p>
+                     <p>若有需求要帶回，請洽管家以貴賓價購買，毛巾每條 100 元，浴巾每條 200 元。</p>
+                  </li>
+                  <li>
+                     <p>本行館為合法登記民宿，敬請遵守相關法規</p>
+                     <p>交通部觀光局「民宿管理辦法」第二十九條：</p>
+                     <ol class="b-tabs-subol">
+                        <li>有危害國家安全之嫌疑者。</li>
+                        <li>攜帶槍械、危險物品或其他違禁物品者。</li>
+                        <li>施用煙毒或其他麻醉藥品者。</li>
+                        <li>有自殺跡象或死亡者。</li>
+                        <li>有喧嘩、聚賭或其他妨害公眾安寧、公共秩序及善良風俗之行為者。</li>
+                        <li>未攜帶身分證明文件或拒絕住宿登記而強行住宿者。</li>
+                        <li>有公共危險之虞或其他犯罪嫌疑者。</li>
+                     </ol>
+                  </li>
+               </ol>
+            </div>
+         <input type="radio" class="b-tabs-radio" name="tabs-1" id="b-tabs-2">
+         <label for="b-tabs-2" class="b-tabs-label">退訂說明</label>
+            <div class="b-tabs-content">
+               <ol>
+                  <li>
+                     <p>欲取消訂房請務必來電告知，根據交通部觀光局定型化契約標準，取消規範如下：</p>
+                     <ol class="b-tabs-subol">
+                        <li>旅客於預定住宿日14日前取消者，民宿退還已付訂金100%。</li>
+                        <li>旅客於預定住宿日10-13日前取消者，民宿退還已付訂金70%。</li>
+                        <li>旅客於預定住宿日7-9日前取消者，民宿退還已付訂金50%。</li>
+                        <li>旅客於預定住宿日4-6日前取消者，民宿退還已付訂金40%。</li>
+                        <li>旅客於預定住宿日2-3日前取消者，民宿退還已付訂金30%。</li>
+                        <li>旅客於預定住宿日1日前取消者，民宿退還已付訂金20%。</li>
+                        <li>旅客於預定住宿日當日取消者，已付訂金全部不得請求退還。</li>
+                     </ol>
+                  </li>
+                  <li>備註：<br>住房當日若逢颱風或地震等不可抗力因素，依中央氣象局針對 恆春地區 或 旅客居住地 發佈陸上颱風警報、地震、天災等不可抗拒因素無法前往，可選擇保留訂金(6個月)或退還訂金全額。凡退款則須酌收NT$ 30元手續費，扣除後餘額再行退還。</li>
+               </ol>
+            </div>
+      </div>
+      <!-- 訂-其他房型 -->
+      <div class="b-rooms">
+         <a href="/room5.html" class="b-rooms-shen5">
+            <div class="b-rooms-shen-text">
+               <div class="b-rooms-shen-text-top">
+                  <span>參考其他房型</span>
+                  <span>森5 / 時尚館</span>
+               </div>
+               <div class="b-rooms-shen-text-bottom">
+                  <span>本房型為 <b>獨棟別墅</b> ， <br>室內坪數 <b>50</b> 坪，室外約 <b>150</b> 坪</span>
+                  <img src="./img/booking/room5-arrow-white.svg" alt="森五 / 時尚館">
+                  <img src="./img/booking/room5-arrow-black.svg" alt="森五 / 時尚館" class="bottom-img" hidden>
+               </div>
+            </div>
+         </a>
+         <a href="/room7.html" class="b-rooms-shen7">
+            <div class="b-rooms-shen-text">
+               <div class="b-rooms-shen-text-top">
+                  <span>參考其他房型</span>
+                  <span>森7 / 和風館</span>
+               </div>
+               <div class="b-rooms-shen-text-bottom">
+                  <span>本房型為 <b>獨棟別墅</b> ， <br>室內坪數 <b>50</b> 坪，室外約 <b>150</b> 坪</span>
+                  <img src="./img/booking/room7-arrow-white.svg" alt="森五 / 和風館">
+                  <img src="./img/booking/room7-arrow-black.svg" alt="森五 / 和風館" class="bottom-img" hidden>
+               </div>
+            </div>
+         </a>
+      </div>
+   </main>
+
+   <!-- 頁腳 -->
+   <footer>
+      <div id="footer">
+         <div class="footer-nav">
+            <!-- 頁腳-logo -->
+            <div class="footer-logo">
+               <a href="/"><img src="./img/footer/footer-logo.svg" alt="屏東-恆春民宿-森五七行館"></a>
+            </div>
+            <!-- 頁腳-選單盒子 -->
+            <div class="footer-menu">
+               <!-- 頁腳-分頁欄 -->
+               <ul>
+                  <a href="/news.html"><li>訊 News</li></a>
+                  <a href="/room5.html"><li>宿 Rooms</li></a>
+                  <a href="/booking.html"><li>訂 Booking</li></a>
+                  <a href="/story.html"><li>源 Story</li></a>
+                  <a href="/location.html"><li id="footer-menu-lastli">行 Location</li></a>
+               </ul>
+               <!-- 頁腳-聯絡資訊 -->
+               <div class="footer-contact">
+                  <div class="footer-text">
+                     <p>屏東縣恆春鎮大光里砂尾路68-2號</p><span>|</span><p>(08) 886-7658 / 0961-333-857</p><span>|</span><p>shen57hostel@gmail.com</p>
+                  </div>
+                  <div class="footer-community">
+                     <!-- LINE-QRcode按鈕 -->
+                     <button type="button" class="community-line" onclick="openwindow()"><img src="./img/footer/line.svg" alt="屏東-恆春民宿-森五七行館-line"></button>
+                        <!-- LINE-QRcode彈跳視窗 -->
+                        <dialog class="linebox show-dialog">
+                           <!-- linebox-bg 視窗內背景 -->
+                           <div class="linebox-bg">
+                              <img src="./img/footer/shen57-line-link.jpg" alt="">
+                              <h4>透過行動條碼加入LINE好友</h4>
+                              <div class="linebox-text">
+                                 <p>請在LINE應用程式上開啟「好友」分頁，點選畫面右上方用來加入好友的圖示，</p>
+                                 <p>接著點選「行動條碼」，然後掃描此行動條碼。</p>
+                              </div>
+                              <h5>透過LINE ID新增LINE好友：shen57hostel</h5>
+                              <button type="button" class="qrcode-close" onclick="closewindow()">關閉視窗</button>
+                           </div>
+                        </dialog>
+                     <a href="https://www.instagram.com/shen57hostel/" target="_blank"><img src="./img/footer/instagram.svg" alt="屏東-恆春民宿-森五七行館-instagram"></a>
+                     <a href="https://www.facebook.com/shen57hostel2016" target="_blank"><img src="./img/footer/facebook.svg" alt="屏東-恆春民宿-森五七行館-facebook"></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- 分隔線 -->
+         <div id="footer-line"></div>
+         <!-- 頁腳-copyright -->
+         <div class="footer-copyright">
+            <p>Copyright © 2022, Shen57 Hostel , All Rights Reserved.</p>
+            <p>Website designed by FiveMinusOne & DreamCenter</p>
+         </div>
+      </div>
+   </footer>
+
+   <script src="./js/hambtn.js"></script>
+   <script src="./js/line.js"></script>
+</body>
+</html>
