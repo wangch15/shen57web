@@ -161,27 +161,20 @@ footer{
       }
       // LINE-QRcode彈跳視窗
       .linebox{
-        background: var(--darkModeWhite,$shen57white);
-        box-shadow: 0 2px 15px 0 rgba(0,0,0,0.6);
-        min-width: 320px;
-        padding: 0;
-        border: 0;
-        margin: auto;
-        text-align: center;
-        // 彈跳視窗-背景
-        &::backdrop{
-          background: var(--darkModeBlack,$shen57black);
-          opacity: 0.6;
-          animation: dialog-bg 0.3s;
-          @keyframes dialog-bg{
-            from {
-              background: rgba(0, 0, 0, 0);
-            }
-          }
-        }
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        @include flex;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: none;
+
         // js點擊
         .linebox-bg{
-          background: #ffffff;
+          @include flex;
+          flex-direction: column;
+          background: var(--darkModeWhite,$shen57white);
           padding: 40px 25px;
         }
         img{
@@ -267,4 +260,8 @@ footer{
       padding: unset;
     }
   }
+}
+
+.showThis{
+  display: flex !important;
 }
