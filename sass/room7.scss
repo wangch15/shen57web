@@ -389,7 +389,7 @@ body{
         width: 100%;
         height: 50%;
         font-size: $webH6;
-        @include flex(space-between,end);
+        @include flex(space-between,flex-end);
         flex-direction: row-reverse;
         @include phone570{
           font-size: $phoneH6;

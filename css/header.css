@@ -382,7 +382,7 @@ header {
           justify-content: start;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -510,7 +510,7 @@ header {
           justify-content: start;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -977,7 +977,7 @@ header {
           justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
 }
 
 @media (max-width: 1024px) {
@@ -1081,7 +1081,7 @@ header {
             justify-content: space-between;
     -webkit-box-align: end;
         -ms-flex-align: end;
-            align-items: end;
+            align-items: flex-end;
   }
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text:hover .hambox-shen-text-bottom .hambox-shen-left-arrow,
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .hambox-shen-text-bottom .hambox-shen-left-arrow {
@@ -1551,7 +1551,7 @@ header {
           justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
 }
 
 @media (max-width: 1024px) {
@@ -1655,7 +1655,7 @@ header {
             justify-content: space-between;
     -webkit-box-align: end;
         -ms-flex-align: end;
-            align-items: end;
+            align-items: flex-end;
   }
   #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom .roomsbox-shen-left-arrow,
   #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom .roomsbox-shen-left-arrow {

@@ -129,7 +129,7 @@ footer{
       @include flex(space-between,center);
     }
     @include phone{
-      @include flex(space-between,end);
+      @include flex(space-between,flex-end);
     }
     .footer-text{
       font-size: $webH6;
