@@ -90,18 +90,21 @@ body {
     width: 100%;
     max-width: 768px;
     margin-bottom: 100px;
+    height: auto;
+    position: relative;
     
     @include phone() {
         flex-direction: column-reverse;
         padding-left: 10px;
         padding-right: 10px;
         margin-bottom: 60px;
+        position: unset;
     }
     
 }
 
 .s-text-left {
-    padding-right: 50px;
+    padding-right: 130px;
     @include phone{
         padding-right: 0;
     }
@@ -134,7 +137,9 @@ body {
     @include flex (space-between, flex-end);
     flex-direction: column;
     width: 68px;
-    height: 620px;
+    height: 100%;
+    right: 0;
+    position: absolute;
 
     @include phone() {
         width: 100%;
@@ -142,6 +147,7 @@ body {
         height: 80px;
         padding-top: 0;
         padding-bottom: 28px;
+        position: unset;
     }
 
     .s-word {

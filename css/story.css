@@ -178,6 +178,8 @@ body {
   width: 100%;
   max-width: 768px;
   margin-bottom: 100px;
+  height: auto;
+  position: relative;
 }
 @media (max-width: 468px) {
   .s-text {
@@ -185,11 +187,12 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 60px;
+    position: unset;
   }
 }
 
 .s-text-left {
-  padding-right: 50px;
+  padding-right: 130px;
 }
 @media (max-width: 468px) {
   .s-text-left {
@@ -223,7 +226,9 @@ body {
   align-items: flex-end;
   flex-direction: column;
   width: 68px;
-  height: 620px;
+  height: 100%;
+  right: 0;
+  position: absolute;
 }
 @media (max-width: 468px) {
   .s-text-right {
@@ -232,6 +237,7 @@ body {
     height: 80px;
     padding-top: 0;
     padding-bottom: 28px;
+    position: unset;
   }
 }
 .s-text-right .s-word {
