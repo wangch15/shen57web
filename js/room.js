@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
     let ww = window.innerWidth
-    if (ww > 768) {
+    if (ww > 1000) {
         swiper = new Swiper(".mySwiper", {
             //循環播放
             loop: true,

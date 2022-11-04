@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -22,6 +23,7 @@ figure {
   margin: 0;
   padding: 0;
   -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
@@ -49,6 +51,7 @@ table {
 
 a {
   text-decoration: none;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -89,41 +92,58 @@ body {
 
 @-webkit-keyframes spin {
   from {
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   to {
-    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
   }
 }
 
 @keyframes spin {
   from {
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   to {
-    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
   }
 }
+
 @-webkit-keyframes changeColor {
+  from {
+  }
   to {
     background-color: white;
   }
 }
+
 @keyframes changeColor {
+  from {
+  }
   to {
     background-color: white;
   }
 }
+
 @-webkit-keyframes showWords {
+  from {
+  }
   to {
     opacity: 1;
   }
 }
+
 @keyframes showWords {
+  from {
+  }
   to {
     opacity: 1;
   }
 }
+
 @-webkit-keyframes showPulse {
   from {
     opacity: 0;
@@ -132,6 +152,7 @@ body {
     opacity: 1;
   }
 }
+
 @keyframes showPulse {
   from {
     opacity: 0;
@@ -140,28 +161,36 @@ body {
     opacity: 1;
   }
 }
+
 @-webkit-keyframes pulse {
   from {
     opacity: 1;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   to {
-    opacity: 0.25;
-    transform: scale(0.75);
+    opacity: .25;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
   }
 }
+
 @keyframes pulse {
   from {
     opacity: 1;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   to {
-    opacity: 0.25;
-    transform: scale(0.75);
+    opacity: .25;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
   }
 }
+
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* ALTERNATING ORBITS */
@@ -172,39 +201,63 @@ body {
   top: 0;
   left: 0;
   background-color: #26292c;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 1s;
   transition: 1s;
   z-index: 999;
   pointer-events: none;
 }
+
 @media (max-width: 768px) {
   #intro {
     display: none;
   }
 }
+
 #intro .spinner-box {
   width: 170px;
   height: 210px;
   background-color: transparent;
 }
+
 #intro .logo-box {
   width: 170px;
   height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #intro .logo-box .circle-border {
   width: 85px;
   height: 85px;
   padding: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 50%;
-  background: linear-gradient(0deg, rgba(63, 249, 220, 0) 33%, rgb(255, 255, 255) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(33%, rgba(63, 249, 220, 0)), to(white));
+  background: linear-gradient(0deg, rgba(63, 249, 220, 0) 33%, white 100%);
   -webkit-animation: spin 1s linear 0s;
           animation: spin 1s linear 0s;
   -webkit-animation-iteration-count: 1;
@@ -212,6 +265,7 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
+
 #intro .logo-box .circle-core {
   width: 100%;
   height: 100%;
@@ -223,26 +277,45 @@ body {
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #intro .logo-box .circle-core svg {
   width: 52px;
   height: 57px;
 }
+
 #intro .logo-box .circle-core svg path {
   fill: #26292c;
 }
+
 #intro .words-box {
   width: 170px;
   height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
 }
+
 #intro .words-box img {
   width: 152px;
   height: 72px;
@@ -254,14 +327,21 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
+
 #intro .spinner-box2 {
   position: absolute;
   top: 100%;
   width: 150px;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: transparent;
   opacity: 0;
   -webkit-animation: showPulse 1s linear 3s;
@@ -272,26 +352,37 @@ body {
           animation-fill-mode: forwards;
   /* PULSE BUBBLES */
 }
+
 #intro .spinner-box2 .pulse-container {
   width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #intro .spinner-box2 .pulse-bubble {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: white;
 }
+
 #intro .spinner-box2 .pulse-bubble-1 {
   -webkit-animation: pulse 0.6s ease 0s infinite alternate;
           animation: pulse 0.6s ease 0s infinite alternate;
 }
+
 #intro .spinner-box2 .pulse-bubble-2 {
   -webkit-animation: pulse 0.6s ease 0.3s infinite alternate;
           animation: pulse 0.6s ease 0.3s infinite alternate;
 }
+
 #intro .spinner-box2 .pulse-bubble-3 {
   -webkit-animation: pulse 0.6s ease 0.6s infinite alternate;
           animation: pulse 0.6s ease 0.6s infinite alternate;
@@ -299,4 +390,5 @@ body {
 
 .noact {
   opacity: 0 !important;
-}/*# sourceMappingURL=intro.css.map */
+}
+/*# sourceMappingURL=intro.css.map */

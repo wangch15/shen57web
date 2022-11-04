@@ -8,6 +8,7 @@
 }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -29,6 +30,7 @@ figure {
   margin: 0;
   padding: 0;
   -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
@@ -56,6 +58,7 @@ table {
 
 a {
   text-decoration: none;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -103,8 +106,14 @@ body {
   font-size: 18px;
   background: var(--darkModeWhite, #ffffff);
   /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -116,9 +125,15 @@ body {
 
 .swiper-Area {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -145,27 +160,38 @@ body {
 .mySwiper {
   width: 100%;
   height: 100%;
-  box-sizing: unset;
+  -webkit-box-sizing: unset;
+          box-sizing: unset;
 }
 
 .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: start;
-  align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
+
 .swiper-slide span {
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
   text-orientation: sideways-right;
   color: var(--darkModeGray, #767676);
   font-size: 14px;
   font-weight: 600;
 }
+
 .swiper-slide img {
   width: 100%;
   height: 100%;
   border-radius: 4px;
 }
+
 @media (max-width: 768px) {
   .swiper-slide img {
     border-radius: unset;
@@ -180,28 +206,47 @@ body {
   width: 100%;
   height: 50px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: unset;
 }
 
 /* button style */
 .swiper-pagination-bullet {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: auto;
   height: auto;
   background-color: transparent;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 1;
 }
@@ -211,7 +256,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 5px;
   height: 5px;
   border-radius: 50%;
@@ -234,11 +280,18 @@ body {
 .progress {
   width: 33px;
   height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
+
 @media (max-width: 468px) {
   .progress {
     width: 20px;
@@ -258,8 +311,11 @@ body {
   -ms-transform: translate(67%, -50%);
   -o-transform: translate(67%, -50%);
   opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 @media (max-width: 468px) {
   .line-origin {
     transform: translate(78%, -50%);
@@ -274,8 +330,11 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--darkModeDarkGreen, #334c3f);
-  flex: 0;
-  flex-basis: 0%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  -ms-flex-preferred-size: 0%;
+      flex-basis: 0%;
 }
 
 .swiper-pagination-bullet-active .line-origin {
@@ -298,12 +357,16 @@ body {
 
 @keyframes progress {
   from {
-    flex-basis: 0%;
+    -ms-flex-preferred-size: 0%;
+        flex-basis: 0%;
   }
   to {
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
+
 .noShow {
   display: none;
-}/*# sourceMappingURL=rooms-swiper.css.map */
+}
+/*# sourceMappingURL=rooms-swiper.css.map */

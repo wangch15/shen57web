@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -22,6 +23,7 @@ figure {
   margin: 0;
   padding: 0;
   -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
@@ -49,6 +51,7 @@ table {
 
 a {
   text-decoration: none;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -92,18 +95,21 @@ header {
   width: 100%;
   height: 75px;
 }
+
 @media (max-width: 1024px) {
   header {
     height: 50px;
   }
 }
+
 @media (max-width: 468px) {
   header {
     position: fixed;
     top: 0;
     z-index: 99;
     opacity: 0.99;
-    box-shadow: 0 3px 6px -3px var(--darkModeBlack, #26292c);
+    -webkit-box-shadow: 0 3px 6px -3px var(--darkModeBlack, #26292c);
+            box-shadow: 0 3px 6px -3px var(--darkModeBlack, #26292c);
   }
 }
 
@@ -113,15 +119,22 @@ header {
   height: 100%;
   padding: 0 20px;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-logo {
   width: 148px;
   height: 24px;
 }
+
 @media (max-width: 1024px) {
   .header-logo {
     width: 123px;
@@ -134,12 +147,30 @@ header {
     display: none;
   }
 }
+
 .header-menu ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
+.header-menu ul .rooms-boxbtn {
+  font-family: "Noto Serif", Noto Serif TC;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .header-menu ul li {
   color: var(--darkModeWhite, #ffffff);
   margin: 0 20px;
@@ -147,15 +178,23 @@ header {
   line-height: 14px;
   font-weight: bold;
   font-size: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 @media (max-width: 1024px) {
   .header-menu ul li {
     margin: 0 10px;
   }
 }
+
 .header-menu ul li:hover {
   border-top: 2px solid var(--darkModeWhite, #ffffff);
   border-bottom: 2px solid var(--darkModeWhite, #ffffff);
@@ -164,11 +203,13 @@ header {
 .header-ham {
   width: 148px;
 }
+
 .header-ham .header-dark-btn {
   width: 108px;
   height: 24px;
   float: left;
 }
+
 .header-ham .header-ham-btn {
   background-image: url("../img/header/hambtn-w.svg");
   background-repeat: no-repeat;
@@ -177,19 +218,24 @@ header {
   height: 35px;
   float: right;
 }
+
 @media (max-width: 1024px) {
   .header-ham .header-ham-btn {
     width: 33px;
     height: 27px;
   }
 }
+
 .header-ham .ham-checked {
   background-image: url("../img/header/hambtn-check-g.svg") !important;
 }
+
 .header-ham .showhambox {
   opacity: 1 !important;
-  transform: translateY(0) !important;
+  -webkit-transform: translateY(0) !important;
+          transform: translateY(0) !important;
 }
+
 .header-ham #header-hambox {
   display: block;
   background-color: var(--darkModeWhite, #ffffff);
@@ -203,114 +249,167 @@ header {
   left: 0;
   opacity: 0;
   z-index: 99;
-  transform: translateY(-100%);
-  transition: transform 0.6s;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform .6s;
+  transition: -webkit-transform .6s;
+  transition: transform .6s;
+  transition: transform .6s, -webkit-transform .6s;
 }
+
 .header-ham #header-hambox .hambox-menu {
   width: 100%;
   max-width: 1400px;
   height: auto;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-logobox {
   width: 100%;
   height: 75px;
   margin: 0;
   padding: 0 20px;
   border-bottom: 1px solid var(--darkModeGray, #767676);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-logobox {
     height: 50px;
   }
 }
+
 @media (max-width: 468px) {
   .header-ham #header-hambox .hambox-menu .hambox-logobox {
     padding: 0 10px;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-logobox .hambox-logo {
   width: 150px;
   height: 25px;
 }
+
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-logobox .hambox-logo {
     width: 125px;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-logobox .hambox-btn {
   width: 40px;
   height: 35px;
   float: right;
   cursor: pointer;
 }
+
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-logobox .hambox-btn {
     width: 33px;
     height: 27px;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox {
   width: 100%;
   max-width: 1100px;
   height: calc(100% - 76px);
   margin: auto;
   padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox {
     height: calc(100% - 51px);
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info {
   width: 100%;
   height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info {
     height: 400px;
   }
 }
+
 @media (max-width: 768px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info {
     height: 100%;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left {
   width: 45.5%;
   height: 100%;
   padding-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: start;
-  align-items: end;
-  flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 @media (max-width: 900px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left {
     width: 40%;
   }
 }
+
 @media (max-width: 768px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left {
     width: 100%;
     height: 350px;
     padding-right: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: start;
-    align-items: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul {
   width: 100%;
   margin: 0;
@@ -318,24 +417,44 @@ header {
   font-weight: bold;
   list-style: none;
 }
+
 @media (max-width: 768px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul {
     padding: 10px;
   }
 }
+
+.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul .rooms-boxbtn {
+  font-family: "Noto Serif", Noto Serif TC;
+  font-weight: bold;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul a:last-child li {
     border-bottom: unset;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul li {
   color: var(--darkModeDarkGreen, #334c3f);
   font-size: 36px;
   line-height: 78px;
   border-bottom: 2px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul li {
     font-size: 27px;
@@ -343,6 +462,7 @@ header {
     padding: 0 20px;
   }
 }
+
 @media (max-width: 768px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul li {
     font-size: 24px;
@@ -351,6 +471,7 @@ header {
     border-bottom: 2px solid var(--darkModeDarkGreen, #334c3f);
   }
 }
+
 @media (max-width: 468px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul li {
     font-size: 20px;
@@ -358,97 +479,137 @@ header {
     line-height: 60px;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul li span {
   font-size: 48px;
   display: none;
 }
+
 @media (max-width: 768px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul li span {
     display: block;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul li:hover {
   border-bottom: 2px solid var(--darkModeDarkGreen, #334c3f);
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul li:hover span {
   display: block;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right {
   width: 54.5%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: start;
-  align-items: end;
-  flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 @media (max-width: 900px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right {
     width: 60%;
   }
 }
+
 @media (max-width: 768px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right {
     width: 100%;
     height: 350px;
     padding: 0 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: start;
-    align-items: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 }
+
 @media (max-width: 468px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right {
     padding: 0 10px;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about {
   width: 100%;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community {
   color: var(--darkModeDarkGreen, #334c3f);
   font-size: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community {
     font-size: 24px;
   }
 }
+
 @media (max-width: 768px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
+
 @media (max-width: 468px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community {
     font-size: 17px;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community p {
   margin: 0;
   padding: 15px 0;
   padding-right: 10px;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img {
   max-width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img a {
   max-width: 30px;
   max-height: 30px;
   margin: 0 8px;
 }
+
 @media (max-width: 468px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img a {
     max-width: 25px;
     max-height: 25px;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img a img {
   width: 100%;
   height: 100%;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .community-line {
   max-width: 30px;
   margin: 0 8px;
@@ -458,55 +619,66 @@ header {
   background-color: transparent;
   cursor: pointer;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .community-line img {
   width: 100%;
   height: 100%;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox {
   background: var(--darkModeWhite, #ffffff);
-  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.6);
   min-width: 320px;
   padding: 0;
   border: 0;
   margin: auto;
   text-align: center;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox::-webkit-backdrop {
   background: var(--darkModeBlack, #26292c);
   opacity: 0.6;
   -webkit-animation: dialog-bg 0.3s;
           animation: dialog-bg 0.3s;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox::backdrop {
   background: var(--darkModeBlack, #26292c);
   opacity: 0.6;
   -webkit-animation: dialog-bg 0.3s;
           animation: dialog-bg 0.3s;
 }
+
 @-webkit-keyframes dialog-bg {
   from {
     background: rgba(0, 0, 0, 0);
   }
 }
+
 @keyframes dialog-bg {
   from {
     background: rgba(0, 0, 0, 0);
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox .linebox-bg {
   background: #ffffff;
   padding: 40px 25px;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox img {
   max-width: 250px !important;
   padding: 10px;
   border: 1px solid var(--darkModeGray, #767676);
 }
+
 @media (max-width: 468px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox img {
     max-width: 200px !important;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox h4,
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox h5 {
   color: var(--darkModeDarkGreen, #334c3f);
@@ -514,29 +686,35 @@ header {
   font-weight: bold;
   margin-top: 40px;
 }
+
 @media (max-width: 468px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox h4,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox h5 {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox h5 {
     font-size: 17px;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox h5 {
   margin-top: unset;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox .linebox-text {
   color: var(--darkModeGray, #767676);
   font-size: 15px;
   margin: 15px 0;
 }
+
 @media (max-width: 468px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox .linebox-text {
     font-size: 14px;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox .linebox-text p {
   margin: 0;
   padding: 0;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox .qrcode-close {
   background: var(--darkModeWhite, #ffffff);
   width: 100px;
@@ -549,10 +727,12 @@ header {
   margin-top: 40px;
   cursor: pointer;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox .qrcode-close:hover {
   background: var(--darkModeDarkGreen, #334c3f);
   color: var(--darkModeWhite, #ffffff);
 }
+
 @media (max-width: 468px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-community .community-img .linebox .qrcode-close {
     background: var(--darkModeDarkGreen, #334c3f);
@@ -560,99 +740,151 @@ header {
     font-size: 14px;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-box {
   width: 100%;
   padding: 15px 0;
   border-bottom: 1px solid var(--darkModeBrown, #e1dcd7);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-box {
     padding: 12px 0;
   }
 }
+
 @media (max-width: 900px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-box {
     padding-right: 20px;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-box:last-child {
   border-bottom: unset;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-box .info-right-title {
   color: var(--darkModeDarkGreen, #334c3f);
   min-width: 100px;
   font-size: 20px;
   font-weight: bold;
   padding-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 @media (max-width: 468px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-box .info-right-title {
     min-width: 65px;
     font-size: 14px;
     padding-right: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-box .info-right-content {
   color: var(--darkModeGray, #767676);
   font-size: 15px;
 }
+
 @media (max-width: 468px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-box .info-right-content {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-right .info-right-about .info-right-box .info-right-content span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms {
   width: 100%;
   height: 215px;
   margin: 75px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms {
     height: 240px;
     margin: 50px 0;
   }
 }
+
 @media (max-width: 768px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms {
     display: none;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms {
   width: 100%;
   height: 215px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms {
     height: 240px;
   }
 }
+
 @media (max-width: 570px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms {
     height: 295px;
     padding: 0;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5,
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 {
   width: calc((100% - 30px) / 2);
@@ -661,25 +893,29 @@ header {
   background-size: cover;
   padding: 20px 20px;
 }
+
 @media (max-width: 570px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 {
     height: 145px;
     padding: 18px 18px;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text,
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text {
   width: 100%;
   height: 100%;
   padding: 20px 20px;
 }
+
 @media (max-width: 570px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text {
     padding: unset;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-top,
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-top {
   color: var(--darkModeWhite, #ffffff);
@@ -687,34 +923,45 @@ header {
   height: 50%;
   font-weight: bold;
   font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
+
 @media (min-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-top:hover,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-top:hover {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-top:hover {
     color: var(--darkModeBlack, #26292c);
   }
 }
+
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-top,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-top {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-top {
     height: 40%;
   }
 }
+
 @media (max-width: 570px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-top,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-top {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-top {
     font-size: 17px;
   }
 }
+
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-top .text-hidden,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-top .text-hidden {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-top .text-hidden {
     display: none;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-bottom,
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom {
   display: none;
@@ -722,48 +969,69 @@ header {
   width: 100%;
   height: 50%;
   font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
 }
+
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-bottom,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom {
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-bottom span,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom span {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom span {
     padding-bottom: 45px;
   }
 }
+
 @media (max-width: 570px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-bottom,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom {
-    font-size: 12px;
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom {
+    font-size: 14px;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-bottom img,
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom img {
   width: 112px;
   padding-bottom: 5px;
 }
+
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-bottom .text-hidden,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom .text-hidden {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom .text-hidden {
     display: block;
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .text-hidden,
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .text-hidden {
   display: none;
 }
+
 @media (min-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text:hover,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover {
     background-color: var(--darkModeWhite, #ffffff);
     color: var(--darkModeBlack, #26292c);
     -webkit-animation: roombg 0.5s;
@@ -774,21 +1042,33 @@ header {
             animation-timing-function: ease-out;
   }
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text:hover .hambox-shen-text-top,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .hambox-shen-text-top {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .hambox-shen-text-top {
     color: var(--darkModeBlack, #26292c);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text:hover .hambox-shen-text-bottom,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .hambox-shen-text-bottom {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .hambox-shen-text-bottom {
     color: var(--darkModeBlack, #26292c);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
   }
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text:hover .hambox-shen-text-bottom .bottom-img-left,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .hambox-shen-text-bottom .bottom-img-left {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .hambox-shen-text-bottom .bottom-img-left {
     display: block;
     -webkit-animation: moveleft 0.5s;
             animation: moveleft 0.5s;
@@ -798,7 +1078,7 @@ header {
             animation-timing-function: ease-out;
   }
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text:hover .hambox-shen-text-bottom .bottom-img-right,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .hambox-shen-text-bottom .bottom-img-right {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .hambox-shen-text-bottom .bottom-img-right {
     display: block;
     -webkit-animation: moveright 0.5s;
             animation: moveright 0.5s;
@@ -808,7 +1088,7 @@ header {
             animation-timing-function: ease-out;
   }
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text:hover .text-move-left,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .text-move-left {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .text-move-left {
     -webkit-animation: moveleft 0.5s;
             animation: moveleft 0.5s;
     -webkit-animation-fill-mode: forwards;
@@ -817,7 +1097,7 @@ header {
             animation-timing-function: ease-out;
   }
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text:hover .text-move-right,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .text-move-right {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .text-move-right {
     -webkit-animation: moveright 0.5s;
             animation: moveright 0.5s;
     -webkit-animation-fill-mode: forwards;
@@ -826,7 +1106,7 @@ header {
             animation-timing-function: ease-out;
   }
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text:hover .text-hidden,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .text-hidden {
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .text-hidden {
     display: block;
     -webkit-animation: text 0.3s;
             animation: text 0.3s;
@@ -867,48 +1147,640 @@ header {
   }
   @-webkit-keyframes moveleft {
     0% {
-      transform: translate(140%, 0);
+      -webkit-transform: translate(140%, 0);
+              transform: translate(140%, 0);
     }
     100% {
-      transform: translate(0, 0);
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
     }
   }
   @keyframes moveleft {
     0% {
-      transform: translate(140%, 0);
+      -webkit-transform: translate(140%, 0);
+              transform: translate(140%, 0);
     }
     100% {
-      transform: translate(0, 0);
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
     }
   }
   @-webkit-keyframes moveright {
     0% {
-      transform: translate(-140%, 0);
+      -webkit-transform: translate(-140%, 0);
+              transform: translate(-140%, 0);
     }
     100% {
-      transform: translate(0, 0);
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
     }
   }
   @keyframes moveright {
     0% {
-      transform: translate(-140%, 0);
+      -webkit-transform: translate(-140%, 0);
+              transform: translate(-140%, 0);
     }
     100% {
-      transform: translate(0, 0);
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
     }
   }
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 {
   background-image: url("../img/booking/room5-cover.jpg");
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text-top,
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text-bottom {
   text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 {
   background-image: url("../img/booking/room7-cover.jpg");
-}/*# sourceMappingURL=header.css.map */
+}
+
+.showRooms {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+#rooms-box {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 499;
+}
+
+#rooms-box .rooms-menu {
+  background-color: var(--darkModeWhite, #ffffff);
+  -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 1160px;
+  padding: 65px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#rooms-box .rooms-menu .rooms-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+#rooms-box .rooms-menu .rooms-info .rooms-info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+@media (max-width: 768px) {
+  #rooms-box .rooms-menu .rooms-info .rooms-info-box img {
+    width: 60px;
+  }
+}
+
+@media (max-width: 570px) {
+  #rooms-box .rooms-menu .rooms-info .rooms-info-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 468px) {
+  #rooms-box .rooms-menu .rooms-info .rooms-info-box img {
+    width: 41px;
+  }
+}
+
+#rooms-box .rooms-menu .rooms-info .rooms-info-box .rooms-info-text {
+  color: var(--darkModeGray, #767676);
+  font-size: 15px;
+  padding-top: 15px;
+  padding-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  #rooms-box .rooms-menu .rooms-info .rooms-info-box .rooms-info-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 570px) {
+  #rooms-box .rooms-menu .rooms-info .rooms-info-box .rooms-info-text {
+    padding-left: 5px;
+  }
+}
+
+#rooms-box .rooms-menu .rooms-info .rooms-info-box .rooms-info-text p {
+  margin: 0;
+  padding-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#rooms-box .rooms-menu .rooms-info .rooms-box-btn {
+  background-image: url("../img/header/rooms-check-g.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 40px;
+  height: 35px;
+  float: right;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  #rooms-box .rooms-menu .rooms-info .rooms-box-btn {
+    min-width: 33px;
+    height: 27px;
+  }
+}
+
+#rooms-box .rooms-menu .roomsbox-rooms {
+  width: 100%;
+  height: 215px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1024px) {
+  #rooms-box .rooms-menu .roomsbox-rooms {
+    height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  #rooms-box .rooms-menu .roomsbox-rooms {
+    height: 100%;
+  }
+}
+
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1024px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms {
+    height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms {
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5,
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 {
+  width: calc((100% - 30px) / 2);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 {
+    width: 100%;
+    height: 100%;
+    padding: unset;
+  }
+}
+
+@media (max-width: 570px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 {
+    padding: 18px;
+  }
+}
+
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text,
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text {
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px;
+}
+
+@media (max-width: 570px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text {
+    padding: unset;
+  }
+}
+
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-top,
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-top {
+  color: var(--darkModeWhite, #ffffff);
+  width: 100%;
+  height: 50%;
+  font-weight: bold;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+@media (min-width: 1024px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-top:hover,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-top:hover {
+    color: var(--darkModeBlack, #26292c);
+  }
+}
+
+@media (max-width: 1024px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-top,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-top {
+    height: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-top,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-top {
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 570px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-top,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-top {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-top .text-hidden,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-top .text-hidden {
+    display: none;
+  }
+}
+
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom,
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom {
+  display: none;
+  color: var(--darkModeWhite, #ffffff);
+  width: 100%;
+  height: 50%;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+@media (max-width: 1024px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom span,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom span {
+    padding-bottom: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom span,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom span {
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 570px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom {
+    font-size: 14px;
+  }
+}
+
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom img,
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom img {
+  width: 112px;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 1024px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom .text-hidden,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom .text-hidden {
+    display: block;
+  }
+}
+
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .text-hidden,
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .text-hidden {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text:hover,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text:hover {
+    background-color: var(--darkModeWhite, #ffffff);
+    color: var(--darkModeBlack, #26292c);
+    -webkit-animation: roombg 0.5s;
+            animation: roombg 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text:hover .roomsbox-shen-text-top,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text:hover .roomsbox-shen-text-top {
+    color: var(--darkModeBlack, #26292c);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom {
+    color: var(--darkModeBlack, #26292c);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom .bottom-img-left,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom .bottom-img-left {
+    display: block;
+    -webkit-animation: moveleft 0.5s;
+            animation: moveleft 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom .bottom-img-right,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom .bottom-img-right {
+    display: block;
+    -webkit-animation: moveright 0.5s;
+            animation: moveright 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text:hover .text-move-left,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text:hover .text-move-left {
+    -webkit-animation: moveleft 0.5s;
+            animation: moveleft 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text:hover .text-move-right,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text:hover .text-move-right {
+    -webkit-animation: moveright 0.5s;
+            animation: moveright 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text:hover .text-hidden,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text:hover .text-hidden {
+    display: block;
+    -webkit-animation: text 0.3s;
+            animation: text 0.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes text {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes text {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes roombg {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.6;
+    }
+  }
+  @keyframes roombg {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.6;
+    }
+  }
+  @-webkit-keyframes moveleft {
+    0% {
+      -webkit-transform: translate(140%, 0);
+              transform: translate(140%, 0);
+    }
+    100% {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+  }
+  @keyframes moveleft {
+    0% {
+      -webkit-transform: translate(140%, 0);
+              transform: translate(140%, 0);
+    }
+    100% {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+  }
+  @-webkit-keyframes moveright {
+    0% {
+      -webkit-transform: translate(-140%, 0);
+              transform: translate(-140%, 0);
+    }
+    100% {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+  }
+  @keyframes moveright {
+    0% {
+      -webkit-transform: translate(-140%, 0);
+              transform: translate(-140%, 0);
+    }
+    100% {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+  }
+}
+
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 {
+  background-image: url("../img/booking/room5-cover.jpg");
+}
+
+@media (max-width: 768px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 {
+    margin-bottom: 10px;
+  }
+}
+
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text-top,
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text-bottom {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 {
+  background-image: url("../img/booking/room7-cover.jpg");
+}
+/*# sourceMappingURL=header.css.map */

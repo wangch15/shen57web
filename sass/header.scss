@@ -64,7 +64,6 @@ header{
     height: 20px;
   }
 }
-
 // 頁首-菜單
 .header-menu{
   @include headerpad{
@@ -73,6 +72,15 @@ header{
   ul{
     list-style: none;
     @include flex;
+    .rooms-boxbtn{
+      font-family: $engFont,$notoTC;
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
     li{
       color: var(--darkModeWhite,$shen57white);
       margin: 0 20px;
@@ -222,6 +230,17 @@ header{
               list-style: none;
               @include pad{
                 padding: 10px;
+              }
+              .rooms-boxbtn{
+                font-family: $engFont,$notoTC;
+                font-weight: bold;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                cursor: pointer;
               }
               a{
                 @include pad{
@@ -640,6 +659,274 @@ header{
               background-image: url("../img/booking/room7-cover.jpg");
             }
           }
+        }
+      }
+    }
+  }
+}
+
+
+// 宿-點擊後的區塊顯示
+.showRooms{
+  display: flex !important;
+}
+#rooms-box{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  @include flex;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 499;
+  .rooms-menu{
+    background-color: var(--darkModeWhite,$shen57white);
+    box-shadow: 0 2px 15px 0 rgba(0,0,0,0.6);
+    width: 100%;
+    max-width: 1160px;
+    padding: 65px 50px;
+    @include flex(space-between,start);
+    flex-direction: column;
+    .rooms-info{
+      width: 100%;
+      @include flex(space-between,start);
+      .rooms-info-box{
+        @include flex(start,start);
+        @include pad{
+          img{
+            width: 60px;
+          }
+        }
+        @include phone570{
+          flex-direction: column;
+        }
+        @include phone{
+          img{
+            width: 41px;
+          }
+        }
+        .rooms-info-text{
+          color: var(--darkModeGray,$shen57gray);
+          font-size: $webH6;
+          padding-top: 15px;
+          padding-left: 30px;
+          display: flex;
+          flex-direction: column;
+          @include pad{
+            font-size: $phoneH5;
+          }
+          @include phone570{
+            padding-left: 5px;
+          }
+          p{
+            margin: 0;
+            padding-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+      .rooms-box-btn{
+        background-image: url("../img/header/rooms-check-g.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: 40px;
+        height: 35px;
+        float: right;
+        cursor: pointer;
+        @include headerpad{
+          min-width: 33px;
+          height: 27px;
+        }
+      }
+    }
+    // 宿-shen57房型
+    .roomsbox-rooms{
+      width: 100%;
+      height: 215px;
+      @include flex;
+      @include headerpad{
+        height: 240px;
+      }
+      @include pad{
+        height: 100%;
+      }
+      .roomsbox-bottom-rooms{     
+        width: 100%;
+        height: 100%;
+        @include flex(space-between,center);
+        @include headerpad{
+          height: 240px;
+        }
+        @include pad{
+          height: 50%;
+          @include flex;
+          flex-direction: column;
+        }
+        .roomsbox-rooms-shen5,
+        .roomsbox-rooms-shen7{
+          width: calc((100% - 30px) / 2);
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          padding: 20px;
+          @include pad{
+            width: 100%;
+            height: 100%;
+            padding: unset;
+          }
+          @include phone570{
+            padding: 18px;
+          }
+          .roomsbox-shen-text{
+            width: 100%;
+            height: 100%;
+            padding: 20px 20px;
+            @include phone570{
+              padding: unset;
+            }
+            .roomsbox-shen-text-top{
+              color: var(--darkModeWhite,$shen57white);
+              width: 100%;
+              height: 50%;
+              font-weight: bold;
+              font-size: $webH4;
+              @include flex(center,start);
+              @media (min-width:1024px){
+                &:hover{
+                  color: var(--darkModeBlack,$shen57black);
+                }
+              }
+              @include headerpad{
+                height: 40%;
+              }
+              @include pad{
+                padding-bottom: 30px;
+              }
+              @include phone570{
+                font-size: $phoneH4;
+              }
+              .text-hidden{
+                @include headerpad{
+                  display: none;
+                }
+              }
+            }
+            .roomsbox-shen-text-bottom{
+              display: none;
+              color: var(--darkModeWhite,$shen57white);
+              width: 100%;
+              height: 50%;
+              font-size: $webH6;
+              @include flex(center,end);
+              @include headerpad{
+                text-align: center;
+                @include flex(start,center);
+                flex-direction: column;
+                span{
+                  padding-bottom: 45px;
+                }
+              }
+              @include pad{
+                span{
+                  padding-bottom: 30px;
+                }
+              }
+              @include phone570{
+                font-size: $phoneH6;
+              }
+              img{
+                width: 112px;
+                padding-bottom: 5px;
+              }
+              .text-hidden{
+                @include headerpad{
+                  display: block;
+                }
+              }
+            }
+            .text-hidden{
+              display: none;
+            }
+            // 1024p以內變版前-動畫
+            @media (min-width:1024px){
+              &:hover{
+                background-color: var(--darkModeWhite,$shen57white);
+                color: var(--darkModeBlack,$shen57black);
+                animation: roombg 0.5s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-out;
+                .roomsbox-shen-text-top{
+                  color: var(--darkModeBlack,$shen57black);
+                  @include flex(space-between,start);
+                }
+                .roomsbox-shen-text-bottom{
+                  color: var(--darkModeBlack,$shen57black);
+                  @include flex(space-between,end);
+                  .bottom-img-left{
+                    display: block;
+                    animation: moveleft 0.5s;
+                    animation-fill-mode: forwards;
+                    animation-timing-function: ease-out;
+                  }
+                  .bottom-img-right{
+                    display: block;
+                    animation: moveright 0.5s;
+                    animation-fill-mode: forwards;
+                    animation-timing-function: ease-out;
+                  }
+                }
+                .text-move-left{
+                  animation: moveleft 0.5s;
+                  animation-fill-mode: forwards;
+                  animation-timing-function: ease-out;
+                }
+                .text-move-right{
+                  animation: moveright 0.5s;
+                  animation-fill-mode: forwards;
+                  animation-timing-function: ease-out;
+                }
+                .text-hidden{
+                  display: block;
+                  animation: text 0.3s;
+                  animation-fill-mode: forwards;
+                  @keyframes text{
+                    0%{opacity: 0;}
+                    100%{opacity: 1;}
+                  }
+                }
+                @keyframes roombg{
+                  0%{opacity: 0;}
+                  100%{opacity: 0.6;}
+                }
+                @keyframes moveleft{
+                  0%{transform: translate(140%, 0);}
+                  100%{transform: translate(0, 0);}
+                }
+                @keyframes moveright{
+                  0%{transform: translate(-140%, 0);}
+                  100%{transform: translate(0, 0);}
+                }
+              }
+            }
+          }
+        }
+        .roomsbox-rooms-shen5{
+          background-image: url("../img/booking/room5-cover.jpg");
+          @include pad{
+            margin-bottom: 10px;
+          }
+          .roomsbox-shen-text-top,
+          .roomsbox-shen-text-bottom{
+            text-align: right;
+            @include flex;
+            flex-direction: row-reverse;
+          }
+        }
+        .roomsbox-rooms-shen7{
+          background-image: url("../img/booking/room7-cover.jpg");
         }
       }
     }

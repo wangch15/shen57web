@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -22,6 +23,7 @@ figure {
   margin: 0;
   padding: 0;
   -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
@@ -49,6 +51,7 @@ table {
 
 a {
   text-decoration: none;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -89,11 +92,21 @@ body {
 
 #story {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 @media (max-width: 468px) {
   #story {
     margin-top: 50px;
@@ -106,11 +119,21 @@ body {
   max-width: 1100px;
   padding: 0 40px;
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 @media (max-width: 468px) {
   .container {
     padding: 0 10px;
@@ -119,29 +142,39 @@ body {
 }
 
 .s-swiper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 38px;
 }
+
 @media (max-width: 468px) {
   .s-swiper {
     padding-top: 76px;
     padding-bottom: 45px;
   }
 }
+
 .s-swiper div {
   width: 600px;
   height: 600px;
   background-color: lightgray;
   margin-bottom: 30px;
 }
+
 @media (max-width: 768px) {
   .s-swiper div {
     width: calc(600 * var(--pp));
     height: calc(600 * var(--pp));
   }
 }
+
 @media (max-width: 468px) {
   .s-swiper div {
     width: calc(468 * var(--ph));
@@ -150,40 +183,61 @@ body {
 }
 
 .s-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 80px;
 }
+
 @media (max-width: 468px) {
   .s-intro {
     display: none;
   }
 }
+
 .s-intro p {
   font-size: 15px;
   color: var(--darkModeDarkBrown, #767067);
   line-height: 23px;
   text-align: center;
 }
+
 .s-intro span {
   font-weight: 900;
 }
 
 .s-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   width: 100%;
   max-width: 768px;
   margin-bottom: 100px;
   height: auto;
   position: relative;
 }
+
 @media (max-width: 468px) {
   .s-text {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 60px;
@@ -194,11 +248,13 @@ body {
 .s-text-left {
   padding-right: 130px;
 }
+
 @media (max-width: 468px) {
   .s-text-left {
     padding-right: 0;
   }
 }
+
 .s-text-left .t-1 p,
 .s-text-left .t-2 p,
 .s-text-left .t-3 p {
@@ -208,57 +264,78 @@ body {
   line-height: 26px;
   color: var(--darkModeDarkBrown, #767067);
 }
+
 @media (max-width: 468px) {
   .s-text-left .t-1 p,
-.s-text-left .t-2 p,
-.s-text-left .t-3 p {
+  .s-text-left .t-2 p,
+  .s-text-left .t-3 p {
     line-height: 18px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
+
 .s-text-left .t-3 p {
   margin-bottom: 0;
 }
 
 .s-text-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 68px;
   height: 100%;
   right: 0;
   position: absolute;
 }
+
 @media (max-width: 468px) {
   .s-text-right {
     width: 100%;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     height: 80px;
     padding-top: 0;
     padding-bottom: 28px;
     position: unset;
   }
 }
+
 .s-text-right .s-word {
   width: 68px;
   height: 80px;
 }
+
 @media (max-width: 468px) {
   .s-text-right .s-word {
     width: 40px;
     height: 44px;
   }
 }
+
 .s-text-right .s-word-en {
   font-size: 27px;
   color: var(--darkModeBrown, #e1dcd7);
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
   font-weight: bold;
 }
+
 @media (max-width: 468px) {
   .s-text-right .s-word-en {
     font-size: 17px;
   }
-}/*# sourceMappingURL=story.css.map */
+}
+/*# sourceMappingURL=story.css.map */

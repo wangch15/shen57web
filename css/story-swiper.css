@@ -1,4 +1,5 @@
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -20,6 +21,7 @@ figure {
   margin: 0;
   padding: 0;
   -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
@@ -47,6 +49,7 @@ table {
 
 a {
   text-decoration: none;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -95,8 +98,14 @@ textarea {
   font-size: 18px;
   background: var(--darkModeWhite, #ffffff);
   /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -108,9 +117,15 @@ textarea {
 
 .swiper-Area {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   background-image: url("../img/story/bg2@2x.png");
   background-size: 50px;
@@ -141,8 +156,10 @@ textarea {
   height: 100%;
   max-width: 600px;
   height: 600px;
-  box-sizing: unset;
+  -webkit-box-sizing: unset;
+          box-sizing: unset;
 }
+
 @media (max-width: 600px) {
   .mySwiper {
     max-width: calc(600 * var(--p600));
@@ -157,6 +174,7 @@ textarea {
   background-size: 50px;
   background-position: center top;
 }
+
 .swiper-slide img {
   width: 100%;
   border-radius: 4px;
@@ -165,18 +183,26 @@ textarea {
 .gridbox {
   width: 100%;
   height: 100%;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
   position: relative;
 }
 
 .left-side {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
   grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   grid-row: 1/3;
   width: 300px;
   height: 600px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   transition: 0.5s linear 0.1s;
   background-size: 300px 600px;
   position: absolute;
@@ -190,6 +216,7 @@ textarea {
   -ms-transition: 0.5s linear 0.1s;
   -o-transition: 0.5s linear 0.1s;
 }
+
 @media (max-width: 600px) {
   .left-side {
     max-width: calc(300 * var(--p600));
@@ -204,11 +231,16 @@ textarea {
 }
 
 .right-side-top {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
   grid-row: 1/2;
   width: 300px;
   height: 300px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   transition: 0.5s linear 0.1s;
   background-size: 300px 300px;
   position: absolute;
@@ -222,6 +254,7 @@ textarea {
   -ms-transition: 0.5s linear 0.1s;
   -o-transition: 0.5s linear 0.1s;
 }
+
 @media (max-width: 600px) {
   .right-side-top {
     max-width: calc(300 * var(--p600));
@@ -236,11 +269,16 @@ textarea {
 }
 
 .right-side-bottom {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
   grid-row: 2/3;
   width: 300px;
   height: 300px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   transition: 0.5s linear 0.1s;
   background-size: 300px 300px;
   position: absolute;
@@ -254,6 +292,7 @@ textarea {
   -ms-transition: 0.5s linear 0.1s;
   -o-transition: 0.5s linear 0.1s;
 }
+
 @media (max-width: 600px) {
   .right-side-bottom {
     max-width: calc(300 * var(--p600));
@@ -270,6 +309,7 @@ textarea {
 .Ltrans {
   width: calc(100% - 8px);
 }
+
 @media (max-width: 600px) {
   .Ltrans {
     width: calc(100% - 4px);
@@ -280,6 +320,7 @@ textarea {
   width: calc(100% - 8px);
   height: calc(100% - 8px);
 }
+
 @media (max-width: 600px) {
   .RTtrans {
     width: calc(100% - 4px);
@@ -291,6 +332,7 @@ textarea {
   width: calc(100% - 8px);
   height: calc(100% - 8px);
 }
+
 @media (max-width: 600px) {
   .RBtrans {
     width: calc(100% - 4px);
@@ -302,31 +344,50 @@ textarea {
   width: 100%;
   height: 50px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-image: url("../img/story/bg2@2x.png");
   background-size: 50px;
   background-position: center top;
 }
 
 .swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: unset;
 }
 
 /* button style */
 .swiper-pagination-bullet {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: auto;
   height: auto;
   background-color: transparent;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 1;
 }
@@ -336,7 +397,8 @@ textarea {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 5px;
   height: 5px;
   border-radius: 50%;
@@ -359,9 +421,15 @@ textarea {
 .progress {
   width: 33px;
   height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -377,6 +445,8 @@ textarea {
   -ms-transform: translate(67%, -50%);
   -o-transform: translate(67%, -50%);
   opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -384,8 +454,11 @@ textarea {
   width: 100%;
   height: 100%;
   background-color: var(--darkModeDarkGreen, #334c3f);
-  flex: 0;
-  flex-basis: 0%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  -ms-flex-preferred-size: 0%;
+      flex-basis: 0%;
 }
 
 .swiper-pagination-bullet-active .line-origin {
@@ -408,12 +481,16 @@ textarea {
 
 @keyframes progress {
   from {
-    flex-basis: 0%;
+    -ms-flex-preferred-size: 0%;
+        flex-basis: 0%;
   }
   to {
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
+
 .noShow {
   display: none;
-}/*# sourceMappingURL=story-swiper.css.map */
+}
+/*# sourceMappingURL=story-swiper.css.map */
