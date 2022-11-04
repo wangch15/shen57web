@@ -351,6 +351,11 @@ body {
   }
 }
 
+.r-container .r-content .r-pattern .r-first-floor img,
+.r-container .r-content .r-pattern .r-second-floor img {
+  width: 400px;
+}
+
 .r-container .r-content .r-pattern .r-first-floor {
   margin-bottom: 40px;
 }

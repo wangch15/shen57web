@@ -148,6 +148,9 @@ body{
             @include flex(space-between,start);
           }
         }
+        img{
+          width: 400px;
+        }
       }
       .r-first-floor{
         margin-bottom: 40px;
