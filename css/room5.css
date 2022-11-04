@@ -221,6 +221,7 @@ body {
 
 .r-container .r-content .r-pattern .r-first-floor,
 .r-container .r-content .r-pattern .r-second-floor {
+  width: 100%;
   height: calc((100% - 40px) / 2);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -734,10 +735,14 @@ body {
   }
 }
 
-.r-rooms .r-rooms-shen5 .r-rooms-shen-text .r-rooms-shen-text-bottom img,
-.r-rooms .r-rooms-shen7 .r-rooms-shen-text .r-rooms-shen-text-bottom img {
+.r-rooms .r-rooms-shen5 .r-rooms-shen-text .r-rooms-shen-text-bottom .r-rooms-shen-arrow,
+.r-rooms .r-rooms-shen7 .r-rooms-shen-text .r-rooms-shen-text-bottom .r-rooms-shen-arrow {
+  background-image: url("../img/rooms/room7-arrow-white.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 112px;
-  padding-bottom: 5px;
+  height: 10px;
+  margin-bottom: 3px;
 }
 
 .r-rooms .r-rooms-shen5 .r-rooms-shen-text:hover,
@@ -762,9 +767,9 @@ body {
   color: var(--darkModeBlack, #26292c);
 }
 
-.r-rooms .r-rooms-shen5 .r-rooms-shen-text:hover .r-rooms-shen-text-bottom .bottom-img,
-.r-rooms .r-rooms-shen7 .r-rooms-shen-text:hover .r-rooms-shen-text-bottom .bottom-img {
-  display: block;
+.r-rooms .r-rooms-shen5 .r-rooms-shen-text:hover .r-rooms-shen-text-bottom .r-rooms-shen-arrow,
+.r-rooms .r-rooms-shen7 .r-rooms-shen-text:hover .r-rooms-shen-text-bottom .r-rooms-shen-arrow {
+  background-image: url("../img/rooms/room7-arrow-black.svg");
 }
 
 .r-rooms .r-rooms-shen5 {

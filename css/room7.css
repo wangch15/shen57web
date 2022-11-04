@@ -250,16 +250,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 @media (max-width: 1000px) {
@@ -312,6 +312,11 @@ body {
   }
 }
 
+.r-container .r-content .r-pattern .r-first-floor img,
+.r-container .r-content .r-pattern .r-second-floor img {
+  width: 400px;
+}
+
 .r-container .r-content .r-pattern .r-first-floor h4,
 .r-container .r-content .r-pattern .r-second-floor h4 {
   color: var(--darkModeDarkGreen, #334c3f);
@@ -349,11 +354,6 @@ body {
         -ms-flex-align: start;
             align-items: start;
   }
-}
-
-.r-container .r-content .r-pattern .r-first-floor img,
-.r-container .r-content .r-pattern .r-second-floor img {
-  width: 400px;
 }
 
 .r-container .r-content .r-pattern .r-first-floor {
@@ -787,10 +787,14 @@ body {
   text-align: right;
 }
 
-.r-rooms .r-rooms-shen5 .r-rooms-shen-text .r-rooms-shen-text-bottom img,
-.r-rooms .r-rooms-shen7 .r-rooms-shen-text .r-rooms-shen-text-bottom img {
+.r-rooms .r-rooms-shen5 .r-rooms-shen-text .r-rooms-shen-text-bottom .r-rooms-shen-arrow,
+.r-rooms .r-rooms-shen7 .r-rooms-shen-text .r-rooms-shen-text-bottom .r-rooms-shen-arrow {
+  background-image: url("../img/rooms/room5-arrow-white.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 112px;
-  padding-bottom: 5px;
+  height: 10px;
+  margin-bottom: 3px;
 }
 
 .r-rooms .r-rooms-shen5 .r-rooms-shen-text:hover,
@@ -815,9 +819,9 @@ body {
   color: var(--darkModeBlack, #26292c);
 }
 
-.r-rooms .r-rooms-shen5 .r-rooms-shen-text:hover .r-rooms-shen-text-bottom .bottom-img,
-.r-rooms .r-rooms-shen7 .r-rooms-shen-text:hover .r-rooms-shen-text-bottom .bottom-img {
-  display: block;
+.r-rooms .r-rooms-shen5 .r-rooms-shen-text:hover .r-rooms-shen-text-bottom .r-rooms-shen-arrow,
+.r-rooms .r-rooms-shen7 .r-rooms-shen-text:hover .r-rooms-shen-text-bottom .r-rooms-shen-arrow {
+  background-image: url("../img/rooms/room5-arrow-black.svg");
 }
 
 .r-rooms .r-rooms-shen5 {

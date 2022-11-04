@@ -444,7 +444,7 @@ header {
 
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul li {
   color: var(--darkModeDarkGreen, #334c3f);
-  font-size: 36px;
+  font-size: 27px;
   line-height: 78px;
   border-bottom: 2px solid transparent;
   display: -webkit-box;
@@ -983,6 +983,7 @@ header {
 @media (max-width: 1024px) {
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-bottom,
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom {
+    height: 60%;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1000,7 +1001,7 @@ header {
   }
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-bottom span,
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom span {
-    padding-bottom: 45px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1011,10 +1012,25 @@ header {
   }
 }
 
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-bottom img,
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom img {
+.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-bottom .hambox-shen-left-arrow,
+.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-bottom .hambox-shen-right-arrow,
+.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom .hambox-shen-left-arrow,
+.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom .hambox-shen-right-arrow {
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 112px;
-  padding-bottom: 5px;
+  height: 10px;
+  margin-bottom: 3px;
+}
+
+.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-bottom .hambox-shen-left-arrow,
+.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom .hambox-shen-left-arrow {
+  background-image: url("../img/booking/room5-arrow-white.svg");
+}
+
+.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text .hambox-shen-text-bottom .hambox-shen-right-arrow,
+.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text .hambox-shen-text-bottom .hambox-shen-right-arrow {
+  background-image: url("../img/booking/room7-arrow-white.svg");
 }
 
 @media (max-width: 1024px) {
@@ -1067,9 +1083,9 @@ header {
         -ms-flex-align: end;
             align-items: end;
   }
-  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text:hover .hambox-shen-text-bottom .bottom-img-left,
-  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .hambox-shen-text-bottom .bottom-img-left {
-    display: block;
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text:hover .hambox-shen-text-bottom .hambox-shen-left-arrow,
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .hambox-shen-text-bottom .hambox-shen-left-arrow {
+    background-image: url("../img/booking/room5-arrow-black.svg");
     -webkit-animation: moveleft 0.5s;
             animation: moveleft 0.5s;
     -webkit-animation-fill-mode: forwards;
@@ -1077,9 +1093,9 @@ header {
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }
-  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text:hover .hambox-shen-text-bottom .bottom-img-right,
-  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .hambox-shen-text-bottom .bottom-img-right {
-    display: block;
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text:hover .hambox-shen-text-bottom .hambox-shen-right-arrow,
+  .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .hambox-shen-text-bottom .hambox-shen-right-arrow {
+    background-image: url("../img/booking/room7-arrow-black.svg");
     -webkit-animation: moveright 0.5s;
             animation: moveright 0.5s;
     -webkit-animation-fill-mode: forwards;
@@ -1541,6 +1557,7 @@ header {
 @media (max-width: 1024px) {
   #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom,
   #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom {
+    height: 60%;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1558,14 +1575,7 @@ header {
   }
   #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom span,
   #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom span {
-    padding-bottom: 45px;
-  }
-}
-
-@media (max-width: 768px) {
-  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom span,
-  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom span {
-    padding-bottom: 30px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1576,10 +1586,25 @@ header {
   }
 }
 
-#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom img,
-#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom img {
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom .roomsbox-shen-left-arrow,
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom .roomsbox-shen-right-arrow,
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom .roomsbox-shen-left-arrow,
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom .roomsbox-shen-right-arrow {
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 112px;
-  padding-bottom: 5px;
+  height: 10px;
+  margin-bottom: 3px;
+}
+
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom .roomsbox-shen-left-arrow,
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom .roomsbox-shen-left-arrow {
+  background-image: url("../img/booking/room5-arrow-white.svg");
+}
+
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom .roomsbox-shen-right-arrow,
+#rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom .roomsbox-shen-right-arrow {
+  background-image: url("../img/booking/room7-arrow-white.svg");
 }
 
 @media (max-width: 1024px) {
@@ -1632,9 +1657,9 @@ header {
         -ms-flex-align: end;
             align-items: end;
   }
-  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom .bottom-img-left,
-  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom .bottom-img-left {
-    display: block;
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom .roomsbox-shen-left-arrow,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom .roomsbox-shen-left-arrow {
+    background-image: url("../img/booking/room5-arrow-black.svg");
     -webkit-animation: moveleft 0.5s;
             animation: moveleft 0.5s;
     -webkit-animation-fill-mode: forwards;
@@ -1642,9 +1667,9 @@ header {
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }
-  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom .bottom-img-right,
-  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom .bottom-img-right {
-    display: block;
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom .roomsbox-shen-right-arrow,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom .roomsbox-shen-right-arrow {
+    background-image: url("../img/booking/room7-arrow-black.svg");
     -webkit-animation: moveright 0.5s;
             animation: moveright 0.5s;
     -webkit-animation-fill-mode: forwards;

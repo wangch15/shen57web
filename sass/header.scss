@@ -253,7 +253,7 @@ header{
               }
               li{
                 color: var(--darkModeDarkGreen,$shen57DarkGreen);
-                font-size: $webH1;
+                font-size: $webH2;
                 line-height: 78px;
                 border-bottom: 2px solid transparent;
                 display: flex;
@@ -560,19 +560,30 @@ header{
                   font-size: $webH6;
                   @include flex(center,end);
                   @include headerpad{
+                    height: 60%;
                     text-align: center;
                     @include flex(start,center);
                     flex-direction: column;
                     span{
-                      padding-bottom: 45px;
+                      margin-bottom: 40px;
                     }
                   }
                   @include phone570{
                     font-size: $phoneH6;
                   }
-                  img{
+                  .hambox-shen-left-arrow,
+                  .hambox-shen-right-arrow{
+                    background-size: cover;
+                    background-repeat: no-repeat;
                     width: 112px;
-                    padding-bottom: 5px;
+                    height: 10px;
+                    margin-bottom: 3px;
+                  }
+                  .hambox-shen-left-arrow{
+                    background-image: url("../img/booking/room5-arrow-white.svg");
+                  }
+                  .hambox-shen-right-arrow{
+                    background-image: url("../img/booking/room7-arrow-white.svg");
                   }
                   .text-hidden{
                     @include headerpad{
@@ -598,14 +609,14 @@ header{
                     .hambox-shen-text-bottom{
                       color: var(--darkModeBlack,$shen57black);
                       @include flex(space-between,end);
-                      .bottom-img-left{
-                        display: block;
+                      .hambox-shen-left-arrow{
+                        background-image: url("../img/booking/room5-arrow-black.svg");
                         animation: moveleft 0.5s;
                         animation-fill-mode: forwards;
                         animation-timing-function: ease-out;
                       }
-                      .bottom-img-right{
-                        display: block;
+                      .hambox-shen-right-arrow{
+                        background-image: url("../img/booking/room7-arrow-black.svg");
                         animation: moveright 0.5s;
                         animation-fill-mode: forwards;
                         animation-timing-function: ease-out;
@@ -822,24 +833,30 @@ header{
               font-size: $webH6;
               @include flex(center,end);
               @include headerpad{
+                height: 60%;
                 text-align: center;
                 @include flex(start,center);
                 flex-direction: column;
                 span{
-                  padding-bottom: 45px;
-                }
-              }
-              @include pad{
-                span{
-                  padding-bottom: 30px;
+                  margin-bottom: 40px;
                 }
               }
               @include phone570{
                 font-size: $phoneH6;
               }
-              img{
+              .roomsbox-shen-left-arrow,
+              .roomsbox-shen-right-arrow{
+                background-size: cover;
+                background-repeat: no-repeat;
                 width: 112px;
-                padding-bottom: 5px;
+                height: 10px;
+                margin-bottom: 3px;
+              }
+              .roomsbox-shen-left-arrow{
+                background-image: url("../img/booking/room5-arrow-white.svg");
+              }
+              .roomsbox-shen-right-arrow{
+                background-image: url("../img/booking/room7-arrow-white.svg");
               }
               .text-hidden{
                 @include headerpad{
@@ -865,14 +882,14 @@ header{
                 .roomsbox-shen-text-bottom{
                   color: var(--darkModeBlack,$shen57black);
                   @include flex(space-between,end);
-                  .bottom-img-left{
-                    display: block;
+                  .roomsbox-shen-left-arrow{
+                    background-image: url("../img/booking/room5-arrow-black.svg");
                     animation: moveleft 0.5s;
                     animation-fill-mode: forwards;
                     animation-timing-function: ease-out;
                   }
-                  .bottom-img-right{
-                    display: block;
+                  .roomsbox-shen-right-arrow{
+                    background-image: url("../img/booking/room7-arrow-black.svg");
                     animation: moveright 0.5s;
                     animation-fill-mode: forwards;
                     animation-timing-function: ease-out;

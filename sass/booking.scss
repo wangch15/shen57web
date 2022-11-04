@@ -539,9 +539,19 @@ body{
         @include phone570{
           font-size: $phoneH6;
         }
-        img{
+        .b-shen-left-arrow,
+        .b-shen-right-arrow{
+          background-size: cover;
+          background-repeat: no-repeat;
           width: 112px;
-          padding-bottom: 5px;
+          height: 10px;
+          margin-bottom: 3px;
+        }
+        .b-shen-left-arrow{
+          background-image: url("../img/booking/room5-arrow-white.svg");
+        }
+        .b-shen-right-arrow{
+          background-image: url("../img/booking/room7-arrow-white.svg");
         }
       }
       &:hover{
@@ -553,8 +563,11 @@ body{
         }
         .b-rooms-shen-text-bottom{
           color: var(--darkModeBlack,$shen57black);
-          .bottom-img{
-            display: block;
+          .b-shen-left-arrow{
+            background-image: url("../img/booking/room5-arrow-black.svg");
+          }
+          .b-shen-right-arrow{
+            background-image: url("../img/booking/room7-arrow-black.svg");
           }
         }
       }

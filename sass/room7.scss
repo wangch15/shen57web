@@ -113,9 +113,9 @@ body{
         width: 100%;
         height: calc((100% - 40px) / 2);
         display: flex;
-        flex-direction: row;
         justify-content: flex-end;
         align-items: flex-start;
+        flex-direction: row;
         @include roomspad{
           width: 500px;
           @include flex;
@@ -130,6 +130,9 @@ body{
           width: 300px;
           @include flex(unset,start);
           flex-direction: column;
+        }
+        img{
+          width: 400px;
         }
         h4{
           color: var(--darkModeDarkGreen,$shen57DarkGreen);
@@ -147,9 +150,6 @@ body{
             padding-bottom: 8px;
             @include flex(space-between,start);
           }
-        }
-        img{
-          width: 400px;
         }
       }
       .r-first-floor{
@@ -397,9 +397,13 @@ body{
         span{
           text-align: right;
         }
-        img{
+        .r-rooms-shen-arrow{
+          background-image: url("../img/rooms/room5-arrow-white.svg");
+          background-size: cover;
+          background-repeat: no-repeat;
           width: 112px;
-          padding-bottom: 5px;
+          height: 10px;
+          margin-bottom: 3px;
         }
       }
       &:hover{
@@ -414,8 +418,8 @@ body{
         }
         .r-rooms-shen-text-bottom{
           color: var(--darkModeBlack,$shen57black);
-          .bottom-img{
-            display: block;
+          .r-rooms-shen-arrow{
+            background-image: url("../img/rooms/room5-arrow-black.svg");
           }
         }
       }

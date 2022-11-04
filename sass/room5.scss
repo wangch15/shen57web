@@ -100,6 +100,7 @@ body{
       // 宿-平面圖
       .r-first-floor,
       .r-second-floor{
+        width: 100%;
         height: calc((100% - 40px) / 2);
         display: flex;
         @include roomspad{
@@ -374,9 +375,13 @@ body{
         @include phone570{
           font-size: $phoneH6;
         }
-        img{
+        .r-rooms-shen-arrow{
+          background-image: url("../img/rooms/room7-arrow-white.svg");
+          background-size: cover;
+          background-repeat: no-repeat;
           width: 112px;
-          padding-bottom: 5px;
+          height: 10px;
+          margin-bottom: 3px;
         }
       }
       &:hover{
@@ -391,8 +396,8 @@ body{
         }
         .r-rooms-shen-text-bottom{
           color: var(--darkModeBlack,$shen57black);
-          .bottom-img{
-            display: block;
+          .r-rooms-shen-arrow{
+            background-image: url("../img/rooms/room7-arrow-black.svg");
           }
         }
       }
