@@ -374,6 +374,7 @@ body {
   #location .location-info-container .info-map-box .info-area-top .info-inside-box .info-title {
     font-size: 14px;
     min-width: 58px;
+    margin-right: 10px;
   }
 }
 
@@ -586,7 +587,7 @@ body {
 
 @media (max-width: 468px) {
   .travel-map-area .info-inside-box {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
   }
 }
 
@@ -599,7 +600,7 @@ body {
 
 @media (max-width: 900px) {
   .travel-map-area .info-inside-box .info-title {
-    margin-right: 30px;
+    margin-right: 10px;
   }
 }
 

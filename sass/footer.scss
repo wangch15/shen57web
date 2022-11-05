@@ -135,7 +135,7 @@ footer{
       font-size: $webH6;
       padding-right: 45px;
       flex-wrap: wrap;
-      @include flex(start,center);
+      @include flex(flex-start,center);
       @include footerpad{
         padding-right: 20px;
       }

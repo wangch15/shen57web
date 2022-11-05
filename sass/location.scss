@@ -194,12 +194,13 @@ body {
                         min-width: 81px;
 
                         @include pad{
-                            margin-right: 0;
+                            margin-right: 45px;
                         }
 
                         @include phone {
                             font-size: $phoneH5;
                             min-width: 58px;
+                            margin-right: 10px;
                         }
                     }
 
@@ -280,7 +281,7 @@ body {
 
                     @include phone {
                         font-size: $phoneH5;
-                        margin-right: 25px;
+                        margin-right: 10px;
                         min-width: 58px;
                         margin-top: 20px;
                     }
@@ -352,7 +353,7 @@ body {
         margin-bottom: 45px;
 
         @include phone {
-            margin-bottom: 25px;
+            margin-bottom: 10px;
         }
 
         //標題
@@ -367,6 +368,7 @@ body {
             }
             @include phone {
                 font-size: $phoneH5;
+                margin-right: 10px;
             }
         }
 
