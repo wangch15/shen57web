@@ -342,7 +342,7 @@ header {
     color: var(--darkModeGray, $shen57gray);
     line-height: 28px;
     width: calc(100% - 73px);
-    margin-left: 24px;
+    padding-left: 24px;
     margin-top: 20px;
 
     @include phone {
@@ -351,7 +351,7 @@ header {
         line-height: 18px;
         width: 100%;
         margin-top: 10px;
-        margin-left: 20px;
+        padding-left: 20px;
       }
     }
 
