@@ -52,7 +52,7 @@ header {
 
     @include phone {
       @media (max-width:468px) {
-        height: calc(45vh - 50px);
+        height: 45vh;
         background-size: cover;
 
       }
@@ -182,7 +182,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 75px;
 
     @include pad{
         height: 80vh;
@@ -194,7 +193,6 @@ header {
         min-height: 360px;
         padding-top: 35px;
         padding-bottom: 60px;
-        margin-top: 0;
       }
     }
   }
