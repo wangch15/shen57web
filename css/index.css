@@ -141,7 +141,7 @@ header {
 
 @media (max-width: 468px) and (max-width: 468px) {
   #index .banner {
-    height: 45vh;
+    height: calc(45vh - 50px);
     background-size: cover;
   }
 }
@@ -297,6 +297,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 75px;
 }
 
 @media (max-width: 768px) {
