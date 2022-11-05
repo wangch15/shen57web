@@ -384,8 +384,7 @@ body {
 
     //旅遊地圖本體
     .travel-map {
-        width: 100% ;
-        max-width: 750px;
+        width: 750px;
 
         @media (max-width: 780px) {
             width: 100%;

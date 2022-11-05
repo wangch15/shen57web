@@ -622,8 +622,7 @@ body {
 }
 
 .travel-map-area .travel-map {
-  width: 100%;
-  max-width: 750px;
+  width: 750px;
 }
 
 @media (max-width: 780px) {
