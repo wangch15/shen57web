@@ -565,12 +565,6 @@ body {
           flex-direction: column;
 }
 
-@media (max-width: 900px) {
-  .travel-map-area {
-    pointer-events: none;
-  }
-}
-
 @media (max-width: 468px) {
   .travel-map-area {
     padding: 35px 0 0;
