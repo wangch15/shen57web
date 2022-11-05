@@ -29,8 +29,8 @@ figure {
 }
 
 img {
-  max-width: 100% !important;
-  height: auto !important;
+  max-width: 100%;
+  height: auto;
   border: 0;
 }
 
@@ -164,32 +164,6 @@ header {
   #index .index-menu {
     display: none;
   }
-}
-
-#index .index-menu .rooms-boxbtn {
-  font-family: "Noto Serif", Noto Serif TC;
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  cursor: pointer;
-  font-size: 17px;
-  color: var(--darkModeDarkGreen, #334c3f);
-  font-weight: 700;
-}
-
-@media (max-width: 768px) and (max-width: 768px) {
-  #index .index-menu .rooms-boxbtn {
-    font-size: 14px;
-  }
-}
-
-#index .index-menu .rooms-boxbtn:hover {
-  color: #FFF;
-  text-shadow: 0 0 5px #26292c;
-  -webkit-transition: all .5s;
-  transition: all .5s;
 }
 
 #index .index-menu li {
@@ -507,7 +481,7 @@ header {
   color: var(--darkModeGray, #767676);
   line-height: 28px;
   width: calc(100% - 73px);
-  margin-left: 24px;
+  padding-left: 24px;
   margin-top: 20px;
 }
 
@@ -517,7 +491,7 @@ header {
     line-height: 18px;
     width: 100%;
     margin-top: 10px;
-    margin-left: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -915,6 +889,21 @@ header {
 #index .news-content-main .left {
   max-width: 680px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  #index .news-content-main .left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 #index .news-title,
@@ -1009,6 +998,7 @@ header {
 @media (max-width: 468px) and (max-width: 468px) {
   #index .news-date {
     font-size: 14px;
+    padding: 0 10px;
   }
 }
 
@@ -1022,6 +1012,7 @@ header {
 @media (max-width: 468px) and (max-width: 468px) {
   #index .news-name {
     font-size: 17px;
+    padding: 0 10px;
   }
 }
 
@@ -1032,22 +1023,27 @@ header {
   max-width: 556px;
   line-height: 23px;
   letter-spacing: 0.075em;
-  margin-top: 25px;
-  margin-bottom: 28px;
-  height: 180px;
+  height: auto;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 7;
+  -webkit-line-clamp: 6;
   overflow: hidden;
 }
 
 @media (max-width: 1100px) and (max-width: 1100px) {
   #index .news-intro {
-    height: 108px;
+    height: auto;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     padding-right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #index .news-intro {
+    margin-top: 30px;
+    margin-bottom: 15px;
   }
 }
 
@@ -1056,11 +1052,12 @@ header {
     font-size: 14px;
     padding-right: 10px;
     margin-top: 5px;
+    margin-bottom: 0;
   }
 }
 
 #index .news-intro p {
-  margin: 5px;
+  margin: 0px 10px;
 }
 
 #index .news-content-pic {
@@ -1075,7 +1072,7 @@ header {
 @media (max-width: 768px) and (max-width: 768px) {
   #index .news-content-pic {
     text-align: center;
-    margin: 59px auto 0 auto;
+    margin: 90px auto 0 auto;
   }
 }
 
@@ -1091,6 +1088,19 @@ header {
 #index .news-content {
   margin-left: 70px;
   margin-top: 50px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 1100px) {
@@ -1103,12 +1113,15 @@ header {
   #index .news-content {
     margin-top: 20px;
     margin-left: unset;
+    width: 420px;
   }
 }
 
 @media (max-width: 468px) and (max-width: 468px) {
   #index .news-content {
     margin-left: 10px;
+    width: 100%;
+    padding: 0 10px;
   }
 }
 
@@ -1276,6 +1289,15 @@ header {
   }
 }
 
+@media (max-width: 468px) {
+  #index .story-title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #index .story-title-pic {
   margin-bottom: 80px;
   margin-right: 25px;
@@ -1304,6 +1326,12 @@ header {
   #index .story-text {
     font-size: 14px;
     line-height: 18px;
+  }
+}
+
+@media (max-width: 468px) {
+  #index .story-text {
+    margin-top: 20px;
   }
 }
 
@@ -1383,7 +1411,7 @@ header {
   width: 100%;
 }
 
-@media (max-width: 1100px) and (max-width: 1100px) {
+@media (max-width: 1100px) {
   #index .location-content-main .left {
     max-width: 570px;
   }

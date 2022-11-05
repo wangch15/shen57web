@@ -29,8 +29,8 @@ figure {
 }
 
 img {
-  max-width: 100% !important;
-  height: auto !important;
+  max-width: 100%;
+  height: auto;
   border: 0;
 }
 
@@ -379,7 +379,7 @@ header {
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: start;
+          justify-content: flex-start;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -403,10 +403,10 @@ header {
     display: flex;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
-            justify-content: start;
+            justify-content: flex-start;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: start;
+            align-items: flex-start;
   }
 }
 
@@ -507,7 +507,7 @@ header {
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: start;
+          justify-content: flex-start;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -531,10 +531,10 @@ header {
     display: flex;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
-            justify-content: start;
+            justify-content: flex-start;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: start;
+            align-items: flex-start;
   }
 }
 
@@ -750,7 +750,7 @@ header {
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -802,7 +802,7 @@ header {
     display: flex;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
-            justify-content: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -931,7 +931,7 @@ header {
           justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: start;
+          align-items: flex-start;
 }
 
 @media (min-width: 1024px) {
@@ -990,7 +990,7 @@ header {
     display: flex;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
-            justify-content: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1068,7 +1068,7 @@ header {
             justify-content: space-between;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: start;
+            align-items: flex-start;
   }
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen5 .hambox-shen-text:hover .hambox-shen-text-bottom,
   .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-rooms .hambox-bottom-rooms .hambox-rooms-shen7 .hambox-shen-text:hover .hambox-shen-text-bottom {
@@ -1271,7 +1271,7 @@ header {
           justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1288,7 +1288,7 @@ header {
           justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: start;
+          align-items: flex-start;
 }
 
 #rooms-box .rooms-menu .rooms-info .rooms-info-box {
@@ -1297,10 +1297,10 @@ header {
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: start;
+          align-items: flex-start;
 }
 
 @media (max-width: 768px) {
@@ -1498,7 +1498,7 @@ header {
           justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: start;
+          align-items: flex-start;
 }
 
 @media (min-width: 1024px) {
@@ -1564,7 +1564,7 @@ header {
     display: flex;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
-            justify-content: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1642,7 +1642,7 @@ header {
             justify-content: space-between;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: start;
+            align-items: flex-start;
   }
   #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom,
   #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text:hover .roomsbox-shen-text-bottom {
@@ -1807,5 +1807,10 @@ header {
 
 #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 {
   background-image: url("../img/booking/room7-cover.jpg");
+}
+
+.showline {
+  border-top: 2px solid var(--darkModeWhite, #ffffff) !important;
+  border-bottom: 2px solid var(--darkModeWhite, #ffffff) !important;
 }
 /*# sourceMappingURL=header.css.map */

@@ -29,8 +29,8 @@ figure {
 }
 
 img {
-  max-width: 100% !important;
-  height: auto !important;
+  max-width: 100%;
+  height: auto;
   border: 0;
 }
 
@@ -366,7 +366,7 @@ body {
 
 @media (max-width: 768px) {
   #location .location-info-container .info-map-box .info-area-top .info-inside-box .info-title {
-    margin-right: 0;
+    margin-right: 45px;
   }
 }
 
@@ -492,7 +492,7 @@ body {
 @media (max-width: 468px) {
   #location .location-info-container .info-map-box .info-inside-lastbox .info-title {
     font-size: 14px;
-    margin-right: 25px;
+    margin-right: 10px;
     min-width: 58px;
     margin-top: 20px;
   }
@@ -600,13 +600,14 @@ body {
 
 @media (max-width: 900px) {
   .travel-map-area .info-inside-box .info-title {
-    margin-right: 10px;
+    margin-right: 30px;
   }
 }
 
 @media (max-width: 468px) {
   .travel-map-area .info-inside-box .info-title {
     font-size: 14px;
+    margin-right: 10px;
   }
 }
 
