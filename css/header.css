@@ -424,15 +424,7 @@ header {
   }
 }
 
-.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul .rooms-boxbtn {
-  font-family: "Noto Serif", Noto Serif TC;
-  font-weight: bold;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  background-color: transparent;
+.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul a {
   cursor: pointer;
 }
 

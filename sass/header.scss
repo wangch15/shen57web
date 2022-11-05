@@ -231,18 +231,8 @@ header{
               @include pad{
                 padding: 10px;
               }
-              .rooms-boxbtn{
-                font-family: $engFont,$notoTC;
-                font-weight: bold;
-                width: 100%;
-                margin: 0;
-                padding: 0;
-                border: none;
-                outline: none;
-                background-color: transparent;
-                cursor: pointer;
-              }
               a{
+                cursor: pointer;
                 @include pad{
                   &:last-child{
                     li{
