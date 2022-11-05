@@ -74,7 +74,7 @@ body {
     //行-頁面標題
     .title-area {
         width: 100%;
-        @include flex(start, center);
+        @include flex(flex-start, center);
 
         //訊書法文字
         img {
@@ -123,7 +123,7 @@ body {
 
         // 地圖與文字區塊(上段)
         .info-map-box {
-            @include flex(start, start);
+            @include flex(flex-start, flex-start);
             position: relative;
             flex-direction: column;
 
@@ -161,7 +161,7 @@ body {
                     width: 100%;
                     height: 68px;
                     border-bottom: 1px solid var(--darkModeDarkGreen, $shen57DarkGreen);
-                    @include flex(start, center);
+                    @include flex(flex-start, center);
 
                     @include s-monitor {
                         padding-right: 20px;
@@ -257,7 +257,7 @@ body {
 
             //自行開車區塊
             .info-inside-lastbox {
-                @include flex(start, start);
+                @include flex(flex-start, flex-start);
 
                 @include s-monitor {
                     grid-column: 1/3;
@@ -339,7 +339,7 @@ body {
     width: 100%;
     max-width: 1100px;
     padding: 55px 0 0;
-    @include flex(start, center);
+    @include flex(flex-start, center);
     flex-direction: column;
 
     @include phone {
