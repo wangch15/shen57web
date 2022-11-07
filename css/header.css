@@ -424,6 +424,18 @@ header {
   }
 }
 
+.header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul .rooms-boxbtn {
+  font-family: "Noto Serif", Noto Serif TC;
+  font-weight: bold;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .header-ham #header-hambox .hambox-menu .hambox-infobox .hambox-info .hambox-info-left ul a {
   cursor: pointer;
 }
@@ -1603,6 +1615,13 @@ header {
   #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom .text-hidden,
   #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom .text-hidden {
     display: block;
+  }
+}
+
+@media (max-width: 468px) {
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen5 .roomsbox-shen-text .roomsbox-shen-text-bottom .text-hidden,
+  #rooms-box .rooms-menu .roomsbox-rooms .roomsbox-bottom-rooms .roomsbox-rooms-shen7 .roomsbox-shen-text .roomsbox-shen-text-bottom .text-hidden {
+    display: none;
   }
 }
 

@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
+    <meta property="og:url" content="https://wangch15.github.io/shen57web/location">
+    <meta property="og:image" content="https://wangch15.github.io/shen57web/img/index/banner.jpg">
+    <meta property="og:description" content="行館資訊、交通指引、旅遊地圖">
+    <meta property="og:title" content="森五七行館 / 行館資訊，旅遊地圖">
     <title>森五七行館 - 行 Location</title>
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/location.css">
@@ -12,8 +17,9 @@
     <link rel="icon" type="image/svg" href="./img/shen57-favicon.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" type="image/svg" href="./img/shen57-favicon-w.svg" media="(prefers-color-scheme: dark)">
 </head>
+
 <body>
-    
+
     <!-- 頁首 -->
     <header>
         <div id="header-nav">
@@ -24,11 +30,21 @@
             <!-- 頁首-菜單 -->
             <div class="header-menu">
                 <ul>
-                    <a href="news.html"><li>訊 News</li></a>
-                    <button type="button" class="rooms-boxbtn" onclick="openrooms()"><li>宿 Rooms</li></button>
-                    <a href="booking.html"><li>訂 Booking</li></a>
-                    <a href="story.html"><li>源 Story</li></a>
-                    <a href="location.html"><li>行 Location</li></a>
+                    <a href="news.html">
+                        <li>訊 News</li>
+                    </a>
+                    <button type="button" class="rooms-boxbtn" onclick="openrooms()">
+                        <li>宿 Rooms</li>
+                    </button>
+                    <a href="booking.html">
+                        <li>訂 Booking</li>
+                    </a>
+                    <a href="story.html">
+                        <li>源 Story</li>
+                    </a>
+                    <a href="location.html">
+                        <li>行 Location</li>
+                    </a>
                 </ul>
             </div>
             <!-- 頁首-隱藏盒子 -->
@@ -38,63 +54,80 @@
                     <!-- hambox -->
                     <div id="header-hambox">
                         <div class="hambox-menu">
-                        <!-- hambox-logo -->
-                        <div class="hambox-logobox">
-                            <a href="index.html"><img src="./img/header/header-hamlogo.svg" class="hambox-logo" alt="屏東-恆春民宿-森五七行館"></a>
-                            <div class="hambox-btn"></div>
-                        </div>
-                        <div class="hambox-infobox">
-                            <!-- hambox-shen57資訊 -->
-                            <div class="hambox-info">
-                                <!-- hambox-nav -->
-                                <div class="hambox-info-left">
-                                    <ul>
-                                    <a href="news.html"><li>訊 News<span>˙</span></li></a>
-                                    <a onclick="openrooms()"><li>宿 Rooms<span>˙</span></li></a>
-                                    <a href="booking.html"><li>訂 Booking<span>˙</span></li></a>
-                                    <a href="story.html"><li>源 Story<span>˙</span></li></a>
-                                    <a href="location.html"><li>行 Location<span>˙</span></li></a>
-                                    </ul>
-                                </div>
-                                <!-- hambox-關於 -->
-                                <div class="hambox-info-right">
-                                    <div class="info-right-about">
-                                    <div class="info-right-community">
-                                        <p>關於&emsp;森˙五七行館</p>
-                                        <div class="community-img">
-                                            <!-- LINE-QRcode按鈕 -->
-                                            <button type="button" class="community-line qrcode-open" onclick="openwindow()"><img src="./img/header/line.svg" alt="屏東-恆春民宿-森五七行館-line"></button>
-                                            <a href="https://www.instagram.com/shen57hostel/" target="_blank"><img src="./img/header/instagram.svg" alt="屏東-恆春民宿-森五七行館-instagram"></a>
-                                            <a href="https://www.facebook.com/shen57hostel2016" target="_blank"><img src="./img/header/facebook.svg" alt="屏東-恆春民宿-森五七行館-facebook"></a>
+                            <!-- hambox-logo -->
+                            <div class="hambox-logobox">
+                                <a href="index.html"><img src="./img/header/header-hamlogo.svg" class="hambox-logo"
+                                        alt="屏東-恆春民宿-森五七行館"></a>
+                                <div class="hambox-btn"></div>
+                            </div>
+                            <div class="hambox-infobox">
+                                <!-- hambox-shen57資訊 -->
+                                <div class="hambox-info">
+                                    <!-- hambox-nav -->
+                                    <div class="hambox-info-left">
+                                        <ul>
+                                            <a href="news.html">
+                                                <li>訊 News<span>˙</span></li>
+                                            </a>
+                                            <a onclick="openrooms()">
+                                                <li>宿 Rooms<span>˙</span></li>
+                                            </a>
+                                            <a href="booking.html">
+                                                <li>訂 Booking<span>˙</span></li>
+                                            </a>
+                                            <a href="story.html">
+                                                <li>源 Story<span>˙</span></li>
+                                            </a>
+                                            <a href="location.html">
+                                                <li>行 Location<span>˙</span></li>
+                                            </a>
+                                        </ul>
+                                    </div>
+                                    <!-- hambox-關於 -->
+                                    <div class="hambox-info-right">
+                                        <div class="info-right-about">
+                                            <div class="info-right-community">
+                                                <p>關於&emsp;森˙五七行館</p>
+                                                <div class="community-img">
+                                                    <!-- LINE-QRcode按鈕 -->
+                                                    <button type="button" class="community-line qrcode-open"
+                                                        onclick="openwindow()"><img src="./img/header/line.svg"
+                                                            alt="屏東-恆春民宿-森五七行館-line"></button>
+                                                    <a href="https://www.instagram.com/shen57hostel/"
+                                                        target="_blank"><img src="./img/header/instagram.svg"
+                                                            alt="屏東-恆春民宿-森五七行館-instagram"></a>
+                                                    <a href="https://www.facebook.com/shen57hostel2016"
+                                                        target="_blank"><img src="./img/header/facebook.svg"
+                                                            alt="屏東-恆春民宿-森五七行館-facebook"></a>
+                                                </div>
+                                            </div>
+                                            <div class="info-right-box">
+                                                <div class="info-right-title">行館地址</div>
+                                                <div class="info-right-content">946 屏東縣恆春鎮大光里砂尾路68-2號</div>
+                                            </div>
+                                            <div class="info-right-box">
+                                                <div class="info-right-title">聯絡電話</div>
+                                                <div class="info-right-content">(08) 886-7658 / 0961-333-857</div>
+                                            </div>
+                                            <div class="info-right-box">
+                                                <div class="info-right-title">電子信箱</div>
+                                                <div class="info-right-content">shen57hostel@gmail.com</div>
+                                            </div>
+                                            <div class="info-right-box">
+                                                <div class="info-right-title">訂房時段</div>
+                                                <div class="info-right-content">每日 09 : 00 am ~ 09 : 00 pm</div>
+                                            </div>
+                                            <div class="info-right-box">
+                                                <div class="info-right-title">服&emsp;&emsp;務</div>
+                                                <div class="info-right-content">
+                                                    <span>提供優惠汽機車租賃、包車旅遊導覽服務資訊。</span>
+                                                    <span>提供旅遊資訊及諮詢服務。</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="info-right-box">
-                                        <div class="info-right-title">行館地址</div>
-                                        <div class="info-right-content">946 屏東縣恆春鎮大光里砂尾路68-2號</div>
-                                    </div>
-                                    <div class="info-right-box">
-                                        <div class="info-right-title">聯絡電話</div>
-                                        <div class="info-right-content">(08) 886-7658 / 0961-333-857</div>
-                                    </div>
-                                    <div class="info-right-box">
-                                        <div class="info-right-title">電子信箱</div>
-                                        <div class="info-right-content">shen57hostel@gmail.com</div>
-                                    </div>
-                                    <div class="info-right-box">
-                                        <div class="info-right-title">訂房時段</div>
-                                        <div class="info-right-content">每日 09 : 00 am ~ 09 : 00 pm</div>
-                                    </div>
-                                    <div class="info-right-box">
-                                        <div class="info-right-title">服&emsp;&emsp;務</div>
-                                        <div class="info-right-content">
-                                            <span>提供優惠汽機車租賃、包車旅遊導覽服務資訊。</span>
-                                            <span>提供旅遊資訊及諮詢服務。</span>
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -107,11 +140,11 @@
                     <div class="rooms-info-box">
                         <img src="./img/header/rooms.svg" alt="">
                         <div class="rooms-info-text">
-                        <p>
-                            <span>將手輕輕撫在耳邊，聆聽貝殼捎來的私密話語，溫暖的白砂，調皮地搔弄我的腳底，</span>
-                            <span>而陣陣的海風 rooms，引領我前往那名為「無期而遇」的美好。</span>
-                        </p>
-                        <p>在這熱情的墾丁，所有的平行線開始交會，儼然成了故事的下一篇章。</p>
+                            <p>
+                                <span>將手輕輕撫在耳邊，聆聽貝殼捎來的私密話語，溫暖的白砂，調皮地搔弄我的腳底，</span>
+                                <span>而陣陣的海風 rooms，引領我前往那名為「無期而遇」的美好。</span>
+                            </p>
+                            <p>在這熱情的墾丁，所有的平行線開始交會，儼然成了故事的下一篇章。</p>
                         </div>
                     </div>
                     <div class="rooms-box-btn" onclick="closerooms()"></div>
@@ -121,28 +154,30 @@
                 <div class="roomsbox-rooms">
                     <div class="roomsbox-bottom-rooms">
                         <a href="room5.html" class="roomsbox-rooms-shen5">
-                        <div class="roomsbox-shen-text">
-                            <div class="roomsbox-shen-text-top">
-                                <span class="text-hidden">參考房型</span>
-                                <span class="text-move-left">森5 / 時尚館</span>
+                            <div class="roomsbox-shen-text">
+                                <div class="roomsbox-shen-text-top">
+                                    <span class="text-hidden">參考房型</span>
+                                    <span class="text-move-left">森5 / 時尚館</span>
+                                </div>
+                                <div class="roomsbox-shen-text-bottom">
+                                    <span class="text-hidden">本房型為 <b>獨棟別墅</b> <br>室內坪數 <b>50</b> 坪，室外約 <b>150</b>
+                                        坪</span>
+                                    <div class="roomsbox-shen-left-arrow"></div>
+                                </div>
                             </div>
-                            <div class="roomsbox-shen-text-bottom">
-                                <span class="text-hidden">本房型為 <b>獨棟別墅</b> <br>室內坪數 <b>50</b> 坪，室外約 <b>150</b> 坪</span>
-                                <div class="roomsbox-shen-left-arrow"></div>
-                            </div>
-                        </div>
                         </a>
                         <a href="room7.html" class="roomsbox-rooms-shen7">
-                        <div class="roomsbox-shen-text">
-                            <div class="roomsbox-shen-text-top">
-                                <span class="text-hidden">參考房型</span>
-                                <span class="text-move-right">森7 / 和風館</span>
+                            <div class="roomsbox-shen-text">
+                                <div class="roomsbox-shen-text-top">
+                                    <span class="text-hidden">參考房型</span>
+                                    <span class="text-move-right">森7 / 和風館</span>
+                                </div>
+                                <div class="roomsbox-shen-text-bottom">
+                                    <span class="text-hidden">本房型為 <b>獨棟別墅</b> <br>室內坪數 <b>50</b> 坪，室外約 <b>150</b>
+                                        坪</span>
+                                    <div class="roomsbox-shen-right-arrow"></div>
+                                </div>
                             </div>
-                            <div class="roomsbox-shen-text-bottom">
-                                <span class="text-hidden">本房型為 <b>獨棟別墅</b> <br>室內坪數 <b>50</b> 坪，室外約 <b>150</b> 坪</span>
-                                <div class="roomsbox-shen-right-arrow"></div>
-                            </div>
-                        </div>
                         </a>
                     </div>
                 </div>
@@ -219,54 +254,55 @@
                 </div>
             </div>
         </section>
-                    <!-- 旅遊地圖 -->
-                    <div class="travel-map-area">
-                        <div class="info-inside-box">
-                            <div class="info-title">旅遊地圖</div>
-                            <p class="info-content">點擊景點區域即可直接開啟Google Map</p>
-                        </div>
-                        
-                        <!-- 768以下旅遊地圖 -->
-                        <!-- Image Map Generated by http://www.image-map.net/ -->
-                        <img srcset="./img/location/travel-map-phone.png 1x, ./img/location/travel-map-phone@2x.png 2x" src="./img/location/travel-map-phone.png" usemap="#image-map-phone" class="travel-map">
-        
-                        <map name="image-map-phone">
-                            <area target="_blank" alt="屏東海生館" title="屏東海生館" href="https://goo.gl/maps/QRAeeUDL3smFE4TQ7"
-                                coords="132,29,258,183" shape="rect">
-                            <area target="_blank" alt="鹿境梅花鹿生態園區" title="鹿境梅花鹿生態園區" href="https://goo.gl/maps/xCxW6uSWE89NtG23A"
-                                coords="300,36,487,219" shape="rect">
-                            <area target="_blank" alt="萬里桐" title="萬里桐" href="https://goo.gl/maps/cUQuAmrz3YDjzoZX7"
-                                coords="48,267,141,371" shape="rect">
-                            <area target="_blank" alt="恆春古城" title="恆春古城" href="https://goo.gl/maps/Ncm7UR1UmSs2MJSx7"
-                                coords="222,261,416,378" shape="rect">
-                            <area target="_blank" alt="出火" title="出火" href="https://goo.gl/maps/2s5yjM6tPeu2YuZj7"
-                                coords="421,244,519,325" shape="rect">
-                            <area target="_blank" alt="墾丁森林公園" title="墾丁森林公園" href="https://goo.gl/maps/YDVoNU3xunxXBaz9A"
-                                coords="475,346,621,379" shape="rect">
-                            <area target="_blank" alt="南灣" title="南灣" href="https://goo.gl/maps/7ppzkhZhirYVLR2W6"
-                                coords="376,392,512,506" shape="rect">
-                            <area target="_blank" alt="白沙灣" title="白沙灣" href="https://goo.gl/maps/zvSz5Q9XMFZjBY7q9"
-                                coords="56,431,192,573" shape="rect">
-                            <area target="_blank" alt="森五七行館" title="森五七行館" href="https://goo.gl/maps/y9epKuTUXdYVUL1k8"
-                                coords="217,461,315,563" shape="rect">
-                            <area target="_blank" alt="貓鼻頭" title="貓鼻頭" href="https://goo.gl/maps/9s6DXGa5GKuGxm9UA"
-                                coords="238,615,402,723" shape="rect">
-                            <area target="_blank" alt="鵝鑾鼻燈塔" title="鵝鑾鼻燈塔" href="https://goo.gl/maps/PJe3tXhEGyTuhWz86"
-                                coords="640,595,755,777" shape="rect">
-                            <area target="_blank" alt="龍磐" title="龍磐" href="https://goo.gl/maps/YyCnpXPjAwjBcjeW9"
-                                coords="647,520,742,564" shape="rect">
-                            <area target="_blank" alt="墾丁大街" title="墾丁大街" href="https://goo.gl/maps/FaqUxLwZpdt8Exjw9"
-                                coords="499,523,621,560" shape="rect">
-                            <area target="_blank" alt="風吹砂" title="風吹砂" href="https://goo.gl/maps/UMdMMTtzGHv1su267"
-                                coords="649,409,762,452" shape="rect">
-                            <area target="_blank" alt="佳樂水遊樂區" title="佳樂水遊樂區" href="https://goo.gl/maps/LJiDjpaNLsGd14zLA"
-                                coords="681,270,864,392" shape="rect">
-                        </map>
-                    </div>
+        <!-- 旅遊地圖 -->
+        <div class="travel-map-area">
+            <div class="info-inside-box">
+                <div class="info-title">旅遊地圖</div>
+                <p class="info-content">點擊景點區域即可直接開啟Google Map</p>
+            </div>
+
+            <!-- 768以下旅遊地圖 -->
+            <!-- Image Map Generated by http://www.image-map.net/ -->
+            <img srcset="./img/location/travel-map-phone.png 1x, ./img/location/travel-map-phone@2x.png 2x"
+                src="./img/location/travel-map-phone.png" usemap="#image-map-phone" class="travel-map">
+
+            <map name="image-map-phone">
+                <area target="_blank" alt="屏東海生館" title="屏東海生館" href="https://goo.gl/maps/QRAeeUDL3smFE4TQ7"
+                    coords="132,29,258,183" shape="rect">
+                <area target="_blank" alt="鹿境梅花鹿生態園區" title="鹿境梅花鹿生態園區" href="https://goo.gl/maps/xCxW6uSWE89NtG23A"
+                    coords="300,36,487,219" shape="rect">
+                <area target="_blank" alt="萬里桐" title="萬里桐" href="https://goo.gl/maps/cUQuAmrz3YDjzoZX7"
+                    coords="48,267,141,371" shape="rect">
+                <area target="_blank" alt="恆春古城" title="恆春古城" href="https://goo.gl/maps/Ncm7UR1UmSs2MJSx7"
+                    coords="222,261,416,378" shape="rect">
+                <area target="_blank" alt="出火" title="出火" href="https://goo.gl/maps/2s5yjM6tPeu2YuZj7"
+                    coords="421,244,519,325" shape="rect">
+                <area target="_blank" alt="墾丁森林公園" title="墾丁森林公園" href="https://goo.gl/maps/YDVoNU3xunxXBaz9A"
+                    coords="475,346,621,379" shape="rect">
+                <area target="_blank" alt="南灣" title="南灣" href="https://goo.gl/maps/7ppzkhZhirYVLR2W6"
+                    coords="376,392,512,506" shape="rect">
+                <area target="_blank" alt="白沙灣" title="白沙灣" href="https://goo.gl/maps/zvSz5Q9XMFZjBY7q9"
+                    coords="56,431,192,573" shape="rect">
+                <area target="_blank" alt="森五七行館" title="森五七行館" href="https://goo.gl/maps/y9epKuTUXdYVUL1k8"
+                    coords="217,461,315,563" shape="rect">
+                <area target="_blank" alt="貓鼻頭" title="貓鼻頭" href="https://goo.gl/maps/9s6DXGa5GKuGxm9UA"
+                    coords="238,615,402,723" shape="rect">
+                <area target="_blank" alt="鵝鑾鼻燈塔" title="鵝鑾鼻燈塔" href="https://goo.gl/maps/PJe3tXhEGyTuhWz86"
+                    coords="640,595,755,777" shape="rect">
+                <area target="_blank" alt="龍磐" title="龍磐" href="https://goo.gl/maps/YyCnpXPjAwjBcjeW9"
+                    coords="647,520,742,564" shape="rect">
+                <area target="_blank" alt="墾丁大街" title="墾丁大街" href="https://goo.gl/maps/FaqUxLwZpdt8Exjw9"
+                    coords="499,523,621,560" shape="rect">
+                <area target="_blank" alt="風吹砂" title="風吹砂" href="https://goo.gl/maps/UMdMMTtzGHv1su267"
+                    coords="649,409,762,452" shape="rect">
+                <area target="_blank" alt="佳樂水遊樂區" title="佳樂水遊樂區" href="https://goo.gl/maps/LJiDjpaNLsGd14zLA"
+                    coords="681,270,864,392" shape="rect">
+            </map>
+        </div>
     </main>
 
     <!-- 頁腳 -->
-   <footer>
+    <footer>
         <div id="footer">
             <div class="footer-nav">
                 <!-- 頁腳-logo -->
@@ -277,20 +313,33 @@
                 <div class="footer-menu">
                     <!-- 頁腳-分頁欄 -->
                     <ul>
-                        <a href="news.html"><li>訊 News</li></a>
-                        <button type="button" class="rooms-boxbtn" onclick="openrooms()"><li>宿 Rooms</li></button>
-                        <a href="booking.html"><li>訂 Booking</li></a>
-                        <a href="story.html"><li>源 Story</li></a>
-                        <a href="location.html"><li id="footer-menu-lastli">行 Location</li></a>
+                        <a href="news.html">
+                            <li>訊 News</li>
+                        </a>
+                        <button type="button" class="rooms-boxbtn" onclick="openrooms()">
+                            <li>宿 Rooms</li>
+                        </button>
+                        <a href="booking.html">
+                            <li>訂 Booking</li>
+                        </a>
+                        <a href="story.html">
+                            <li>源 Story</li>
+                        </a>
+                        <a href="location.html">
+                            <li id="footer-menu-lastli">行 Location</li>
+                        </a>
                     </ul>
                     <!-- 頁腳-聯絡資訊 -->
                     <div class="footer-contact">
                         <div class="footer-text">
-                        <p>屏東縣恆春鎮大光里砂尾路68-2號</p><span>|</span><p>(08) 886-7658 / 0961-333-857</p><span>|</span><p>shen57hostel@gmail.com</p>
+                            <p>屏東縣恆春鎮大光里砂尾路68-2號</p><span>|</span>
+                            <p>(08) 886-7658 / 0961-333-857</p><span>|</span>
+                            <p>shen57hostel@gmail.com</p>
                         </div>
                         <div class="footer-community">
-                        <!-- LINE-QRcode按鈕 -->
-                        <button type="button" class="community-line" onclick="openwindow()"><img src="./img/footer/line.svg" alt="屏東-恆春民宿-森五七行館-line"></button>
+                            <!-- LINE-QRcode按鈕 -->
+                            <button type="button" class="community-line" onclick="openwindow()"><img
+                                    src="./img/footer/line.svg" alt="屏東-恆春民宿-森五七行館-line"></button>
                             <!-- LINE-QRcode彈跳視窗 -->
                             <div class="linebox show-dialog">
                                 <!-- linebox-bg 視窗內背景 -->
@@ -298,15 +347,17 @@
                                     <img src="./img/footer/shen57-line-link.jpg" alt="">
                                     <h4>透過行動條碼加入LINE好友</h4>
                                     <div class="linebox-text">
-                                    <p>請在LINE應用程式上開啟「好友」分頁，點選畫面右上方用來加入好友的圖示，</p>
-                                    <p>接著點選「行動條碼」，然後掃描此行動條碼。</p>
+                                        <p>請在LINE應用程式上開啟「好友」分頁，點選畫面右上方用來加入好友的圖示，</p>
+                                        <p>接著點選「行動條碼」，然後掃描此行動條碼。</p>
                                     </div>
                                     <h5>透過LINE ID新增LINE好友：shen57hostel</h5>
                                     <button type="button" class="qrcode-close" onclick="closewindow()">關閉視窗</button>
                                 </div>
                             </div>
-                        <a href="https://www.instagram.com/shen57hostel/" target="_blank"><img src="./img/footer/instagram.svg" alt="屏東-恆春民宿-森五七行館-instagram"></a>
-                        <a href="https://www.facebook.com/shen57hostel2016" target="_blank"><img src="./img/footer/facebook.svg" alt="屏東-恆春民宿-森五七行館-facebook"></a>
+                            <a href="https://www.instagram.com/shen57hostel/" target="_blank"><img
+                                    src="./img/footer/instagram.svg" alt="屏東-恆春民宿-森五七行館-instagram"></a>
+                            <a href="https://www.facebook.com/shen57hostel2016" target="_blank"><img
+                                    src="./img/footer/facebook.svg" alt="屏東-恆春民宿-森五七行館-facebook"></a>
                         </div>
                     </div>
                 </div>
@@ -334,4 +385,5 @@
     <script src="./js/hambtn.js"></script>
     <script src="./js/line.js"></script>
 </body>
+
 </html>

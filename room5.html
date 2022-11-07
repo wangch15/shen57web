@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="format-detection" content="telephone=no">
+   <meta property="og:url" content="https://wangch15.github.io/shen57web/room5">
+   <meta property="og:image" content="https://wangch15.github.io/shen57web/img/index/banner.jpg">
+   <meta property="og:description" content="森5 - 時尚館房型資訊">
+   <meta property="og:title" content="森五七行館 / 時尚館">
    <title>森五七行館 - 宿 Rooms - 森五時尚館</title>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
    <link rel="stylesheet" href="./css/header.css">
    <link rel="stylesheet" href="./css/room5.css">
    <link rel="stylesheet" href="./css/rooms-swiper.css">
@@ -14,6 +19,7 @@
    <link rel="icon" type="image/svg" href="./img/shen57-favicon.svg" media="(prefers-color-scheme: light)">
    <link rel="icon" type="image/svg" href="./img/shen57-favicon-w.svg" media="(prefers-color-scheme: dark)">
 </head>
+
 <body>
 
    <!-- 頁首 -->
@@ -26,11 +32,21 @@
          <!-- 頁首-菜單 -->
          <div class="header-menu">
             <ul>
-               <a href="news.html"><li>訊 News</li></a>
-               <button type="button" class="rooms-boxbtn" onclick="openrooms()"><li>宿 Rooms</li></button>
-               <a href="booking.html"><li>訂 Booking</li></a>
-               <a href="story.html"><li>源 Story</li></a>
-               <a href="location.html"><li>行 Location</li></a>
+               <a href="news.html">
+                  <li>訊 News</li>
+               </a>
+               <button type="button" class="rooms-boxbtn" onclick="openrooms()">
+                  <li>宿 Rooms</li>
+               </button>
+               <a href="booking.html">
+                  <li>訂 Booking</li>
+               </a>
+               <a href="story.html">
+                  <li>源 Story</li>
+               </a>
+               <a href="location.html">
+                  <li>行 Location</li>
+               </a>
             </ul>
          </div>
          <!-- 頁首-隱藏盒子 -->
@@ -42,7 +58,8 @@
                   <div class="hambox-menu">
                      <!-- hambox-logo -->
                      <div class="hambox-logobox">
-                        <a href="index.html"><img src="./img/header/header-hamlogo.svg" class="hambox-logo" alt="屏東-恆春民宿-森五七行館"></a>
+                        <a href="index.html"><img src="./img/header/header-hamlogo.svg" class="hambox-logo"
+                              alt="屏東-恆春民宿-森五七行館"></a>
                         <div class="hambox-btn"></div>
                      </div>
                      <div class="hambox-infobox">
@@ -51,11 +68,21 @@
                            <!-- hambox-nav -->
                            <div class="hambox-info-left">
                               <ul>
-                                 <a href="news.html"><li>訊 News<span>˙</span></li></a>
-                                 <a onclick="openrooms()"><li>宿 Rooms<span>˙</span></li></a>
-                                 <a href="booking.html"><li>訂 Booking<span>˙</span></li></a>
-                                 <a href="story.html"><li>源 Story<span>˙</span></li></a>
-                                 <a href="location.html"><li>行 Location<span>˙</span></li></a>
+                                 <a href="news.html">
+                                    <li>訊 News<span>˙</span></li>
+                                 </a>
+                                 <a onclick="openrooms()">
+                                    <li>宿 Rooms<span>˙</span></li>
+                                 </a>
+                                 <a href="booking.html">
+                                    <li>訂 Booking<span>˙</span></li>
+                                 </a>
+                                 <a href="story.html">
+                                    <li>源 Story<span>˙</span></li>
+                                 </a>
+                                 <a href="location.html">
+                                    <li>行 Location<span>˙</span></li>
+                                 </a>
                               </ul>
                            </div>
                            <!-- hambox-關於 -->
@@ -65,9 +92,13 @@
                                     <p>關於&emsp;森˙五七行館</p>
                                     <div class="community-img">
                                        <!-- LINE-QRcode按鈕 -->
-                                       <button type="button" class="community-line qrcode-open" onclick="openwindow()"><img src="./img/header/line.svg" alt="屏東-恆春民宿-森五七行館-line"></button>
-                                       <a href="https://www.instagram.com/shen57hostel/" target="_blank"><img src="./img/header/instagram.svg" alt="屏東-恆春民宿-森五七行館-instagram"></a>
-                                       <a href="https://www.facebook.com/shen57hostel2016" target="_blank"><img src="./img/header/facebook.svg" alt="屏東-恆春民宿-森五七行館-facebook"></a>
+                                       <button type="button" class="community-line qrcode-open"
+                                          onclick="openwindow()"><img src="./img/header/line.svg"
+                                             alt="屏東-恆春民宿-森五七行館-line"></button>
+                                       <a href="https://www.instagram.com/shen57hostel/" target="_blank"><img
+                                             src="./img/header/instagram.svg" alt="屏東-恆春民宿-森五七行館-instagram"></a>
+                                       <a href="https://www.facebook.com/shen57hostel2016" target="_blank"><img
+                                             src="./img/header/facebook.svg" alt="屏東-恆春民宿-森五七行館-facebook"></a>
                                     </div>
                                  </div>
                                  <div class="info-right-box">
@@ -151,7 +182,7 @@
          </div>
       </div>
    </header>
-   
+
    <!-- 宿-森五 -->
    <main id="room5">
 
@@ -290,7 +321,8 @@
             </div>
             <div class="r-info-bottom-box">
                <div class="r-info-bottom-title">客房備品</div>
-               <div class="r-info-bottom-content">Bath & Body Work 系列沐浴乳、洗髮精、潤髮乳、身體乳、洗手液。<br>牙刷組、刮鬍刀、棉花棒、牙線棒、毛巾、浴巾、吹風機、室內拖鞋。</div>
+               <div class="r-info-bottom-content">Bath & Body Work
+                  系列沐浴乳、洗髮精、潤髮乳、身體乳、洗手液。<br>牙刷組、刮鬍刀、棉花棒、牙線棒、毛巾、浴巾、吹風機、室內拖鞋。</div>
             </div>
          </div>
       </div>
@@ -332,36 +364,51 @@
             <div class="footer-menu">
                <!-- 頁腳-分頁欄 -->
                <ul>
-                  <a href="news.html"><li>訊 News</li></a>
-                  <button type="button" class="rooms-boxbtn" onclick="openrooms()"><li>宿 Rooms</li></button>
-                  <a href="booking.html"><li>訂 Booking</li></a>
-                  <a href="story.html"><li>源 Story</li></a>
-                  <a href="location.html"><li id="footer-menu-lastli">行 Location</li></a>
+                  <a href="news.html">
+                     <li>訊 News</li>
+                  </a>
+                  <button type="button" class="rooms-boxbtn" onclick="openrooms()">
+                     <li>宿 Rooms</li>
+                  </button>
+                  <a href="booking.html">
+                     <li>訂 Booking</li>
+                  </a>
+                  <a href="story.html">
+                     <li>源 Story</li>
+                  </a>
+                  <a href="location.html">
+                     <li id="footer-menu-lastli">行 Location</li>
+                  </a>
                </ul>
                <!-- 頁腳-聯絡資訊 -->
                <div class="footer-contact">
                   <div class="footer-text">
-                     <p>屏東縣恆春鎮大光里砂尾路68-2號</p><span>|</span><p>(08) 886-7658 / 0961-333-857</p><span>|</span><p>shen57hostel@gmail.com</p>
+                     <p>屏東縣恆春鎮大光里砂尾路68-2號</p><span>|</span>
+                     <p>(08) 886-7658 / 0961-333-857</p><span>|</span>
+                     <p>shen57hostel@gmail.com</p>
                   </div>
                   <div class="footer-community">
                      <!-- LINE-QRcode按鈕 -->
-                     <button type="button" class="community-line" onclick="openwindow()"><img src="./img/footer/line.svg" alt="屏東-恆春民宿-森五七行館-line"></button>
-                        <!-- LINE-QRcode彈跳視窗 -->
-                        <div class="linebox show-dialog">
-                           <!-- linebox-bg 視窗內背景 -->
-                           <div class="linebox-bg">
-                              <img src="./img/footer/shen57-line-link.jpg" alt="">
-                              <h4>透過行動條碼加入LINE好友</h4>
-                              <div class="linebox-text">
-                                 <p>請在LINE應用程式上開啟「好友」分頁，點選畫面右上方用來加入好友的圖示，</p>
-                                 <p>接著點選「行動條碼」，然後掃描此行動條碼。</p>
-                              </div>
-                              <h5>透過LINE ID新增LINE好友：shen57hostel</h5>
-                              <button type="button" class="qrcode-close" onclick="closewindow()">關閉視窗</button>
+                     <button type="button" class="community-line" onclick="openwindow()"><img
+                           src="./img/footer/line.svg" alt="屏東-恆春民宿-森五七行館-line"></button>
+                     <!-- LINE-QRcode彈跳視窗 -->
+                     <div class="linebox show-dialog">
+                        <!-- linebox-bg 視窗內背景 -->
+                        <div class="linebox-bg">
+                           <img src="./img/footer/shen57-line-link.jpg" alt="">
+                           <h4>透過行動條碼加入LINE好友</h4>
+                           <div class="linebox-text">
+                              <p>請在LINE應用程式上開啟「好友」分頁，點選畫面右上方用來加入好友的圖示，</p>
+                              <p>接著點選「行動條碼」，然後掃描此行動條碼。</p>
                            </div>
+                           <h5>透過LINE ID新增LINE好友：shen57hostel</h5>
+                           <button type="button" class="qrcode-close" onclick="closewindow()">關閉視窗</button>
                         </div>
-                     <a href="https://www.instagram.com/shen57hostel/" target="_blank"><img src="./img/footer/instagram.svg" alt="屏東-恆春民宿-森五七行館-instagram"></a>
-                     <a href="https://www.facebook.com/shen57hostel2016" target="_blank"><img src="./img/footer/facebook.svg" alt="屏東-恆春民宿-森五七行館-facebook"></a>
+                     </div>
+                     <a href="https://www.instagram.com/shen57hostel/" target="_blank"><img
+                           src="./img/footer/instagram.svg" alt="屏東-恆春民宿-森五七行館-instagram"></a>
+                     <a href="https://www.facebook.com/shen57hostel2016" target="_blank"><img
+                           src="./img/footer/facebook.svg" alt="屏東-恆春民宿-森五七行館-facebook"></a>
                   </div>
                </div>
             </div>
@@ -377,8 +424,9 @@
    </footer>
 
    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-   <script src="./js/room.js"></script>
+   <script src="./js/room2.js"></script>
    <script src="./js/line.js"></script>
    <script src="./js/hambtn.js"></script>
 </body>
+
 </html>
