@@ -3,7 +3,7 @@ let logoWordsLoaded = false
 let indexLoaded = false
 
 const intro = document.getElementById('intro')
-console.log(indexLoaded);
+
 window.addEventListener("load", function (event) {
     indexLoaded = true
     
@@ -19,7 +19,6 @@ logoWords.addEventListener('animationend', (event) => {
     }
 
 });
-
 
 
 let scrollBtn = document.querySelector('.scroll-btn')
