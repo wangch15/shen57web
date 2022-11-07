@@ -76,7 +76,6 @@ window.addEventListener('load', function () {
 
 
 window.onresize = function () {
-    console.log('resize!');
     let ww = window.innerWidth
     const slideSpanLoad = document.querySelectorAll('.swiper-slide>span')
     if (ww < 769) {
